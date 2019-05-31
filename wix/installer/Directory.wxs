@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <!-- Define the directory structure where program gets installed -->
+  <Fragment>
+    <!--<SetDirectory Id="CBBackOfficeDir" Value="C:\" Sequence="both"/>-->
+
+
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="DesktopFolder" Name="Desktop">
+        <Component Id="ApplicationShortcutDesktop" Guid="{77E1DD59-3608-4403-9B93-8766654A4001}">
+          <Shortcut Id="ApplicationDesktopShortcut"
+                    Name="$(var.ProductName)"
+                    Description="$(var.ProductName) shortcut"
+                    Target="[AppDir]$(var.ProductName).exe"
+                    WorkingDirectory="AppDir"/>
+          <RemoveFolder Id="DesktopFolder" On="uninstall"/>
+          <RegistryValue
+            Root="HKCU"
+            Key="Software/$(var.Manufacturer)/$(var.ProductName)"
+            Name="installed"
+            Type="integer"
+            Value="1"
+            KeyPath="yes"/>
+        </Component>
+      </Directory>
+
+      <!--<Directory Id="ProgramFilesFolder" Name="PFiles">
+        <Directory Id="StarcareDir" Name="Starcare">
+          <Directory Id="AppDir" Name="StarcareDesktop">
+
+
+          </Directory>
+        </Directory>
+      </Directory>-->
+
+ 
+        <Directory Id="MyAppsDir" Name="MyApps">
+          <Directory Id='ManufacturerFolder' Name='$(var.Manufacturer)'>
+          <Directory Id="AppDir" Name="$(var.ProductName)" />
+          </Directory>
+        </Directory>
+
+
+    </Directory>
+
+
+  </Fragment>
+</Wix>

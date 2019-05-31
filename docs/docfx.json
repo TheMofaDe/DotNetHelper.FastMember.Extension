@@ -1,0 +1,57 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [ "**.csproj" ],
+          "exclude": [ "**/bin/**", "**/obj/**" ],
+          "src": "../src"
+        }
+      ],
+      "dest": "api",
+      "properties": {
+        "TargetFramework": "net452"
+      }
+    }
+  ],
+  "build": {
+
+    "content": [
+      {
+        "files": [ "**/*.yml", "**/**/*.yml" ],
+        "src": "api",
+        "dest": "api"
+      },
+      {
+        "files": [ "articles/**/*.md", "*.md", "toc.yml" ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [ "images/**", "langwordmapping/**" ],
+        "exclude": [ "**.meta" ]
+      }
+    ],
+    "globalMetadata": {
+      "_appTitle": "DotNetHelper.FastMember.Extension",
+      "_disableContribution": false,
+      "_disableBreadcrumb": false,
+      "_appFaviconPath": "logo/favicon.ico",
+      "_disableNavbar": false,
+      "_enableSearch": true,
+      //   "_navRel": "../toc.html",
+      //    "_appLogoPath": "logo/lucene-net-color.png",
+      "_appFooter": "Copyright © 2019 Joseph McNeal Jr"
+    },
+    "dest": "./",
+    "globalMetadataFiles": [],
+    "template": [ "statictoc" ],
+    "postProcessors": [],
+    "markdownEngineName": "markdig",
+    "noLangKeyword": false,
+    "xrefService": [ "https://xref.docs.microsoft.com/query?uid={uid}" ],
+    "keepFileLink": true,
+    "cleanupCacheHistory": true,
+    "disableGitFeatures": false
+  }
+}

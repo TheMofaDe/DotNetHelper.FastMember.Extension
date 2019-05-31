@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: DotNetHelper.FastMember.Extension.Models
+  commentId: N:DotNetHelper.FastMember.Extension.Models
+  id: DotNetHelper.FastMember.Extension.Models
+  children:
+  - DotNetHelper.FastMember.Extension.Models.AdvanceMember
+  - DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember
+  langs:
+  - csharp
+  - vb
+  name: DotNetHelper.FastMember.Extension.Models
+  nameWithType: DotNetHelper.FastMember.Extension.Models
+  fullName: DotNetHelper.FastMember.Extension.Models
+  type: Namespace
+  assemblies:
+  - DotNetHelper.FastMember.Extension
+references:
+- uid: DotNetHelper.FastMember.Extension.Models.AdvanceMember
+  commentId: T:DotNetHelper.FastMember.Extension.Models.AdvanceMember
+  name: AdvanceMember
+  nameWithType: AdvanceMember
+  fullName: DotNetHelper.FastMember.Extension.Models.AdvanceMember
+- uid: DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember
+  commentId: T:DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember
+  name: DynamicAdvanceMember
+  nameWithType: DynamicAdvanceMember
+  fullName: DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember

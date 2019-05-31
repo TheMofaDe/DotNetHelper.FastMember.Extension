@@ -1,0 +1,761 @@
+### YamlMime:ManagedReference
+items:
+- uid: DotNetHelper.FastMember.Extension.Models.AdvanceMember
+  commentId: T:DotNetHelper.FastMember.Extension.Models.AdvanceMember
+  id: AdvanceMember
+  parent: DotNetHelper.FastMember.Extension.Models
+  children:
+  - DotNetHelper.FastMember.Extension.Models.AdvanceMember.#ctor(FastMember.Member)
+  - DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetCustomAttribute``1
+  - DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetMemberInfo
+  - DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetValue(System.Object)
+  - DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetValue(System.Object,FastMember.TypeAccessor)
+  - DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetValue``1(``0)
+  - DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetValue``1(``0,FastMember.TypeAccessor)
+  - DotNetHelper.FastMember.Extension.Models.AdvanceMember.Member
+  - DotNetHelper.FastMember.Extension.Models.AdvanceMember.SetMemberValue``1(``0,System.Object)
+  langs:
+  - csharp
+  - vb
+  name: AdvanceMember
+  nameWithType: AdvanceMember
+  fullName: DotNetHelper.FastMember.Extension.Models.AdvanceMember
+  type: Class
+  source:
+    remote:
+      path: src/DotNetHelper.FastMember.Extension/Models/AdvanceMember.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+    id: AdvanceMember
+    path: ../src/DotNetHelper.FastMember.Extension/Models/AdvanceMember.cs
+    startLine: 8
+  assemblies:
+  - DotNetHelper.FastMember.Extension
+  namespace: DotNetHelper.FastMember.Extension.Models
+  syntax:
+    content: public class AdvanceMember
+    content.vb: Public Class AdvanceMember
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: DotNetHelper.FastMember.Extension.Models.AdvanceMember.Member
+  commentId: P:DotNetHelper.FastMember.Extension.Models.AdvanceMember.Member
+  id: Member
+  parent: DotNetHelper.FastMember.Extension.Models.AdvanceMember
+  langs:
+  - csharp
+  - vb
+  name: Member
+  nameWithType: AdvanceMember.Member
+  fullName: DotNetHelper.FastMember.Extension.Models.AdvanceMember.Member
+  type: Property
+  source:
+    remote:
+      path: src/DotNetHelper.FastMember.Extension/Models/AdvanceMember.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+    id: Member
+    path: ../src/DotNetHelper.FastMember.Extension/Models/AdvanceMember.cs
+    startLine: 10
+  assemblies:
+  - DotNetHelper.FastMember.Extension
+  namespace: DotNetHelper.FastMember.Extension.Models
+  syntax:
+    content: public Member Member { get; }
+    parameters: []
+    return:
+      type: FastMember.Member
+    content.vb: Public ReadOnly Property Member As Member
+  overload: DotNetHelper.FastMember.Extension.Models.AdvanceMember.Member*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: DotNetHelper.FastMember.Extension.Models.AdvanceMember.#ctor(FastMember.Member)
+  commentId: M:DotNetHelper.FastMember.Extension.Models.AdvanceMember.#ctor(FastMember.Member)
+  id: '#ctor(FastMember.Member)'
+  parent: DotNetHelper.FastMember.Extension.Models.AdvanceMember
+  langs:
+  - csharp
+  - vb
+  name: AdvanceMember(Member)
+  nameWithType: AdvanceMember.AdvanceMember(Member)
+  fullName: DotNetHelper.FastMember.Extension.Models.AdvanceMember.AdvanceMember(FastMember.Member)
+  type: Constructor
+  source:
+    remote:
+      path: src/DotNetHelper.FastMember.Extension/Models/AdvanceMember.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+    id: .ctor
+    path: ../src/DotNetHelper.FastMember.Extension/Models/AdvanceMember.cs
+    startLine: 12
+  assemblies:
+  - DotNetHelper.FastMember.Extension
+  namespace: DotNetHelper.FastMember.Extension.Models
+  syntax:
+    content: public AdvanceMember(Member member)
+    parameters:
+    - id: member
+      type: FastMember.Member
+    content.vb: Public Sub New(member As Member)
+  overload: DotNetHelper.FastMember.Extension.Models.AdvanceMember.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetCustomAttribute``1
+  commentId: M:DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetCustomAttribute``1
+  id: GetCustomAttribute``1
+  parent: DotNetHelper.FastMember.Extension.Models.AdvanceMember
+  langs:
+  - csharp
+  - vb
+  name: GetCustomAttribute<T>()
+  nameWithType: AdvanceMember.GetCustomAttribute<T>()
+  fullName: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetCustomAttribute<T>()
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.FastMember.Extension/Models/AdvanceMember.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+    id: GetCustomAttribute
+    path: ../src/DotNetHelper.FastMember.Extension/Models/AdvanceMember.cs
+    startLine: 17
+  assemblies:
+  - DotNetHelper.FastMember.Extension
+  namespace: DotNetHelper.FastMember.Extension.Models
+  syntax:
+    content: >-
+      public T GetCustomAttribute<T>()
+          where T : Attribute
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Function GetCustomAttribute(Of T As Attribute) As T
+  overload: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetCustomAttribute*
+  nameWithType.vb: AdvanceMember.GetCustomAttribute(Of T)()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetCustomAttribute(Of T)()
+  name.vb: GetCustomAttribute(Of T)()
+- uid: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetMemberInfo
+  commentId: M:DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetMemberInfo
+  id: GetMemberInfo
+  parent: DotNetHelper.FastMember.Extension.Models.AdvanceMember
+  langs:
+  - csharp
+  - vb
+  name: GetMemberInfo()
+  nameWithType: AdvanceMember.GetMemberInfo()
+  fullName: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetMemberInfo()
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.FastMember.Extension/Models/AdvanceMember.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+    id: GetMemberInfo
+    path: ../src/DotNetHelper.FastMember.Extension/Models/AdvanceMember.cs
+    startLine: 24
+  assemblies:
+  - DotNetHelper.FastMember.Extension
+  namespace: DotNetHelper.FastMember.Extension.Models
+  syntax:
+    content: public MemberInfo GetMemberInfo()
+    return:
+      type: System.Reflection.MemberInfo
+    content.vb: Public Function GetMemberInfo As MemberInfo
+  overload: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetMemberInfo*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetValue(System.Object)
+  commentId: M:DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetValue(System.Object)
+  id: GetValue(System.Object)
+  parent: DotNetHelper.FastMember.Extension.Models.AdvanceMember
+  langs:
+  - csharp
+  - vb
+  name: GetValue(Object)
+  nameWithType: AdvanceMember.GetValue(Object)
+  fullName: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetValue(System.Object)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.FastMember.Extension/Models/AdvanceMember.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+    id: GetValue
+    path: ../src/DotNetHelper.FastMember.Extension/Models/AdvanceMember.cs
+    startLine: 29
+  assemblies:
+  - DotNetHelper.FastMember.Extension
+  namespace: DotNetHelper.FastMember.Extension.Models
+  syntax:
+    content: public object GetValue(object instanceOfObject)
+    parameters:
+    - id: instanceOfObject
+      type: System.Object
+    return:
+      type: System.Object
+    content.vb: Public Function GetValue(instanceOfObject As Object) As Object
+  overload: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetValue*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetValue(System.Object,FastMember.TypeAccessor)
+  commentId: M:DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetValue(System.Object,FastMember.TypeAccessor)
+  id: GetValue(System.Object,FastMember.TypeAccessor)
+  parent: DotNetHelper.FastMember.Extension.Models.AdvanceMember
+  langs:
+  - csharp
+  - vb
+  name: GetValue(Object, TypeAccessor)
+  nameWithType: AdvanceMember.GetValue(Object, TypeAccessor)
+  fullName: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetValue(System.Object, FastMember.TypeAccessor)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.FastMember.Extension/Models/AdvanceMember.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+    id: GetValue
+    path: ../src/DotNetHelper.FastMember.Extension/Models/AdvanceMember.cs
+    startLine: 34
+  assemblies:
+  - DotNetHelper.FastMember.Extension
+  namespace: DotNetHelper.FastMember.Extension.Models
+  syntax:
+    content: public object GetValue(object instanceOfObject, TypeAccessor accessor)
+    parameters:
+    - id: instanceOfObject
+      type: System.Object
+    - id: accessor
+      type: FastMember.TypeAccessor
+    return:
+      type: System.Object
+    content.vb: Public Function GetValue(instanceOfObject As Object, accessor As TypeAccessor) As Object
+  overload: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetValue*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetValue``1(``0)
+  commentId: M:DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetValue``1(``0)
+  id: GetValue``1(``0)
+  parent: DotNetHelper.FastMember.Extension.Models.AdvanceMember
+  langs:
+  - csharp
+  - vb
+  name: GetValue<T>(T)
+  nameWithType: AdvanceMember.GetValue<T>(T)
+  fullName: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetValue<T>(T)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.FastMember.Extension/Models/AdvanceMember.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+    id: GetValue
+    path: ../src/DotNetHelper.FastMember.Extension/Models/AdvanceMember.cs
+    startLine: 39
+  assemblies:
+  - DotNetHelper.FastMember.Extension
+  namespace: DotNetHelper.FastMember.Extension.Models
+  syntax:
+    content: >-
+      public object GetValue<T>(T instanceOfObject)
+          where T : class
+    parameters:
+    - id: instanceOfObject
+      type: '{T}'
+    typeParameters:
+    - id: T
+    return:
+      type: System.Object
+    content.vb: Public Function GetValue(Of T As Class)(instanceOfObject As T) As Object
+  overload: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetValue*
+  nameWithType.vb: AdvanceMember.GetValue(Of T)(T)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetValue(Of T)(T)
+  name.vb: GetValue(Of T)(T)
+- uid: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetValue``1(``0,FastMember.TypeAccessor)
+  commentId: M:DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetValue``1(``0,FastMember.TypeAccessor)
+  id: GetValue``1(``0,FastMember.TypeAccessor)
+  parent: DotNetHelper.FastMember.Extension.Models.AdvanceMember
+  langs:
+  - csharp
+  - vb
+  name: GetValue<T>(T, TypeAccessor)
+  nameWithType: AdvanceMember.GetValue<T>(T, TypeAccessor)
+  fullName: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetValue<T>(T, FastMember.TypeAccessor)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.FastMember.Extension/Models/AdvanceMember.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+    id: GetValue
+    path: ../src/DotNetHelper.FastMember.Extension/Models/AdvanceMember.cs
+    startLine: 44
+  assemblies:
+  - DotNetHelper.FastMember.Extension
+  namespace: DotNetHelper.FastMember.Extension.Models
+  syntax:
+    content: >-
+      public object GetValue<T>(T instanceOfObject, TypeAccessor accessor)
+          where T : class
+    parameters:
+    - id: instanceOfObject
+      type: '{T}'
+    - id: accessor
+      type: FastMember.TypeAccessor
+    typeParameters:
+    - id: T
+    return:
+      type: System.Object
+    content.vb: Public Function GetValue(Of T As Class)(instanceOfObject As T, accessor As TypeAccessor) As Object
+  overload: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetValue*
+  nameWithType.vb: AdvanceMember.GetValue(Of T)(T, TypeAccessor)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetValue(Of T)(T, FastMember.TypeAccessor)
+  name.vb: GetValue(Of T)(T, TypeAccessor)
+- uid: DotNetHelper.FastMember.Extension.Models.AdvanceMember.SetMemberValue``1(``0,System.Object)
+  commentId: M:DotNetHelper.FastMember.Extension.Models.AdvanceMember.SetMemberValue``1(``0,System.Object)
+  id: SetMemberValue``1(``0,System.Object)
+  parent: DotNetHelper.FastMember.Extension.Models.AdvanceMember
+  langs:
+  - csharp
+  - vb
+  name: SetMemberValue<T>(T, Object)
+  nameWithType: AdvanceMember.SetMemberValue<T>(T, Object)
+  fullName: DotNetHelper.FastMember.Extension.Models.AdvanceMember.SetMemberValue<T>(T, System.Object)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.FastMember.Extension/Models/AdvanceMember.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+    id: SetMemberValue
+    path: ../src/DotNetHelper.FastMember.Extension/Models/AdvanceMember.cs
+    startLine: 49
+  assemblies:
+  - DotNetHelper.FastMember.Extension
+  namespace: DotNetHelper.FastMember.Extension.Models
+  syntax:
+    content: public void SetMemberValue<T>(T instanceOfObject, object value)
+    parameters:
+    - id: instanceOfObject
+      type: '{T}'
+    - id: value
+      type: System.Object
+    typeParameters:
+    - id: T
+    content.vb: Public Sub SetMemberValue(Of T)(instanceOfObject As T, value As Object)
+  overload: DotNetHelper.FastMember.Extension.Models.AdvanceMember.SetMemberValue*
+  nameWithType.vb: AdvanceMember.SetMemberValue(Of T)(T, Object)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: DotNetHelper.FastMember.Extension.Models.AdvanceMember.SetMemberValue(Of T)(T, System.Object)
+  name.vb: SetMemberValue(Of T)(T, Object)
+references:
+- uid: DotNetHelper.FastMember.Extension.Models
+  commentId: N:DotNetHelper.FastMember.Extension.Models
+  name: DotNetHelper.FastMember.Extension.Models
+  nameWithType: DotNetHelper.FastMember.Extension.Models
+  fullName: DotNetHelper.FastMember.Extension.Models
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DotNetHelper.FastMember.Extension.Models.AdvanceMember.Member*
+  commentId: Overload:DotNetHelper.FastMember.Extension.Models.AdvanceMember.Member
+  name: Member
+  nameWithType: AdvanceMember.Member
+  fullName: DotNetHelper.FastMember.Extension.Models.AdvanceMember.Member
+- uid: FastMember.Member
+  commentId: T:FastMember.Member
+  parent: FastMember
+  isExternal: true
+  name: Member
+  nameWithType: Member
+  fullName: FastMember.Member
+- uid: FastMember
+  commentId: N:FastMember
+  isExternal: true
+  name: FastMember
+  nameWithType: FastMember
+  fullName: FastMember
+- uid: DotNetHelper.FastMember.Extension.Models.AdvanceMember.#ctor*
+  commentId: Overload:DotNetHelper.FastMember.Extension.Models.AdvanceMember.#ctor
+  name: AdvanceMember
+  nameWithType: AdvanceMember.AdvanceMember
+  fullName: DotNetHelper.FastMember.Extension.Models.AdvanceMember.AdvanceMember
+- uid: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetCustomAttribute*
+  commentId: Overload:DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetCustomAttribute
+  name: GetCustomAttribute
+  nameWithType: AdvanceMember.GetCustomAttribute
+  fullName: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetCustomAttribute
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetMemberInfo*
+  commentId: Overload:DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetMemberInfo
+  name: GetMemberInfo
+  nameWithType: AdvanceMember.GetMemberInfo
+  fullName: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetMemberInfo
+- uid: System.Reflection.MemberInfo
+  commentId: T:System.Reflection.MemberInfo
+  parent: System.Reflection
+  isExternal: true
+  name: MemberInfo
+  nameWithType: MemberInfo
+  fullName: System.Reflection.MemberInfo
+- uid: System.Reflection
+  commentId: N:System.Reflection
+  isExternal: true
+  name: System.Reflection
+  nameWithType: System.Reflection
+  fullName: System.Reflection
+- uid: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetValue*
+  commentId: Overload:DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetValue
+  name: GetValue
+  nameWithType: AdvanceMember.GetValue
+  fullName: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetValue
+- uid: FastMember.TypeAccessor
+  commentId: T:FastMember.TypeAccessor
+  parent: FastMember
+  isExternal: true
+  name: TypeAccessor
+  nameWithType: TypeAccessor
+  fullName: FastMember.TypeAccessor
+- uid: DotNetHelper.FastMember.Extension.Models.AdvanceMember.SetMemberValue*
+  commentId: Overload:DotNetHelper.FastMember.Extension.Models.AdvanceMember.SetMemberValue
+  name: SetMemberValue
+  nameWithType: AdvanceMember.SetMemberValue
+  fullName: DotNetHelper.FastMember.Extension.Models.AdvanceMember.SetMemberValue

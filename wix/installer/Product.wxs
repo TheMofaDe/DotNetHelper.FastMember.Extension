@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     RequiredVersion="3.11.1.2318">
+
+  <Product Id="*"
+           Name="$(var.ProductName)"
+           Language="1033"
+           Version="$(var.Version)"
+           Manufacturer="$(var.Manufacturer)"
+           UpgradeCode="{EBCE5684-2D62-44CA-8494-E7E4665132F8}">
+    <!-- MUST BE GLOBALLY UNIQUE ACROSS APPLICATIONS -->
+
+    <!-- Define Package Details -->
+    <Package InstallerVersion="200"
+             Compressed="yes"
+             InstallScope="perMachine"
+             Manufacturer="$(var.Manufacturer)"
+             Description="$(var.ProductName) $(var.Version)"
+             Keywords="$(var.ProductName),Installer,MSI"
+             Comments="Copyright 2018 $(var.ProductName) Properties, Inc."/>
+
+    <!-- Define Upgrade Specifications -->
+    <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed."
+                  AllowSameVersionUpgrades="yes" />
+
+    <!-- Define Supported Media Types -->
+    <MediaTemplate EmbedCab="yes" />
+
+    <!-- Define Features -->
+    <Feature Id="ProductFeature"
+             Title="$(var.ProductName)"
+             Level="1">
+      <ComponentGroupRef Id="NetBinComponents" />
+      <ComponentRef Id="ApplicationShortcutDesktop" />
+    </Feature>
+
+    <!-- Define Custom Actions to be Included in Execution Sequence -->
+    <!--<InstallExecuteSequence>
+      <Custom Action ="MyCustomActionCA" Before="InstallFinalize" />
+    </InstallExecuteSequence>-->
+
+  </Product>
+
+</Wix>

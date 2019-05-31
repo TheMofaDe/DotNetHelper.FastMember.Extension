@@ -1,0 +1,908 @@
+### YamlMime:ManagedReference
+items:
+- uid: DotNetHelper.FastMember.Extension.ObjectMapper
+  commentId: T:DotNetHelper.FastMember.Extension.ObjectMapper
+  id: ObjectMapper
+  parent: DotNetHelper.FastMember.Extension
+  children:
+  - DotNetHelper.FastMember.Extension.ObjectMapper.MapExcept``2(``0,``1,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Boolean,System.StringComparison,System.Collections.Generic.IDictionary{System.Type,System.IFormatProvider})
+  - DotNetHelper.FastMember.Extension.ObjectMapper.MapExceptDontThrow``2(``0,``1,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Boolean,System.StringComparison,System.Collections.Generic.IDictionary{System.Type,System.IFormatProvider})
+  - DotNetHelper.FastMember.Extension.ObjectMapper.MapOnly``2(``0,``1,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Boolean,System.StringComparison,System.Collections.Generic.IDictionary{System.Type,System.IFormatProvider})
+  - DotNetHelper.FastMember.Extension.ObjectMapper.MapProperties``2(``0,``1,System.Boolean,System.StringComparison,System.Collections.Generic.IDictionary{System.Type,System.IFormatProvider})
+  - DotNetHelper.FastMember.Extension.ObjectMapper.MapPropertiesDontThrow``2(``0,``1,System.Boolean,System.StringComparison,System.Collections.Generic.IDictionary{System.Type,System.IFormatProvider})
+  langs:
+  - csharp
+  - vb
+  name: ObjectMapper
+  nameWithType: ObjectMapper
+  fullName: DotNetHelper.FastMember.Extension.ObjectMapper
+  type: Class
+  source:
+    remote:
+      path: src/DotNetHelper.FastMember.Extension/ObjectMapper.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+    id: ObjectMapper
+    path: ../src/DotNetHelper.FastMember.Extension/ObjectMapper.cs
+    startLine: 11
+  assemblies:
+  - DotNetHelper.FastMember.Extension
+  namespace: DotNetHelper.FastMember.Extension
+  syntax:
+    content: public static class ObjectMapper
+    content.vb: Public Module ObjectMapper
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: DotNetHelper.FastMember.Extension.ObjectMapper.MapProperties``2(``0,``1,System.Boolean,System.StringComparison,System.Collections.Generic.IDictionary{System.Type,System.IFormatProvider})
+  commentId: M:DotNetHelper.FastMember.Extension.ObjectMapper.MapProperties``2(``0,``1,System.Boolean,System.StringComparison,System.Collections.Generic.IDictionary{System.Type,System.IFormatProvider})
+  id: MapProperties``2(``0,``1,System.Boolean,System.StringComparison,System.Collections.Generic.IDictionary{System.Type,System.IFormatProvider})
+  parent: DotNetHelper.FastMember.Extension.ObjectMapper
+  langs:
+  - csharp
+  - vb
+  name: MapProperties<T1, T2>(T1, T2, Boolean, StringComparison, IDictionary<Type, IFormatProvider>)
+  nameWithType: ObjectMapper.MapProperties<T1, T2>(T1, T2, Boolean, StringComparison, IDictionary<Type, IFormatProvider>)
+  fullName: DotNetHelper.FastMember.Extension.ObjectMapper.MapProperties<T1, T2>(T1, T2, System.Boolean, System.StringComparison, System.Collections.Generic.IDictionary<System.Type, System.IFormatProvider>)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.FastMember.Extension/ObjectMapper.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+    id: MapProperties
+    path: ../src/DotNetHelper.FastMember.Extension/ObjectMapper.cs
+    startLine: 67
+  assemblies:
+  - DotNetHelper.FastMember.Extension
+  namespace: DotNetHelper.FastMember.Extension
+  syntax:
+    content: public static T2 MapProperties<T1, T2>(T1 original, T2 copyCat, bool exactTypeOnly = false, StringComparison comparer = StringComparison.CurrentCulture, IDictionary<Type, IFormatProvider> beforeMappinFormatProviders = null)
+    parameters:
+    - id: original
+      type: '{T1}'
+    - id: copyCat
+      type: '{T2}'
+    - id: exactTypeOnly
+      type: System.Boolean
+    - id: comparer
+      type: System.StringComparison
+    - id: beforeMappinFormatProviders
+      type: System.Collections.Generic.IDictionary{System.Type,System.IFormatProvider}
+    typeParameters:
+    - id: T1
+    - id: T2
+    return:
+      type: '{T2}'
+    content.vb: Public Shared Function MapProperties(Of T1, T2)(original As T1, copyCat As T2, exactTypeOnly As Boolean = False, comparer As StringComparison = StringComparison.CurrentCulture, beforeMappinFormatProviders As IDictionary(Of Type, IFormatProvider) = Nothing) As T2
+  overload: DotNetHelper.FastMember.Extension.ObjectMapper.MapProperties*
+  nameWithType.vb: ObjectMapper.MapProperties(Of T1, T2)(T1, T2, Boolean, StringComparison, IDictionary(Of Type, IFormatProvider))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: DotNetHelper.FastMember.Extension.ObjectMapper.MapProperties(Of T1, T2)(T1, T2, System.Boolean, System.StringComparison, System.Collections.Generic.IDictionary(Of System.Type, System.IFormatProvider))
+  name.vb: MapProperties(Of T1, T2)(T1, T2, Boolean, StringComparison, IDictionary(Of Type, IFormatProvider))
+- uid: DotNetHelper.FastMember.Extension.ObjectMapper.MapPropertiesDontThrow``2(``0,``1,System.Boolean,System.StringComparison,System.Collections.Generic.IDictionary{System.Type,System.IFormatProvider})
+  commentId: M:DotNetHelper.FastMember.Extension.ObjectMapper.MapPropertiesDontThrow``2(``0,``1,System.Boolean,System.StringComparison,System.Collections.Generic.IDictionary{System.Type,System.IFormatProvider})
+  id: MapPropertiesDontThrow``2(``0,``1,System.Boolean,System.StringComparison,System.Collections.Generic.IDictionary{System.Type,System.IFormatProvider})
+  parent: DotNetHelper.FastMember.Extension.ObjectMapper
+  langs:
+  - csharp
+  - vb
+  name: MapPropertiesDontThrow<T1, T2>(T1, T2, Boolean, StringComparison, IDictionary<Type, IFormatProvider>)
+  nameWithType: ObjectMapper.MapPropertiesDontThrow<T1, T2>(T1, T2, Boolean, StringComparison, IDictionary<Type, IFormatProvider>)
+  fullName: DotNetHelper.FastMember.Extension.ObjectMapper.MapPropertiesDontThrow<T1, T2>(T1, T2, System.Boolean, System.StringComparison, System.Collections.Generic.IDictionary<System.Type, System.IFormatProvider>)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.FastMember.Extension/ObjectMapper.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+    id: MapPropertiesDontThrow
+    path: ../src/DotNetHelper.FastMember.Extension/ObjectMapper.cs
+    startLine: 81
+  assemblies:
+  - DotNetHelper.FastMember.Extension
+  namespace: DotNetHelper.FastMember.Extension
+  syntax:
+    content: public static T2 MapPropertiesDontThrow<T1, T2>(T1 original, T2 copyCat, bool exactTypeOnly = false, StringComparison comparer = StringComparison.CurrentCulture, IDictionary<Type, IFormatProvider> beforeMappinFormatProviders = null)
+    parameters:
+    - id: original
+      type: '{T1}'
+    - id: copyCat
+      type: '{T2}'
+    - id: exactTypeOnly
+      type: System.Boolean
+    - id: comparer
+      type: System.StringComparison
+    - id: beforeMappinFormatProviders
+      type: System.Collections.Generic.IDictionary{System.Type,System.IFormatProvider}
+    typeParameters:
+    - id: T1
+    - id: T2
+    return:
+      type: '{T2}'
+    content.vb: Public Shared Function MapPropertiesDontThrow(Of T1, T2)(original As T1, copyCat As T2, exactTypeOnly As Boolean = False, comparer As StringComparison = StringComparison.CurrentCulture, beforeMappinFormatProviders As IDictionary(Of Type, IFormatProvider) = Nothing) As T2
+  overload: DotNetHelper.FastMember.Extension.ObjectMapper.MapPropertiesDontThrow*
+  nameWithType.vb: ObjectMapper.MapPropertiesDontThrow(Of T1, T2)(T1, T2, Boolean, StringComparison, IDictionary(Of Type, IFormatProvider))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: DotNetHelper.FastMember.Extension.ObjectMapper.MapPropertiesDontThrow(Of T1, T2)(T1, T2, System.Boolean, System.StringComparison, System.Collections.Generic.IDictionary(Of System.Type, System.IFormatProvider))
+  name.vb: MapPropertiesDontThrow(Of T1, T2)(T1, T2, Boolean, StringComparison, IDictionary(Of Type, IFormatProvider))
+- uid: DotNetHelper.FastMember.Extension.ObjectMapper.MapExcept``2(``0,``1,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Boolean,System.StringComparison,System.Collections.Generic.IDictionary{System.Type,System.IFormatProvider})
+  commentId: M:DotNetHelper.FastMember.Extension.ObjectMapper.MapExcept``2(``0,``1,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Boolean,System.StringComparison,System.Collections.Generic.IDictionary{System.Type,System.IFormatProvider})
+  id: MapExcept``2(``0,``1,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Boolean,System.StringComparison,System.Collections.Generic.IDictionary{System.Type,System.IFormatProvider})
+  parent: DotNetHelper.FastMember.Extension.ObjectMapper
+  langs:
+  - csharp
+  - vb
+  name: MapExcept<T1, T2>(T1, T2, Expression<Func<T1, Object>>, Boolean, StringComparison, IDictionary<Type, IFormatProvider>)
+  nameWithType: ObjectMapper.MapExcept<T1, T2>(T1, T2, Expression<Func<T1, Object>>, Boolean, StringComparison, IDictionary<Type, IFormatProvider>)
+  fullName: DotNetHelper.FastMember.Extension.ObjectMapper.MapExcept<T1, T2>(T1, T2, System.Linq.Expressions.Expression<System.Func<T1, System.Object>>, System.Boolean, System.StringComparison, System.Collections.Generic.IDictionary<System.Type, System.IFormatProvider>)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.FastMember.Extension/ObjectMapper.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+    id: MapExcept
+    path: ../src/DotNetHelper.FastMember.Extension/ObjectMapper.cs
+    startLine: 105
+  assemblies:
+  - DotNetHelper.FastMember.Extension
+  namespace: DotNetHelper.FastMember.Extension
+  syntax:
+    content: public static T2 MapExcept<T1, T2>(T1 original, T2 copyCat, Expression<Func<T1, object>> excludeProperties = null, bool exactTypeOnly = false, StringComparison comparer = StringComparison.CurrentCulture, IDictionary<Type, IFormatProvider> beforeMappinFormatProviders = null)
+    parameters:
+    - id: original
+      type: '{T1}'
+    - id: copyCat
+      type: '{T2}'
+    - id: excludeProperties
+      type: System.Linq.Expressions.Expression{System.Func{{T1},System.Object}}
+    - id: exactTypeOnly
+      type: System.Boolean
+    - id: comparer
+      type: System.StringComparison
+    - id: beforeMappinFormatProviders
+      type: System.Collections.Generic.IDictionary{System.Type,System.IFormatProvider}
+    typeParameters:
+    - id: T1
+    - id: T2
+    return:
+      type: '{T2}'
+    content.vb: Public Shared Function MapExcept(Of T1, T2)(original As T1, copyCat As T2, excludeProperties As Expression(Of Func(Of T1, Object)) = Nothing, exactTypeOnly As Boolean = False, comparer As StringComparison = StringComparison.CurrentCulture, beforeMappinFormatProviders As IDictionary(Of Type, IFormatProvider) = Nothing) As T2
+  overload: DotNetHelper.FastMember.Extension.ObjectMapper.MapExcept*
+  nameWithType.vb: ObjectMapper.MapExcept(Of T1, T2)(T1, T2, Expression(Of Func(Of T1, Object)), Boolean, StringComparison, IDictionary(Of Type, IFormatProvider))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: DotNetHelper.FastMember.Extension.ObjectMapper.MapExcept(Of T1, T2)(T1, T2, System.Linq.Expressions.Expression(Of System.Func(Of T1, System.Object)), System.Boolean, System.StringComparison, System.Collections.Generic.IDictionary(Of System.Type, System.IFormatProvider))
+  name.vb: MapExcept(Of T1, T2)(T1, T2, Expression(Of Func(Of T1, Object)), Boolean, StringComparison, IDictionary(Of Type, IFormatProvider))
+- uid: DotNetHelper.FastMember.Extension.ObjectMapper.MapExceptDontThrow``2(``0,``1,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Boolean,System.StringComparison,System.Collections.Generic.IDictionary{System.Type,System.IFormatProvider})
+  commentId: M:DotNetHelper.FastMember.Extension.ObjectMapper.MapExceptDontThrow``2(``0,``1,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Boolean,System.StringComparison,System.Collections.Generic.IDictionary{System.Type,System.IFormatProvider})
+  id: MapExceptDontThrow``2(``0,``1,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Boolean,System.StringComparison,System.Collections.Generic.IDictionary{System.Type,System.IFormatProvider})
+  parent: DotNetHelper.FastMember.Extension.ObjectMapper
+  langs:
+  - csharp
+  - vb
+  name: MapExceptDontThrow<T1, T2>(T1, T2, Expression<Func<T1, Object>>, Boolean, StringComparison, IDictionary<Type, IFormatProvider>)
+  nameWithType: ObjectMapper.MapExceptDontThrow<T1, T2>(T1, T2, Expression<Func<T1, Object>>, Boolean, StringComparison, IDictionary<Type, IFormatProvider>)
+  fullName: DotNetHelper.FastMember.Extension.ObjectMapper.MapExceptDontThrow<T1, T2>(T1, T2, System.Linq.Expressions.Expression<System.Func<T1, System.Object>>, System.Boolean, System.StringComparison, System.Collections.Generic.IDictionary<System.Type, System.IFormatProvider>)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.FastMember.Extension/ObjectMapper.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+    id: MapExceptDontThrow
+    path: ../src/DotNetHelper.FastMember.Extension/ObjectMapper.cs
+    startLine: 122
+  assemblies:
+  - DotNetHelper.FastMember.Extension
+  namespace: DotNetHelper.FastMember.Extension
+  syntax:
+    content: public static T2 MapExceptDontThrow<T1, T2>(T1 original, T2 copyCat, Expression<Func<T1, object>> excludeProperties = null, bool exactTypeOnly = false, StringComparison comparer = StringComparison.CurrentCulture, IDictionary<Type, IFormatProvider> beforeMappinFormatProviders = null)
+    parameters:
+    - id: original
+      type: '{T1}'
+    - id: copyCat
+      type: '{T2}'
+    - id: excludeProperties
+      type: System.Linq.Expressions.Expression{System.Func{{T1},System.Object}}
+    - id: exactTypeOnly
+      type: System.Boolean
+    - id: comparer
+      type: System.StringComparison
+    - id: beforeMappinFormatProviders
+      type: System.Collections.Generic.IDictionary{System.Type,System.IFormatProvider}
+    typeParameters:
+    - id: T1
+    - id: T2
+    return:
+      type: '{T2}'
+    content.vb: Public Shared Function MapExceptDontThrow(Of T1, T2)(original As T1, copyCat As T2, excludeProperties As Expression(Of Func(Of T1, Object)) = Nothing, exactTypeOnly As Boolean = False, comparer As StringComparison = StringComparison.CurrentCulture, beforeMappinFormatProviders As IDictionary(Of Type, IFormatProvider) = Nothing) As T2
+  overload: DotNetHelper.FastMember.Extension.ObjectMapper.MapExceptDontThrow*
+  nameWithType.vb: ObjectMapper.MapExceptDontThrow(Of T1, T2)(T1, T2, Expression(Of Func(Of T1, Object)), Boolean, StringComparison, IDictionary(Of Type, IFormatProvider))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: DotNetHelper.FastMember.Extension.ObjectMapper.MapExceptDontThrow(Of T1, T2)(T1, T2, System.Linq.Expressions.Expression(Of System.Func(Of T1, System.Object)), System.Boolean, System.StringComparison, System.Collections.Generic.IDictionary(Of System.Type, System.IFormatProvider))
+  name.vb: MapExceptDontThrow(Of T1, T2)(T1, T2, Expression(Of Func(Of T1, Object)), Boolean, StringComparison, IDictionary(Of Type, IFormatProvider))
+- uid: DotNetHelper.FastMember.Extension.ObjectMapper.MapOnly``2(``0,``1,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Boolean,System.StringComparison,System.Collections.Generic.IDictionary{System.Type,System.IFormatProvider})
+  commentId: M:DotNetHelper.FastMember.Extension.ObjectMapper.MapOnly``2(``0,``1,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Boolean,System.StringComparison,System.Collections.Generic.IDictionary{System.Type,System.IFormatProvider})
+  id: MapOnly``2(``0,``1,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Boolean,System.StringComparison,System.Collections.Generic.IDictionary{System.Type,System.IFormatProvider})
+  parent: DotNetHelper.FastMember.Extension.ObjectMapper
+  langs:
+  - csharp
+  - vb
+  name: MapOnly<T1, T2>(T1, T2, Expression<Func<T1, Object>>, Boolean, StringComparison, IDictionary<Type, IFormatProvider>)
+  nameWithType: ObjectMapper.MapOnly<T1, T2>(T1, T2, Expression<Func<T1, Object>>, Boolean, StringComparison, IDictionary<Type, IFormatProvider>)
+  fullName: DotNetHelper.FastMember.Extension.ObjectMapper.MapOnly<T1, T2>(T1, T2, System.Linq.Expressions.Expression<System.Func<T1, System.Object>>, System.Boolean, System.StringComparison, System.Collections.Generic.IDictionary<System.Type, System.IFormatProvider>)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.FastMember.Extension/ObjectMapper.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+    id: MapOnly
+    path: ../src/DotNetHelper.FastMember.Extension/ObjectMapper.cs
+    startLine: 146
+  assemblies:
+  - DotNetHelper.FastMember.Extension
+  namespace: DotNetHelper.FastMember.Extension
+  syntax:
+    content: public static T2 MapOnly<T1, T2>(T1 original, T2 copyCat, Expression<Func<T1, object>> includeProperties = null, bool exactTypeOnly = false, StringComparison comparer = StringComparison.CurrentCulture, IDictionary<Type, IFormatProvider> beforeMappinFormatProviders = null)
+    parameters:
+    - id: original
+      type: '{T1}'
+    - id: copyCat
+      type: '{T2}'
+    - id: includeProperties
+      type: System.Linq.Expressions.Expression{System.Func{{T1},System.Object}}
+    - id: exactTypeOnly
+      type: System.Boolean
+    - id: comparer
+      type: System.StringComparison
+    - id: beforeMappinFormatProviders
+      type: System.Collections.Generic.IDictionary{System.Type,System.IFormatProvider}
+    typeParameters:
+    - id: T1
+    - id: T2
+    return:
+      type: '{T2}'
+    content.vb: Public Shared Function MapOnly(Of T1, T2)(original As T1, copyCat As T2, includeProperties As Expression(Of Func(Of T1, Object)) = Nothing, exactTypeOnly As Boolean = False, comparer As StringComparison = StringComparison.CurrentCulture, beforeMappinFormatProviders As IDictionary(Of Type, IFormatProvider) = Nothing) As T2
+  overload: DotNetHelper.FastMember.Extension.ObjectMapper.MapOnly*
+  nameWithType.vb: ObjectMapper.MapOnly(Of T1, T2)(T1, T2, Expression(Of Func(Of T1, Object)), Boolean, StringComparison, IDictionary(Of Type, IFormatProvider))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: DotNetHelper.FastMember.Extension.ObjectMapper.MapOnly(Of T1, T2)(T1, T2, System.Linq.Expressions.Expression(Of System.Func(Of T1, System.Object)), System.Boolean, System.StringComparison, System.Collections.Generic.IDictionary(Of System.Type, System.IFormatProvider))
+  name.vb: MapOnly(Of T1, T2)(T1, T2, Expression(Of Func(Of T1, Object)), Boolean, StringComparison, IDictionary(Of Type, IFormatProvider))
+references:
+- uid: DotNetHelper.FastMember.Extension
+  commentId: N:DotNetHelper.FastMember.Extension
+  name: DotNetHelper.FastMember.Extension
+  nameWithType: DotNetHelper.FastMember.Extension
+  fullName: DotNetHelper.FastMember.Extension
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DotNetHelper.FastMember.Extension.ObjectMapper.MapProperties*
+  commentId: Overload:DotNetHelper.FastMember.Extension.ObjectMapper.MapProperties
+  name: MapProperties
+  nameWithType: ObjectMapper.MapProperties
+  fullName: DotNetHelper.FastMember.Extension.ObjectMapper.MapProperties
+- uid: '{T1}'
+  commentId: '!:T1'
+  definition: T1
+  name: T1
+  nameWithType: T1
+  fullName: T1
+- uid: '{T2}'
+  commentId: '!:T2'
+  definition: T2
+  name: T2
+  nameWithType: T2
+  fullName: T2
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.StringComparison
+  commentId: T:System.StringComparison
+  parent: System
+  isExternal: true
+  name: StringComparison
+  nameWithType: StringComparison
+  fullName: System.StringComparison
+- uid: System.Collections.Generic.IDictionary{System.Type,System.IFormatProvider}
+  commentId: T:System.Collections.Generic.IDictionary{System.Type,System.IFormatProvider}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IDictionary`2
+  name: IDictionary<Type, IFormatProvider>
+  nameWithType: IDictionary<Type, IFormatProvider>
+  fullName: System.Collections.Generic.IDictionary<System.Type, System.IFormatProvider>
+  nameWithType.vb: IDictionary(Of Type, IFormatProvider)
+  fullName.vb: System.Collections.Generic.IDictionary(Of System.Type, System.IFormatProvider)
+  name.vb: IDictionary(Of Type, IFormatProvider)
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    nameWithType: IDictionary
+    fullName: System.Collections.Generic.IDictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Type
+    name: Type
+    nameWithType: Type
+    fullName: System.Type
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    nameWithType: IFormatProvider
+    fullName: System.IFormatProvider
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    nameWithType: IDictionary
+    fullName: System.Collections.Generic.IDictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Type
+    name: Type
+    nameWithType: Type
+    fullName: System.Type
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    nameWithType: IFormatProvider
+    fullName: System.IFormatProvider
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: T1
+  name: T1
+  nameWithType: T1
+  fullName: T1
+- uid: T2
+  name: T2
+  nameWithType: T2
+  fullName: T2
+- uid: System.Collections.Generic.IDictionary`2
+  commentId: T:System.Collections.Generic.IDictionary`2
+  isExternal: true
+  name: IDictionary<TKey, TValue>
+  nameWithType: IDictionary<TKey, TValue>
+  fullName: System.Collections.Generic.IDictionary<TKey, TValue>
+  nameWithType.vb: IDictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.IDictionary(Of TKey, TValue)
+  name.vb: IDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    nameWithType: IDictionary
+    fullName: System.Collections.Generic.IDictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    nameWithType: IDictionary
+    fullName: System.Collections.Generic.IDictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: DotNetHelper.FastMember.Extension.ObjectMapper.MapPropertiesDontThrow*
+  commentId: Overload:DotNetHelper.FastMember.Extension.ObjectMapper.MapPropertiesDontThrow
+  name: MapPropertiesDontThrow
+  nameWithType: ObjectMapper.MapPropertiesDontThrow
+  fullName: DotNetHelper.FastMember.Extension.ObjectMapper.MapPropertiesDontThrow
+- uid: DotNetHelper.FastMember.Extension.ObjectMapper.MapExcept*
+  commentId: Overload:DotNetHelper.FastMember.Extension.ObjectMapper.MapExcept
+  name: MapExcept
+  nameWithType: ObjectMapper.MapExcept
+  fullName: DotNetHelper.FastMember.Extension.ObjectMapper.MapExcept
+- uid: System.Linq.Expressions.Expression{System.Func{{T1},System.Object}}
+  commentId: T:System.Linq.Expressions.Expression{System.Func{``0,System.Object}}
+  parent: System.Linq.Expressions
+  definition: System.Linq.Expressions.Expression`1
+  name: Expression<Func<T1, Object>>
+  nameWithType: Expression<Func<T1, Object>>
+  fullName: System.Linq.Expressions.Expression<System.Func<T1, System.Object>>
+  nameWithType.vb: Expression(Of Func(Of T1, Object))
+  fullName.vb: System.Linq.Expressions.Expression(Of System.Func(Of T1, System.Object))
+  name.vb: Expression(Of Func(Of T1, Object))
+  spec.csharp:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    nameWithType: Expression
+    fullName: System.Linq.Expressions.Expression
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    nameWithType: Expression
+    fullName: System.Linq.Expressions.Expression
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Linq.Expressions.Expression`1
+  commentId: T:System.Linq.Expressions.Expression`1
+  isExternal: true
+  name: Expression<TDelegate>
+  nameWithType: Expression<TDelegate>
+  fullName: System.Linq.Expressions.Expression<TDelegate>
+  nameWithType.vb: Expression(Of TDelegate)
+  fullName.vb: System.Linq.Expressions.Expression(Of TDelegate)
+  name.vb: Expression(Of TDelegate)
+  spec.csharp:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    nameWithType: Expression
+    fullName: System.Linq.Expressions.Expression
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TDelegate
+    nameWithType: TDelegate
+    fullName: TDelegate
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    nameWithType: Expression
+    fullName: System.Linq.Expressions.Expression
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TDelegate
+    nameWithType: TDelegate
+    fullName: TDelegate
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Linq.Expressions
+  commentId: N:System.Linq.Expressions
+  isExternal: true
+  name: System.Linq.Expressions
+  nameWithType: System.Linq.Expressions
+  fullName: System.Linq.Expressions
+- uid: DotNetHelper.FastMember.Extension.ObjectMapper.MapExceptDontThrow*
+  commentId: Overload:DotNetHelper.FastMember.Extension.ObjectMapper.MapExceptDontThrow
+  name: MapExceptDontThrow
+  nameWithType: ObjectMapper.MapExceptDontThrow
+  fullName: DotNetHelper.FastMember.Extension.ObjectMapper.MapExceptDontThrow
+- uid: DotNetHelper.FastMember.Extension.ObjectMapper.MapOnly*
+  commentId: Overload:DotNetHelper.FastMember.Extension.ObjectMapper.MapOnly
+  name: MapOnly
+  nameWithType: ObjectMapper.MapOnly
+  fullName: DotNetHelper.FastMember.Extension.ObjectMapper.MapOnly

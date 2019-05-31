@@ -1,0 +1,86 @@
+﻿#MAJOR version when you make incompatible API changes,
+#MINOR version when you add functionality in a backwards-compatible manner, and
+#PATCH version when you make backwards-compatible bug fixes.
+next-version: 1.0  # This property only serves as a base version
+assembly-versioning-scheme: MajorMinorPatch
+assembly-file-versioning-scheme: MajorMinorPatchTag
+assembly-informational-format: '{NuGetVersionV2}'
+mode: Mainline
+increment: Inherit
+continuous-delivery-fallback-tag: ci
+tag-prefix: '[vV]' # A regex which is used to trim git tags before processing (eg v1.0.0). Default is [vV]  
+major-version-bump-message: '\+semver:\s?(breaking|major)'
+minor-version-bump-message: '\+semver:\s?(feature|minor)'
+patch-version-bump-message: '\+semver:\s?(fix|patch)'
+no-bump-message: '\+semver:\s?(none|skip)' # example +semver: skip
+legacy-semver-padding: 4
+build-metadata-padding: 4
+commits-since-version-source-padding: 4
+commit-message-incrementing: Enabled # Sets whether it should be possible to increment the version with special syntax in the commit message   %Enabled, MergeMessageOnly and Disabled%
+commit-date-format: 'yyyy-MM-dd'
+#branches:
+#  master:
+#    regex: master
+#    mode: Mainline # https://gitversion.readthedocs.io/en/latest/reference/mainline-development/
+#    tag: ''
+#    increment: Major
+#    prevent-increment-of-merged-branch-version: true
+#    track-merge-target: false
+#    tracks-release-branches: false
+#    is-release-branch: true
+#    is-mainline: true
+#  release:
+#    regex: releases?[/-]
+#    mode: ContinuousDelivery
+#    tag: beta
+#    increment: Patch
+#    prevent-increment-of-merged-branch-version: true
+#    track-merge-target: false
+#    tracks-release-branches: false
+#    is-release-branch: true
+#  feature:
+#    regex: features?[/-]
+#    mode: ContinuousDelivery
+#    tag: useBranchName
+#    increment: Inherit
+#    prevent-increment-of-merged-branch-version: false
+#    track-merge-target: false
+#    tracks-release-branches: false
+#    is-release-branch: false
+#  pull-request:
+#    regex: (pull|pull\-requests|pr)[/-]
+#    mode: ContinuousDelivery
+#    tag: PullRequest
+#    increment: Inherit
+#    prevent-increment-of-merged-branch-version: false
+#    tag-number-pattern: '[/-](?<number>\d+)[-/]'
+#    track-merge-target: false
+#    tracks-release-branches: false
+#    is-release-branch: false
+#  hotfix:
+#    regex: hotfix(es)?[/-]
+#    mode: ContinuousDelivery
+#    tag: beta
+#    increment: Patch
+#    prevent-increment-of-merged-branch-version: false
+#    track-merge-target: false
+#    tracks-release-branches: false
+#    is-release-branch: false
+#  support:
+#    regex: support[/-]
+#    mode: ContinuousDelivery
+#    tag: ''
+#    increment: Patch
+#    prevent-increment-of-merged-branch-version: true # self-explantory
+#    track-merge-target: false
+#    tracks-release-branches: false #Indicates this branch config represents develop in GitFlow.
+#    is-release-branch: false #Indicates this branch config represents a release branch in GitFlow.
+#  develop:
+#    regex: dev(elop)?(ment)?$ #Regex expression to determine if the current branch is what we call a dev branch
+#    mode: ContinuousDeployment #Sets the mode of how GitVersion should create a new version.
+#    tag: unstable #This suffix that is appended to package name example : GitVersionExampleCore.1.0.0-unstable0015.nupkg
+#    increment: Minor #The type of Semantic versioning to increment : Major, Minor, Patch, None 
+#    prevent-increment-of-merged-branch-version: false # self-explantory
+#    track-merge-target: true
+#    tracks-release-branches: true #Indicates this branch config represents develop in GitFlow.
+#    is-release-branch: false #Indicates this branch config represents a release branch in GitFlow.

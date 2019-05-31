@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: DotNetHelper.FastMember.Extension.Exceptions
+  commentId: N:DotNetHelper.FastMember.Extension.Exceptions
+  id: DotNetHelper.FastMember.Extension.Exceptions
+  children:
+  - DotNetHelper.FastMember.Extension.Exceptions.PropertyMapException
+  langs:
+  - csharp
+  - vb
+  name: DotNetHelper.FastMember.Extension.Exceptions
+  nameWithType: DotNetHelper.FastMember.Extension.Exceptions
+  fullName: DotNetHelper.FastMember.Extension.Exceptions
+  type: Namespace
+  assemblies:
+  - DotNetHelper.FastMember.Extension
+references:
+- uid: DotNetHelper.FastMember.Extension.Exceptions.PropertyMapException
+  commentId: T:DotNetHelper.FastMember.Extension.Exceptions.PropertyMapException
+  name: PropertyMapException
+  nameWithType: PropertyMapException
+  fullName: DotNetHelper.FastMember.Extension.Exceptions.PropertyMapException

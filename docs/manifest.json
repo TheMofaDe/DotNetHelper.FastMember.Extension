@@ -1,0 +1,288 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Business/TheMoFaDe/Code/TheMofaDe/DotNetHelper.FastMember.Extension/docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotNetHelper.FastMember.Extension.Comparer.EqualityComparerString.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotNetHelper.FastMember.Extension.Comparer.EqualityComparerString.html",
+          "hash": "k7qUc2zoxYQeoR5H7Xo0FQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotNetHelper.FastMember.Extension.Comparer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotNetHelper.FastMember.Extension.Comparer.html",
+          "hash": "C9PESQc91Jn7GxDR6yvPOg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotNetHelper.FastMember.Extension.Exceptions.PropertyMapException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotNetHelper.FastMember.Extension.Exceptions.PropertyMapException.html",
+          "hash": "n5aird8sRyYH0XV19M57hQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotNetHelper.FastMember.Extension.Exceptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotNetHelper.FastMember.Extension.Exceptions.html",
+          "hash": "kDRm1CvbKAs+8Gyxg/H6VQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotNetHelper.FastMember.Extension.ExtFastMember.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotNetHelper.FastMember.Extension.ExtFastMember.html",
+          "hash": "72hx5/3PoG1p1kuwRzZQpg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.html",
+          "hash": "EvhNPVUMGEEBYIfh0F1QHQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotNetHelper.FastMember.Extension.Helpers.ExpressionHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotNetHelper.FastMember.Extension.Helpers.ExpressionHelper.html",
+          "hash": "o/TVJtTLcKWVUbHla0U3lA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotNetHelper.FastMember.Extension.Helpers.New-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotNetHelper.FastMember.Extension.Helpers.New-1.html",
+          "hash": "p8mks7ql/9urh66plCzG1g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotNetHelper.FastMember.Extension.Helpers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotNetHelper.FastMember.Extension.Helpers.html",
+          "hash": "xqGNjK3/xSbnYfe+wUJqhg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotNetHelper.FastMember.Extension.Models.AdvanceMember.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotNetHelper.FastMember.Extension.Models.AdvanceMember.html",
+          "hash": "uVhMoCH3eTZMPiwJ2sbKGg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.html",
+          "hash": "L1UdRcrr8XN/HlR16pqOuQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotNetHelper.FastMember.Extension.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotNetHelper.FastMember.Extension.Models.html",
+          "hash": "RUPNeNj46SKo6m0KeNyUew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotNetHelper.FastMember.Extension.ObjectMapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotNetHelper.FastMember.Extension.ObjectMapper.html",
+          "hash": "123XwjYFn7giScbQalQHHw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotNetHelper.FastMember.Extension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotNetHelper.FastMember.Extension.html",
+          "hash": "3cqGDR+dcuBX09BxuPa69g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/sample.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/sample.html",
+          "hash": "yWI0Y9EM5aJFvQB5xKt7yg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/icon.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/icon.png",
+          "link_to_path": "C:\\Business\\TheMoFaDe\\Code\\TheMofaDe\\DotNetHelper.FastMember.Extension\\docs/images/icon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "cZskbk7HpsJEzb3orfM0eg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "langwordmapping/langwordMapping.yml",
+      "output": {
+        "resource": {
+          "relative_path": "langwordmapping/langwordMapping.yml",
+          "link_to_path": "C:\\Business\\TheMoFaDe\\Code\\TheMofaDe\\DotNetHelper.FastMember.Extension\\docs/langwordmapping/langwordMapping.yml"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 14,
+          "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 2,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

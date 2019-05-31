@@ -1,0 +1,65 @@
+### YamlMime:ManagedReference
+items:
+- uid: DotNetHelper.FastMember.Extension.Helpers
+  commentId: N:DotNetHelper.FastMember.Extension.Helpers
+  id: DotNetHelper.FastMember.Extension.Helpers
+  children:
+  - DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper
+  - DotNetHelper.FastMember.Extension.Helpers.ExpressionHelper
+  - DotNetHelper.FastMember.Extension.Helpers.New`1
+  langs:
+  - csharp
+  - vb
+  name: DotNetHelper.FastMember.Extension.Helpers
+  nameWithType: DotNetHelper.FastMember.Extension.Helpers
+  fullName: DotNetHelper.FastMember.Extension.Helpers
+  type: Namespace
+  assemblies:
+  - DotNetHelper.FastMember.Extension
+references:
+- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper
+  commentId: T:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper
+  name: DynamicObjectHelper
+  nameWithType: DynamicObjectHelper
+  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper
+- uid: DotNetHelper.FastMember.Extension.Helpers.ExpressionHelper
+  commentId: T:DotNetHelper.FastMember.Extension.Helpers.ExpressionHelper
+  name: ExpressionHelper
+  nameWithType: ExpressionHelper
+  fullName: DotNetHelper.FastMember.Extension.Helpers.ExpressionHelper
+- uid: DotNetHelper.FastMember.Extension.Helpers.New`1
+  commentId: T:DotNetHelper.FastMember.Extension.Helpers.New`1
+  name: New<T>
+  nameWithType: New<T>
+  fullName: DotNetHelper.FastMember.Extension.Helpers.New<T>
+  nameWithType.vb: New(Of T)
+  fullName.vb: DotNetHelper.FastMember.Extension.Helpers.New(Of T)
+  name.vb: New(Of T)
+  spec.csharp:
+  - uid: DotNetHelper.FastMember.Extension.Helpers.New`1
+    name: New
+    nameWithType: New
+    fullName: DotNetHelper.FastMember.Extension.Helpers.New
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: DotNetHelper.FastMember.Extension.Helpers.New`1
+    name: New
+    nameWithType: New
+    fullName: DotNetHelper.FastMember.Extension.Helpers.New
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
