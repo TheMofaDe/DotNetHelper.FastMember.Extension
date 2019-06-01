@@ -2,18 +2,29 @@
 using System.ComponentModel;
 using System.Reflection;
 using DotNetHelper.FastMember.Extension.Extension;
+using DotNetHelper.FastMember.Extension.Interface;
 using FastMember;
 
 namespace DotNetHelper.FastMember.Extension.Models
 {
-    public class AdvanceMember
+    public class MemberWrapper : IMember
     {
-        public Member Member { get; }
-        
-        public AdvanceMember(Member member)
+        private Member Member { get; }
+
+        public string Name { get; }
+        public Type Type { get; }
+        public bool CanRead { get; }
+        public bool CanWrite { get; }
+
+        internal MemberWrapper(Member member) 
         {
             Member = member;
+            Name = Member.Name;
+            Type = Member.Type;
+            CanRead = Member.CanRead;
+            CanWrite = Member.CanWrite;
         }
+
 
         public T GetCustomAttribute<T>() where T : Attribute
         {
@@ -74,8 +85,7 @@ namespace DotNetHelper.FastMember.Extension.Models
         }
 
 
-    
-
+ 
     }
 
 

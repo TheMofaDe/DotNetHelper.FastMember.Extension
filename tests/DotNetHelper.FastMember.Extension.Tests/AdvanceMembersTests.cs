@@ -20,7 +20,7 @@ namespace Tests
         public void Test_AccessingPrivateMembers()
         {
             // FAST-MEMBER DOESN'T SUPPORT ACCESSING NON-PUBLIC PROPERTIES
-            var members = ExtFastMember.GetAdvanceMembers<PrivatePropertiesModel>(true);
+            var members = ExtFastMember.GetMemberWrappers<PrivatePropertiesModel>(true);
             Assert.AreEqual(0,members.Count);
         }
 
@@ -29,7 +29,7 @@ namespace Tests
         [Test]
         public void Test_AccessingPublicMembers()
         {
-            var members = ExtFastMember.GetAdvanceMembers<PublicPropertiesModel>(true);
+            var members = ExtFastMember.GetMemberWrappers<PublicPropertiesModel>(true);
             Assert.AreEqual(2, members.Count);
         }
 
@@ -47,18 +47,18 @@ namespace Tests
                 ,IsPublicProperty = true
                 ,NullBoolean = null
             };
-            var members = ExtFastMember.GetAdvanceMembers<PublicPropertiesNoAccessor>();
+            var members = ExtFastMember.GetMemberWrappers<PublicPropertiesNoAccessor>();
             foreach(var member in members)
             {
-                if (member.Member.Name == "FalseNullableBoolean")
+                if (member.Name == "FalseNullableBoolean")
                 {
                     Assert.AreEqual(member.GetValue(obj), false);
                 }
-                if (member.Member.Name == "IsPublicProperty")
+                if (member.Name == "IsPublicProperty")
                 {
                     Assert.AreEqual(member.GetValue(obj), true);
                 }
-                if (member.Member.Name == "NullBoolean")
+                if (member.Name == "NullBoolean")
                 {
                     Assert.AreEqual(member.GetValue(obj), null);
                 }
@@ -76,20 +76,20 @@ namespace Tests
                 ,
                 NullBoolean = null
             };
-            var members = ExtFastMember.GetAdvanceMembers<PublicPropertiesNoAccessor>();
+            var members = ExtFastMember.GetMemberWrappers<PublicPropertiesNoAccessor>();
             foreach (var member in members)
             {
-                if (member.Member.Name == "FalseNullableBoolean")
+                if (member.Name == "FalseNullableBoolean")
                 {
                     member.SetMemberValue(obj,null);
                     Assert.AreEqual(member.GetValue(obj), null);
                 }
-                if (member.Member.Name == "IsPublicProperty")
+                if (member.Name == "IsPublicProperty")
                 {
                     member.SetMemberValue(obj, false);
                     Assert.AreEqual(member.GetValue(obj), false);
                 }
-                if (member.Member.Name == "NullBoolean")
+                if (member.Name == "NullBoolean")
                 {
                     member.SetMemberValue(obj, true);
                     Assert.AreEqual(member.GetValue(obj),true);
@@ -107,8 +107,8 @@ namespace Tests
 
             Parallel.ForEach(ret, delegate(int i, ParallelLoopState state)
             {
-                ExtFastMember.GetAdvanceMembers(typeof(PublicPropertiesModel));
-                ExtFastMember.GetAdvanceMembers(typeof(PublicPropertiesNoAccessor));
+                ExtFastMember.GetMemberWrappers(typeof(PublicPropertiesModel));
+                ExtFastMember.GetMemberWrappers(typeof(PublicPropertiesNoAccessor));
             });
         }
 
@@ -148,7 +148,7 @@ namespace Tests
             dynamic dyn = new ExpandoObject();
             dyn.PropNumber1 = 1;
             dyn.PropNumber2 = 2;
-            var members = ExtFastMember.GetDynamicAdvanceMembers(dyn);
+            var members = ExtFastMember.GetDynamicMembers(dyn);
             Assert.AreEqual(2, members.Count);
         }
 
@@ -164,9 +164,9 @@ namespace Tests
             obj.IsPublicProperty = true;
             obj.NullBoolean = null;
              
-            var members = ExtFastMember.GetDynamicAdvanceMembers(obj);
+            var members = ExtFastMember.GetDynamicMembers(obj);
             
-            foreach (DynamicAdvanceMember member in members)
+            foreach (DynamicMember member in members)
             {
                 if (member.Name == "FalseNullableBoolean")
                 {
@@ -190,8 +190,8 @@ namespace Tests
             obj.FalseNullableBoolean = false;
             obj.IsPublicProperty = true;
             obj.NullBoolean = null;
-            var members = ExtFastMember.GetDynamicAdvanceMembers(obj);
-            foreach (DynamicAdvanceMember member in members)
+            var members = ExtFastMember.GetDynamicMembers(obj);
+            foreach (DynamicMember member in members)
             {
                 if (member.Name == "FalseNullableBoolean")
                 {

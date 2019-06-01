@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 
 namespace DotNetHelper.FastMember.Extension.Extension
 {
-    public static class TypeExtension
+    internal static class TypeExtension
     {
 
         public static bool HasDefaultConstructor(this Type t) => t.IsValueType || t.GetConstructor(Type.EmptyTypes) != null;
@@ -27,10 +27,6 @@ namespace DotNetHelper.FastMember.Extension.Extension
             return (false, type);
         }
 
-       //public static bool CanContainNullValue(this Type type)
-       //{
-       //
-       //}
 
         /// <summary>
         /// 

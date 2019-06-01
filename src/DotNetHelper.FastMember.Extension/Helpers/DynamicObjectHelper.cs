@@ -21,16 +21,15 @@ namespace DotNetHelper.FastMember.Extension.Helpers
 
         public static void RemoveProperty(ExpandoObject expandoObject, string propertyName)
         {
-            // ReSharper disable once UsePatternMatching
-            var x = expandoObject as IDictionary<string, object>;
-            if (x == null) return;
+            // ReSharper disable once UsePatternMatching 
+            if (!(expandoObject is IDictionary<string, object> x)) return;
             if (x.Keys.Contains(propertyName))
             {
                 x.Remove(propertyName);
             }
         }
 
-        public static void AddPropertyChangedHander(ExpandoObject expandoObject, PropertyChangedEventHandler action)
+        public static void AddPropertyChangedHandler(ExpandoObject expandoObject, PropertyChangedEventHandler action)
         {
             ((INotifyPropertyChanged)expandoObject).PropertyChanged += action;
         }
