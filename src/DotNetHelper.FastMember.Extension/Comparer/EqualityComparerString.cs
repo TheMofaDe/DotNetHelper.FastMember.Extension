@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace DotNetHelper.FastMember.Extension.Comparer
 {
-    public class EqualityComparerString : IEqualityComparer<string>
+    internal class EqualityComparerString : IEqualityComparer<string>
     {
 
         private StringComparison Comparer { get; }

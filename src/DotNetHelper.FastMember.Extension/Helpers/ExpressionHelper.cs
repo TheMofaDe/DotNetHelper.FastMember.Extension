@@ -5,7 +5,7 @@ using DotNetHelper.FastMember.Extension.Extension;
 
 namespace DotNetHelper.FastMember.Extension.Helpers
 {
-    public static class ExpressionHelper
+    internal static class ExpressionHelper
     {
 
         public static List<string> GetPropertyNamesFromExpressions<T>(this Expression<Func<T, object>>[] expression)

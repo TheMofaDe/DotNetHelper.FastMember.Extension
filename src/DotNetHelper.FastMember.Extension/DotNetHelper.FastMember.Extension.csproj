@@ -41,6 +41,10 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Attributes\" />
+  </ItemGroup>
+
 
 
 </Project>

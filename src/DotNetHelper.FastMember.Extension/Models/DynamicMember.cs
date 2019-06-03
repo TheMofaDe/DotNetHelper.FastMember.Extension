@@ -13,8 +13,6 @@ namespace DotNetHelper.FastMember.Extension.Models
         public Type Type { get; }
         public bool CanRead { get; } = true;
         public bool CanWrite { get; } = true;
-        //  public object Value { get; }
-
 
         public DynamicMember(string name, Type type)
         {
