@@ -27,7 +27,7 @@ namespace ConsoleApp1
             var members = accessor.GetMembers().ToList();
 
 
-            var members3 = ExtFastMember.GetDynamicAdvanceMembers(joe);
+          //  var members3 = ExtFastMember.GetDynamicAdvanceMembers(joe);
             //members.ForEach(delegate(Member member)
             //{
             //    var attr = member.GetAttribute(typeof(RequiredAttribute), true);

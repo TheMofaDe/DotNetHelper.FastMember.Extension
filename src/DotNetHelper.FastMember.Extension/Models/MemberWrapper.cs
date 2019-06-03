@@ -21,8 +21,24 @@ namespace DotNetHelper.FastMember.Extension.Models
             Member = member;
             Name = Member.Name;
             Type = Member.Type;
-            CanRead = Member.CanRead;
-            CanWrite = Member.CanWrite;
+            try
+            {
+                CanRead = Member.CanRead;
+            }
+            catch (NotSupportedException)
+            {
+                // we can still get and set the value of fields and if its read-only you compiler will stop it
+                CanRead = member.GetMemberInfo().MemberType == MemberTypes.Field;
+            }
+            try
+            {
+                CanRead = member.GetMemberInfo().MemberType == MemberTypes.Field;
+            }
+            catch (NotSupportedException)
+            {
+                CanWrite = false;
+            }
+
         }
 
 
