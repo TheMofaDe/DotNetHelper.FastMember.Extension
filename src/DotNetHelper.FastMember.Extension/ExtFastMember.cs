@@ -120,6 +120,11 @@ namespace DotNetHelper.FastMember.Extension
             poco.IsNullThrow(nameof(poco));
             propertyName.IsNullThrow(nameof(propertyName));
 
+            if (poco is IDynamicMetaObjectProvider dynamicobject)
+            {
+                DynamicObjectHelper.AddOrUpdateProperty((ExpandoObject) dynamicobject, propertyName, value);
+                return;
+            }
             var accessor = TypeAccessor.Create(typeof(T), true);
             var members = accessor.GetMembers().ToList();
             if (string.IsNullOrEmpty(propertyName) || !accessor.GetMembers().ToList().Exists(a => string.Equals(a.Name, propertyName, StringComparison.CurrentCultureIgnoreCase))) throw new InvalidOperationException("SetMemberValue Method Can't Work If You Pass It Null Object Or Invalid Property Name");
@@ -148,6 +153,8 @@ namespace DotNetHelper.FastMember.Extension
             }
             accessor[poco, propertyName] = value;
         }
+
+
 
 
 

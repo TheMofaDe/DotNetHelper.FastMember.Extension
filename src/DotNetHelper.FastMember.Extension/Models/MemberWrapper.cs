@@ -32,7 +32,7 @@ namespace DotNetHelper.FastMember.Extension.Models
             }
             try
             {
-                CanRead = member.GetMemberInfo().MemberType == MemberTypes.Field;
+                CanWrite = member.GetMemberInfo().MemberType == MemberTypes.Field;
             }
             catch (NotSupportedException)
             {
@@ -81,7 +81,23 @@ namespace DotNetHelper.FastMember.Extension.Models
 
             if (value == null)
             {
-                accessor[instanceOfObject, Member.Name] = null;
+                try
+                {
+                    accessor[instanceOfObject, Member.Name] = null;
+                }
+                catch (ArgumentOutOfRangeException e)
+                {
+                    if (typeof(T).IsTypeAnonymousType())
+                    {
+                        throw new InvalidOperationException(
+                            "Anonymous object are meant to hold values and is not mutable ", e);
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+
                 return;
             }
             if (value.GetType() != Member.Type) // TODO :: UNIT TEST FOR EVERY SINGLE SYSTEM TYPE

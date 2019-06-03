@@ -9,14 +9,25 @@ namespace DotNetHelper.FastMember.Extension.Helpers
     public static class DynamicObjectHelper
     {
 
-        public static void AddProperty(ExpandoObject expandoObject, string propertyName, object value)
+        public static void AddOrUpdateProperty(ExpandoObject expandoObject, string propertyName, object value)
         {
             var x = expandoObject as IDictionary<string, object>;
             if (x.Keys.Contains(propertyName))
             {
                 x[propertyName] = value;
+                return;
             }
             x.Add(propertyName, value);
+        }
+        public static void AddProperty(ExpandoObject expandoObject, string propertyName, object value)
+        {
+            var x = expandoObject as IDictionary<string, object>;
+            x.Add(propertyName, value);
+        }
+        public static void UpdateProperty(ExpandoObject expandoObject, string propertyName, object value)
+        {
+            var x = expandoObject as IDictionary<string, object>;
+            x[propertyName] = value;
         }
 
         public static void RemoveProperty(ExpandoObject expandoObject, string propertyName)
