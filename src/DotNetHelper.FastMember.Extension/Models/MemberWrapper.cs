@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Concurrent;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
 using DotNetHelper.FastMember.Extension.Extension;
@@ -9,8 +11,8 @@ namespace DotNetHelper.FastMember.Extension.Models
 {
     public class MemberWrapper : IMember
     {
-        private Member Member { get; }
-
+        private IDictionary<Type, object> CustomAttributeLookup { get; set; } = new ConcurrentDictionary<Type, object>();
+        internal Member Member { get; }
         public string Name { get; }
         public Type Type { get; }
         public bool CanRead { get; }
@@ -23,7 +25,7 @@ namespace DotNetHelper.FastMember.Extension.Models
             Type = Member.Type;
             try
             {
-                CanRead = Member.CanRead;
+                CanRead = Member.CanRead; 
             }
             catch (NotSupportedException)
             {
@@ -44,8 +46,22 @@ namespace DotNetHelper.FastMember.Extension.Models
 
         public T GetCustomAttribute<T>() where T : Attribute
         {
-            if (Member.IsDefined(typeof(T)))
-                return Member.GetMemberAttribute<T>(); // TODO :: CHECK TO SEE IF THIS RETURN NULL IF NOT DEFINED IF SO REMOVE THE CHECK ALSO WRITE UNIT TO ENSURE WE ARE NOTIFIED WHEN THIS FUNCTIONALITY CHANGES
+            var hasRecord = CustomAttributeLookup.TryGetValue(typeof(T), out var value);
+            if (hasRecord)
+            {
+                // ReSharper disable once UseNullPropagation
+                if (value == null) return null; 
+                return (T) value;
+            }
+            else
+            {
+                if (Member.IsDefined(typeof(T)))
+                {
+                    var customAttr = Member.GetMemberAttribute<T>(); // TODO :: CHECK TO SEE IF THIS RETURN NULL IF NOT DEFINED IF SO REMOVE THE CHECK ALSO WRITE UNIT TO ENSURE WE ARE NOTIFIED WHEN THIS FUNCTIONALITY CHANGES
+                    CustomAttributeLookup.Add(typeof(T), customAttr);
+                    return customAttr;
+                }
+            }
             return null;
         }
 
@@ -89,8 +105,7 @@ namespace DotNetHelper.FastMember.Extension.Models
                 {
                     if (typeof(T).IsTypeAnonymousType())
                     {
-                        throw new InvalidOperationException(
-                            "Anonymous object are meant to hold values and is not mutable ", e);
+                        throw new InvalidOperationException("Anonymous object are meant to hold values and is not mutable ", e);
                     }
                     else
                     {

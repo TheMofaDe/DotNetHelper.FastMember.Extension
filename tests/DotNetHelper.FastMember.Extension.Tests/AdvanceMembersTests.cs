@@ -66,7 +66,7 @@ namespace Tests
         }
 
         [Test]
-        public void Test_SetttingMemberValueFromObject()
+        public void Test_SettingMemberValueFromObject()
         {
             var obj = new PublicPropertiesNoAccessor()
             {
