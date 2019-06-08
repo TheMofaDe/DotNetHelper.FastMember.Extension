@@ -23,6 +23,10 @@ namespace ConsoleApp1
             dynamic joe = new ExpandoObject();
             joe.Home = "No";
             joe.Day = true;
+
+
+            var t = joe.GetType();
+            var test = ExtFastMember.GetMemberWrappers(t);
             var accessor =  TypeAccessor.Create(joe.GetType(), true);
             var members = accessor.GetMembers().ToList();
 

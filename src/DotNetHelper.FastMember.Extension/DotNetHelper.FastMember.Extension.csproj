@@ -21,6 +21,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Helpers\DynamicObjectHelper.cs" />
     <Compile Remove="Models\Property.cs" />
   </ItemGroup>
 

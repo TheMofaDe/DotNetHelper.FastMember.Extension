@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 
@@ -36,6 +37,11 @@ namespace DotNetHelper.FastMember.Extension.Extension
         public static bool IsTypeAnIEnumerable(this Type type)
         {
             return typeof(IEnumerable).IsAssignableFrom(type);
+        }
+
+        public static bool IsTypeDynamic(this Type type)
+        {
+            return typeof(IDynamicMetaObjectProvider).IsAssignableFrom(type);
         }
 
         public static bool IsTypeAnonymousType(this Type type)

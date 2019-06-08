@@ -6,7 +6,7 @@ using DotNetHelper.FastMember.Extension.Extension;
 
 namespace DotNetHelper.FastMember.Extension.Helpers
 {
-    public static class DynamicObjectHelper
+    public static class ExpandoObjectHelper
     {
 
         public static void AddOrUpdateProperty(ExpandoObject expandoObject, string propertyName, object value)

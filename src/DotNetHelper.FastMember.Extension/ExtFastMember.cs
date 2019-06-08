@@ -11,7 +11,7 @@ using FastMember;
 
 namespace DotNetHelper.FastMember.Extension
 {
-
+    // https://stackoverflow.com/questions/315146/anonymous-types-are-there-any-distingushing-characteristics
     public static class ExtFastMember
     {
 
@@ -34,7 +34,7 @@ namespace DotNetHelper.FastMember.Extension
             poco.IsNullThrow(nameof(poco));
 
             var list = new List<DynamicMember>() { };
-            var props = DynamicObjectHelper.GetProperties(poco as ExpandoObject);
+            var props = new DynamicObjectHelper().GetDynamicMemberNameAndValues(poco);
 
             props.ForEach(delegate (KeyValuePair<string, object> pair)
             {
@@ -85,7 +85,7 @@ namespace DotNetHelper.FastMember.Extension
         /// <returns>A List Of Advance Members Of T</returns>
         public static List<MemberWrapper> GetMemberWrappers<T>(bool includeNonPublicAccessor = true) where T : class
         {
-            if (typeof(T) == typeof(ExpandoObject) || typeof(IDynamicMetaObjectProvider).IsAssignableFrom(typeof(T)))
+            if (typeof(T).IsTypeDynamic())
                 throw new InvalidOperationException("Method : GetAdvanceMembers doesn't support dynamic objects please use GetDynamicAdvanceMembers instead.");
 
             var type = typeof(T);
@@ -122,7 +122,7 @@ namespace DotNetHelper.FastMember.Extension
 
             if (poco is IDynamicMetaObjectProvider dynamicobject)
             {
-                DynamicObjectHelper.AddOrUpdateProperty((ExpandoObject) dynamicobject, propertyName, value);
+                new DynamicObjectHelper().TrySetMember(dynamicobject, propertyName, value);
                 return;
             }
             var accessor = TypeAccessor.Create(typeof(T), true);
