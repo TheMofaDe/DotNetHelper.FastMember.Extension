@@ -19,24 +19,30 @@ Works with dynamic, generics, and anonymous types
 
 
 
-## Set Dynamic, Generics, and Anonymous Object Values 
+## GET & SET Dynamic, Generics, and Anonymous Object Values 
 ```csharp
 public class Employee {
       public FirstName { get; set; }
       public LastName  { get; set; }
 }
 
-// SET AS GENERIC
-          var employee = new Employee(){ FirstName = "Joseph" };
-          ExtFastMember.SetMemberValue(employee,"FirstName","Joseph");
-// SET AS DYNAMIC 
-          var employee = new ExpandoObject();
-          ExtFastMember.SetMemberValue(employee,"FirstName","Joseph");
-// SET AS ANONYMOUS
-          var employee = new { FirstName = "YEET"};
-          ExtFastMember.SetMemberValue(employee,"FirstName","Joseph"); 
-          // NOT SUPPORTED THROWS EXCEPTION SEE https://stackoverflow.com/a/30242237/2445462          
+// CREATE A GENERIC, DYNAMIC, & ANONYMOUS OBJECT 
+            var employee = new Employee() { FirstName = "generic" };
+            dynamic dynamicEmployee = new ExpandoObject();
+            var anonymousEmployee = new { FirstName = "I'm so Anonymous" };
+
+// SET PROPERTY VALUE FOR GENERICS & DYNAMICS OBJECTS
+            ExtFastMember.SetMemberValue(employee, "FirstName", "I'm so generic");
+            ExtFastMember.SetMemberValue(dynamicEmployee, "FirstName", "I'm so Dynamic");
+
+// GET PROPERTY VALUES FOR GENERICS & DYNAMICS & ANONYMOUS OBJECTS
+            Console.WriteLine(ExtFastMember.GetMemberValue(employee,"FirstName")); // PRINTS : I'm so generic
+            Console.WriteLine(ExtFastMember.GetMemberValue(dynamicEmployee, "FirstName"));  // PRINTS : I'm so Dynamic
+            Console.WriteLine(ExtFastMember.GetMemberValue(anonymousEmployee, "FirstName"));  // PRINTS : I'm so Anonymous
 ```
+
+
+`
 
 
 

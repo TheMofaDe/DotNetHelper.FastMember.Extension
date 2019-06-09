@@ -14,7 +14,6 @@ namespace DotNetHelper.FastMember.Extension
     public static class ExtFastMember
     {
 
-      //  public static IDictionary<T, List<AdvanceMember>> AttributeLookup { get; } = new Dictionary<string, List<AdvanceMember>>();
         private static IDictionary<string, List<MemberWrapper>> Lookup { get; } = new Dictionary<string, List<MemberWrapper>>();
 
         private static object Lock { get; } = new object();
@@ -190,8 +189,16 @@ namespace DotNetHelper.FastMember.Extension
 
 
 
-
-
+        public static object GetMemberValue<T>(T instance,string key) where T : class
+        {
+            if (typeof(T).IsTypeDynamic())
+                return GetMemberValue((IDynamicMetaObjectProvider)instance, key);
+            return GetMemberWrappers<T>(true).FirstOrDefault(w => w.Name == key)?.GetValue(instance);
+        }
+        public static object GetMemberValue(IDynamicMetaObjectProvider instance, string key) 
+        {
+            return GetMemberWrappers<IDynamicMetaObjectProvider>(instance).FirstOrDefault(w => w.Name == key)?.GetValue(instance);
+        }
 
     }
 }

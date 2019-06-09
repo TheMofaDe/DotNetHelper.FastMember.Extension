@@ -248,6 +248,34 @@ namespace Tests
 
 
         [Test]
+        public void Test_Set_Member_Value_From_Dynamic_Object_Level_When_Member_Doesnt_Exist()
+        {
+            dynamic obj = new ExpandoObject();
+
+            var members = ExtFastMember.GetMemberWrappers(obj);
+
+            ExtFastMember.SetMemberValue(obj, "FalseNullableBoolean", null);
+            ExtFastMember.SetMemberValue(obj, "IsPublicProperty", false);
+            ExtFastMember.SetMemberValue(obj, "NullBoolean", true);
+            foreach (MemberWrapper member in members)
+            {
+                if (member.Name == "FalseNullableBoolean")
+                {
+                    Assert.AreEqual(member.GetValue(obj), null);
+                }
+                if (member.Name == "IsPublicProperty")
+                {
+                    Assert.AreEqual(member.GetValue(obj), false);
+                }
+                if (member.Name == "NullBoolean")
+                {
+                    Assert.AreEqual(member.GetValue(obj), true);
+                }
+            }
+        }
+
+
+        [Test]
         public void Test_Set_Member_Value_From_Dynamic_Object_Level_With_Property_Not_Existing()
         {
             dynamic obj = new ExpandoObject();

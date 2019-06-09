@@ -13,71 +13,25 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            var employee = new Employee()
-            {
-                DOB = DateTime.Now
-                ,Name =  "Joe"
-            };
-          
 
-            dynamic joe = new ExpandoObject();
-            joe.Home = "No";
-            joe.Day = true;
+            // CREATE A GENERIC, DYNAMIC, & ANONYMOUS OBJECT 
+            var employee = new Employee() { FirstName = "generic" };
+            dynamic dynamicEmployee = new ExpandoObject();
+            var anonymousEmployee = new { FirstName = "I'm so Anonymous" };
 
+            // SET PROPERTY VALUE FOR GENERICS & DYNAMICS OBJECTS
+            ExtFastMember.SetMemberValue(employee, "FirstName", "I'm so generic");
+            ExtFastMember.SetMemberValue(dynamicEmployee, "FirstName", "I'm so Dynamic");
 
-            var t = joe.GetType();
-        
-            var accessor =  TypeAccessor.Create(joe.GetType(), true);
-            var members = accessor.GetMembers().ToList();
+            // GET PROPERTY VALUES FOR GENERICS & DYNAMICS & ANONYMOUS OBJECTS
+            Console.WriteLine(ExtFastMember.GetMemberValue(employee,"FirstName")); // PRINTS : I'm so generic
+            Console.WriteLine(ExtFastMember.GetMemberValue(dynamicEmployee, "FirstName"));  // PRINTS : I'm so Dynamic
+            Console.WriteLine(ExtFastMember.GetMemberValue(anonymousEmployee, "FirstName"));  // PRINTS : I'm so Anonymous
 
-            
-
-          //  var members3 = ExtFastMember.GetDynamicAdvanceMembers(joe);
-            //members.ForEach(delegate(Member member)
-            //{
-            //    var attr = member.GetAttribute(typeof(RequiredAttribute), true);
-            //    var attrNotInherit = member.GetAttribute(typeof(RequiredAttribute), false);
-            //    var a = member.IsDefined(typeof(RequiredAttribute));
-            //    var b = member.IsDefined(typeof(KeyAttribute));
-            //    var c = GetMemberAttribute<RequiredAttribute>(member);
-            //    var key = member.GetAttribute(typeof(KeyAttribute), true);
-            //    var keyNotInherit = member.GetAttribute(typeof(KeyAttribute), false);
-            //});
-
-            Console.ReadLine();
         }
 
 
-        public static void DynamicsOnly<T>(T obj) where T : IDynamicMetaObjectProvider
-        {
 
-        } 
-
-        public static T GetPrivateField<T>( object obj, string name)
-        {
-            BindingFlags flags = BindingFlags.Instance | BindingFlags.NonPublic;
-            Type type = obj.GetType();
-            FieldInfo field = type.GetField(name, flags);
-            return (T)field.GetValue(obj);
-        }
-
-        public static T GetPrivateProperty<T>( object obj, string name)
-        {
-            BindingFlags flags = BindingFlags.Instance | BindingFlags.NonPublic;
-            Type type = obj.GetType();
-            PropertyInfo field = type.GetProperty(name, flags);
-            return (T)field.GetValue(obj, null);
-        }
-
-        public static MemberInfo GetMemberInfo( Member member)
-        {
-            return GetPrivateField<MemberInfo>(member, "member");
-        }
-
-        public static T GetMemberAttribute<T>( Member member) where T : Attribute
-        {
-            return GetPrivateField<MemberInfo>(member, "member").GetCustomAttribute<T>();
-        }
 
     }
 
@@ -86,7 +40,7 @@ namespace ConsoleApp1
     public class Employee
     {
         [Required]
-        public string Name { get; set; }
+        public string FirstName { get; set; }
         [Key]
         public DateTime? DOB { get; set; }
     }
