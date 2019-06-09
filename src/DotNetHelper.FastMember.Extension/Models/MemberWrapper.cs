@@ -2,21 +2,23 @@
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Dynamic;
 using System.Reflection;
 using DotNetHelper.FastMember.Extension.Extension;
-using DotNetHelper.FastMember.Extension.Interface;
+using DotNetHelper.FastMember.Extension.Helpers;
 using FastMember;
 
 namespace DotNetHelper.FastMember.Extension.Models
 {
-    public class MemberWrapper : IMember
+    public class MemberWrapper 
     {
         private IDictionary<Type, object> CustomAttributeLookup { get; set; } = new ConcurrentDictionary<Type, object>();
-        internal Member Member { get; }
+        private Member Member { get; }
         public string Name { get; }
         public Type Type { get; }
         public bool CanRead { get; }
         public bool CanWrite { get; }
+        public bool IsADynamicMember { get; } = false;
 
         internal MemberWrapper(Member member) 
         {
@@ -44,8 +46,24 @@ namespace DotNetHelper.FastMember.Extension.Models
         }
 
 
+        /// <summary>
+        /// Only use this for IDynamicMetaObjectProvider types. Initializes a new instance of the <see cref="MemberWrapper"/> class.
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="type"></param>
+        internal MemberWrapper(string name, Type type)
+        {
+            Name = name;
+            Type = type;
+            CanRead = true;
+            CanWrite = true;
+            IsADynamicMember = true;
+        }
+
+
         public T GetCustomAttribute<T>() where T : Attribute
         {
+            if (IsADynamicMember) return null; // 
             var hasRecord = CustomAttributeLookup.TryGetValue(typeof(T), out var value);
             if (hasRecord)
             {
@@ -67,68 +85,58 @@ namespace DotNetHelper.FastMember.Extension.Models
 
         public MemberInfo GetMemberInfo()
         {
+            if(IsADynamicMember) throw new InvalidOperationException("Can't retrieve MemberInfo from dynamic objects");
             return Member.GetMemberInfo();
         }
 
         public object GetValue(object instanceOfObject)
         {
+            if (instanceOfObject is IDynamicMetaObjectProvider dynamicInstance)
+            {
+                var helper = new DynamicObjectHelper();
+                helper.TryGetMember(dynamicInstance, Name, out var value);
+                return value;
+            }
             var accessor = TypeAccessor.Create(instanceOfObject.GetType(), true);
-            return accessor[instanceOfObject, Member.Name];
+            return accessor[instanceOfObject, Name];
         }
         public object GetValue(object instanceOfObject, TypeAccessor accessor)
         {
-            return accessor[instanceOfObject, Member.Name];
+            if (instanceOfObject is IDynamicMetaObjectProvider dynamicInstance)
+            {
+                var helper = new DynamicObjectHelper();
+                helper.TryGetMember(dynamicInstance, Name, out var value);
+                return value;
+            }
+            accessor.IsNullThrow(nameof(accessor)); // TODO :: UNIT TEST ENSURE IT THROWS
+            return accessor[instanceOfObject, Name];
         }
 
         public object GetValue<T>(T instanceOfObject) where T : class
         {
+            if (instanceOfObject is IDynamicMetaObjectProvider dynamicInstance)
+            {
+                var helper = new DynamicObjectHelper();
+                helper.TryGetMember(dynamicInstance, Name, out var value);
+                return value;
+            }
             var accessor = TypeAccessor.Create(typeof(T), true);
-            return accessor[instanceOfObject, Member.Name];
+            return accessor[instanceOfObject, Name];
         }
         public object GetValue<T>(T instanceOfObject, TypeAccessor accessor) where T : class
         {
-            return accessor[instanceOfObject, Member.Name];
+            if (instanceOfObject is IDynamicMetaObjectProvider dynamicInstance)
+            {
+                var helper = new DynamicObjectHelper();
+                helper.TryGetMember(dynamicInstance, Name, out var value);
+                return value;
+            }
+            return accessor[instanceOfObject, Name];
         }
 
         public void SetMemberValue<T>(T instanceOfObject, object value)
         {
-            instanceOfObject.IsNullThrow(nameof(instanceOfObject));
-            var accessor = TypeAccessor.Create(typeof(T), true);
-
-            if (value == null)
-            {
-                try
-                {
-                    accessor[instanceOfObject, Member.Name] = null;
-                }
-                catch (ArgumentOutOfRangeException e)
-                {
-                    if (typeof(T).IsTypeAnonymousType())
-                    {
-                        throw new InvalidOperationException("Anonymous object are meant to hold values and is not mutable ", e);
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-
-                return;
-            }
-            if (value.GetType() != Member.Type) // TODO :: UNIT TEST FOR EVERY SINGLE SYSTEM TYPE
-            {
-                if (Member.Type == typeof(DateTimeOffset) || Member.Type == typeof(DateTimeOffset?))
-                {
-                    value = TypeDescriptor.GetConverter(Member.Type).ConvertFrom(value);
-                }
-                else
-                {
-                    value = Member.Type.IsEnum
-                        ? System.Enum.Parse(Member.Type.IsNullable().underlyingType, value.ToString(), true)
-                        : Convert.ChangeType(value, Member.Type.IsNullable().underlyingType, null);
-                }
-            }
-            accessor[instanceOfObject, Member.Name] = value;
+            ExtFastMember.SetMemberValue(instanceOfObject,Name,value);
         }
 
 

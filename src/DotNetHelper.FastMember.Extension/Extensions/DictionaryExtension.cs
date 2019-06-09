@@ -30,17 +30,6 @@ namespace DotNetHelper.FastMember.Extension.Extension
 
 #endif
 
-        public static DataTable MapToDataTable(this IDictionary<string, object> dictionary, string tableName = null)
-        {
-            var dataTable = new DataTable(tableName);
-            for (var i = 0; i < dictionary.Keys.Count; i++)
-            {
-                dataTable.Columns.Add(dictionary.Keys.AsList()[i], dictionary.Values.AsList()[i].GetType());
-            }
-            var dataRow = dataTable.NewRow();
-            dataRow.ItemArray = dictionary.Values.Select(a => a ?? DBNull.Value).ToArray();
-            dataTable.Rows.Add(dataRow);
-            return dataTable;
-        }
+
     }
 }

@@ -9,17 +9,6 @@ namespace DotNetHelper.FastMember.Extension.Extension
     {
 
 
-        /// <summary>
-        /// 
-        /// </summary> 
-        /// <param name="source"></param>
-        /// <param name="whereClause"></param>
-        /// <returns></returns>
-        public static bool IsNullOrEmpty<T>(this List<T> source, Func<T, bool> whereClause = null)
-        {
-            if (whereClause == null) return source == null || !source.Any();
-            return source == null || !source.Any(whereClause);
-        }
 
 
         /// <summary>

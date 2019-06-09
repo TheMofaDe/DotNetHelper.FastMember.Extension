@@ -26,10 +26,11 @@ namespace ConsoleApp1
 
 
             var t = joe.GetType();
-            var test = ExtFastMember.GetMemberWrappers(t);
+        
             var accessor =  TypeAccessor.Create(joe.GetType(), true);
             var members = accessor.GetMembers().ToList();
 
+            
 
           //  var members3 = ExtFastMember.GetDynamicAdvanceMembers(joe);
             //members.ForEach(delegate(Member member)

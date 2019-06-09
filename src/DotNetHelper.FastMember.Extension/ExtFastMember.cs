@@ -5,7 +5,6 @@ using System.Dynamic;
 using System.Linq;
 using DotNetHelper.FastMember.Extension.Extension;
 using DotNetHelper.FastMember.Extension.Helpers;
-using DotNetHelper.FastMember.Extension.Interface;
 using DotNetHelper.FastMember.Extension.Models;
 using FastMember;
 
@@ -21,36 +20,14 @@ namespace DotNetHelper.FastMember.Extension
         private static object Lock { get; } = new object();
 
 
-
-
         /// <summary>
         /// 
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        /// <param name="poco">If Null Default Value Will Be Used For Members</param>
-        /// <returns>A List Of Advance Members Of T</returns>
-        public static List<DynamicMember> GetDynamicMembers<T>(T poco) where T : IDynamicMetaObjectProvider
-        {
-            poco.IsNullThrow(nameof(poco));
-
-            var list = new List<DynamicMember>() { };
-            var props = new DynamicObjectHelper().GetDynamicMemberNameAndValues(poco);
-
-            props.ForEach(delegate (KeyValuePair<string, object> pair)
-            {
-                var keyType = pair.Value == null ? typeof(object) : pair.Value.GetType();
-                list.Add(new DynamicMember(pair.Key,keyType));
-            });
-            return list;
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
+        /// <param name="type"></param>
         /// <param name="includeNonPublicAccessor"></param>
         /// <returns>A List Of Advance Members Of T</returns>
-        public static List<MemberWrapper> GetMemberWrappers(Type type, bool includeNonPublicAccessor = true)
+        public static List<MemberWrapper> GetMemberWrappers(Type type, bool includeNonPublicAccessor)
         {
             type.IsNullThrow(nameof(type));
             // ReSharper disable once AssignNullToNotNullAttribute
@@ -79,11 +56,32 @@ namespace DotNetHelper.FastMember.Extension
         /// <summary>
         /// 
         /// </summary>
+        /// <param name="dynamicObject"></param>
+        /// <returns>A List Of Advance Members Of T</returns>
+        public static List<MemberWrapper> GetMemberWrappers(IDynamicMetaObjectProvider dynamicObject)
+        {
+            var list = new List<MemberWrapper>() { };
+              
+                    var dynamicObjectHelper = new DynamicObjectHelper();
+                    dynamicObjectHelper.GetDynamicMemberNameAndValues(dynamicObject).ForEach(
+                        delegate (KeyValuePair<string, object> pair)
+                        {
+                            var advance = new MemberWrapper(pair.Key, pair.Value == null ? typeof(object) : pair.Value.GetType()) { };
+                            list.Add(advance);
+                        });
+
+            return list;
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="poco">If Null Default Value Will Be Used For Members</param>
         /// <param name="includeNonPublicAccessor"></param>
         /// <returns>A List Of Advance Members Of T</returns>
-        public static List<MemberWrapper> GetMemberWrappers<T>(bool includeNonPublicAccessor = true) where T : class
+        public static List<MemberWrapper> GetMemberWrappers<T>(bool includeNonPublicAccessor) where T : class
         {
             if (typeof(T).IsTypeDynamic())
                 throw new InvalidOperationException("Method : GetAdvanceMembers doesn't support dynamic objects please use GetDynamicAdvanceMembers instead.");
@@ -112,7 +110,25 @@ namespace DotNetHelper.FastMember.Extension
             }
         }
 
-   
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <returns>A List Of Advance Members Of T</returns>
+        public static List<MemberWrapper> GetMemberWrappers<T>(T dynamicObject) where T : IDynamicMetaObjectProvider
+        {
+            var list = new List<MemberWrapper>() { };
+
+            var dynamicObjectHelper = new DynamicObjectHelper();
+            dynamicObjectHelper.GetDynamicMemberNameAndValues(dynamicObject).ForEach(
+                delegate (KeyValuePair<string, object> pair)
+                {
+                    var advance = new MemberWrapper(pair.Key, pair.Value == null ? typeof(object) : pair.Value.GetType()) { };
+                    list.Add(advance);
+                });
+
+            return list;
+        }
 
 
         public static void SetMemberValue<T>(T poco, string propertyName, object value)
@@ -131,9 +147,27 @@ namespace DotNetHelper.FastMember.Extension
 
             var needToBeType = members.First(m => m.Name == propertyName).Type;
 
+            void SetValue(object propertyValue)
+            {
+                try
+                {
+                    accessor[poco, propertyName] = propertyValue;
+                }
+                catch (ArgumentOutOfRangeException e)
+                {
+                    if (typeof(T).IsTypeAnonymousType())
+                    {
+                        throw new InvalidOperationException("Anonymous object are meant to hold values and is not mutable ", e);
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+            }
             if (value == null)
             {
-                accessor[poco, propertyName] = null;
+                SetValue(null);
                 return;
             }
             if (value.GetType() != needToBeType)
@@ -146,12 +180,12 @@ namespace DotNetHelper.FastMember.Extension
                 else
                 {
                     value = needToBeType.IsEnum
-                        ? System.Enum.Parse(needToBeType.IsNullable().underlyingType, value.ToString(), true)
+                        ? Enum.Parse(needToBeType.IsNullable().underlyingType, value.ToString(), true)
                         : Convert.ChangeType(value, needToBeType.IsNullable().underlyingType, null);
                 }
 
             }
-            accessor[poco, propertyName] = value;
+            SetValue(value);
         }
 
 
