@@ -5,7 +5,6 @@ items:
   id: DotNetHelper.FastMember.Extension.Helpers
   children:
   - DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper
-  - DotNetHelper.FastMember.Extension.Helpers.ExpressionHelper
   - DotNetHelper.FastMember.Extension.Helpers.New`1
   langs:
   - csharp
@@ -22,11 +21,6 @@ references:
   name: DynamicObjectHelper
   nameWithType: DynamicObjectHelper
   fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper
-- uid: DotNetHelper.FastMember.Extension.Helpers.ExpressionHelper
-  commentId: T:DotNetHelper.FastMember.Extension.Helpers.ExpressionHelper
-  name: ExpressionHelper
-  nameWithType: ExpressionHelper
-  fullName: DotNetHelper.FastMember.Extension.Helpers.ExpressionHelper
 - uid: DotNetHelper.FastMember.Extension.Helpers.New`1
   commentId: T:DotNetHelper.FastMember.Extension.Helpers.New`1
   name: New<T>

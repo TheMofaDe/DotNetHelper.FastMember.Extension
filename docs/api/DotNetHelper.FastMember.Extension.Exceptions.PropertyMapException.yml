@@ -20,7 +20,7 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/Exceptions/PropertyMapException.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
     id: PropertyMapException
     path: ../src/DotNetHelper.FastMember.Extension/Exceptions/PropertyMapException.cs
     startLine: 9
@@ -65,6 +65,9 @@ items:
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.MemberwiseClone
+  extensionMethods:
+  - System.Object.DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField``1(System.String)
+  - System.Object.DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty``1(System.String)
   attributes:
   - type: System.SerializableAttribute
     ctor: System.SerializableAttribute.#ctor
@@ -90,7 +93,7 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/Exceptions/PropertyMapException.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
     id: .ctor
     path: ../src/DotNetHelper.FastMember.Extension/Exceptions/PropertyMapException.cs
     startLine: 16
@@ -122,7 +125,7 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/Exceptions/PropertyMapException.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
     id: .ctor
     path: ../src/DotNetHelper.FastMember.Extension/Exceptions/PropertyMapException.cs
     startLine: 26
@@ -158,7 +161,7 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/Exceptions/PropertyMapException.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
     id: .ctor
     path: ../src/DotNetHelper.FastMember.Extension/Exceptions/PropertyMapException.cs
     startLine: 37
@@ -197,7 +200,7 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/Exceptions/PropertyMapException.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
     id: .ctor
     path: ../src/DotNetHelper.FastMember.Extension/Exceptions/PropertyMapException.cs
     startLine: 50
@@ -685,6 +688,90 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Object.DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField``1(System.String)
+  commentId: M:DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField``1(System.Object,System.String)
+  parent: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension
+  definition: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField``1(System.Object,System.String)
+  name: GetPrivateField<T>(String)
+  nameWithType: FastMemberExtension.GetPrivateField<T>(String)
+  fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField<T>(System.String)
+  nameWithType.vb: FastMemberExtension.GetPrivateField(Of T)(String)
+  fullName.vb: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField(Of T)(System.String)
+  name.vb: GetPrivateField(Of T)(String)
+  spec.csharp:
+  - uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField``1(System.String)
+    name: GetPrivateField<T>
+    nameWithType: FastMemberExtension.GetPrivateField<T>
+    fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField``1(System.String)
+    name: GetPrivateField(Of T)
+    nameWithType: FastMemberExtension.GetPrivateField(Of T)
+    fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty``1(System.String)
+  commentId: M:DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty``1(System.Object,System.String)
+  parent: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension
+  definition: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty``1(System.Object,System.String)
+  name: GetPrivateProperty<T>(String)
+  nameWithType: FastMemberExtension.GetPrivateProperty<T>(String)
+  fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty<T>(System.String)
+  nameWithType.vb: FastMemberExtension.GetPrivateProperty(Of T)(String)
+  fullName.vb: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty(Of T)(System.String)
+  name.vb: GetPrivateProperty(Of T)(String)
+  spec.csharp:
+  - uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty``1(System.String)
+    name: GetPrivateProperty<T>
+    nameWithType: FastMemberExtension.GetPrivateProperty<T>
+    fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty``1(System.String)
+    name: GetPrivateProperty(Of T)
+    nameWithType: FastMemberExtension.GetPrivateProperty(Of T)
+    fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -703,6 +790,131 @@ references:
   name: System.Runtime.InteropServices
   nameWithType: System.Runtime.InteropServices
   fullName: System.Runtime.InteropServices
+- uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField``1(System.Object,System.String)
+  commentId: M:DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField``1(System.Object,System.String)
+  isExternal: true
+  name: GetPrivateField<T>(Object, String)
+  nameWithType: FastMemberExtension.GetPrivateField<T>(Object, String)
+  fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField<T>(System.Object, System.String)
+  nameWithType.vb: FastMemberExtension.GetPrivateField(Of T)(Object, String)
+  fullName.vb: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField(Of T)(System.Object, System.String)
+  name.vb: GetPrivateField(Of T)(Object, String)
+  spec.csharp:
+  - uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField``1(System.Object,System.String)
+    name: GetPrivateField<T>
+    nameWithType: FastMemberExtension.GetPrivateField<T>
+    fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField``1(System.Object,System.String)
+    name: GetPrivateField(Of T)
+    nameWithType: FastMemberExtension.GetPrivateField(Of T)
+    fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension
+  commentId: T:DotNetHelper.FastMember.Extension.Extension.FastMemberExtension
+  parent: DotNetHelper.FastMember.Extension.Extension
+  name: FastMemberExtension
+  nameWithType: FastMemberExtension
+  fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension
+- uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty``1(System.Object,System.String)
+  commentId: M:DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty``1(System.Object,System.String)
+  isExternal: true
+  name: GetPrivateProperty<T>(Object, String)
+  nameWithType: FastMemberExtension.GetPrivateProperty<T>(Object, String)
+  fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty<T>(System.Object, System.String)
+  nameWithType.vb: FastMemberExtension.GetPrivateProperty(Of T)(Object, String)
+  fullName.vb: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty(Of T)(System.Object, System.String)
+  name.vb: GetPrivateProperty(Of T)(Object, String)
+  spec.csharp:
+  - uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty``1(System.Object,System.String)
+    name: GetPrivateProperty<T>
+    nameWithType: FastMemberExtension.GetPrivateProperty<T>
+    fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty``1(System.Object,System.String)
+    name: GetPrivateProperty(Of T)
+    nameWithType: FastMemberExtension.GetPrivateProperty(Of T)
+    fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DotNetHelper.FastMember.Extension.Extension
+  commentId: N:DotNetHelper.FastMember.Extension.Extension
+  name: DotNetHelper.FastMember.Extension.Extension
+  nameWithType: DotNetHelper.FastMember.Extension.Extension
+  fullName: DotNetHelper.FastMember.Extension.Extension
 - uid: DotNetHelper.FastMember.Extension.Exceptions.PropertyMapException.#ctor*
   commentId: Overload:DotNetHelper.FastMember.Extension.Exceptions.PropertyMapException.#ctor
   name: PropertyMapException

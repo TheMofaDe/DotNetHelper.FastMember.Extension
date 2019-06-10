@@ -5,13 +5,11 @@ items:
   id: DynamicObjectHelper
   parent: DotNetHelper.FastMember.Extension.Helpers
   children:
-  - DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.AddProperty(System.Dynamic.ExpandoObject,System.String,System.Object)
-  - DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.AddPropertyChangedHander(System.Dynamic.ExpandoObject,System.ComponentModel.PropertyChangedEventHandler)
-  - DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetProperties(System.Dynamic.ExpandoObject)
-  - DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetPropertyValue(System.Dynamic.ExpandoObject,System.String,System.Boolean)
-  - DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.RemoveProperty(System.Dynamic.ExpandoObject,System.String)
-  - DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.ToDataReader(System.Dynamic.ExpandoObject)
-  - DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.ToDataTable(System.Dynamic.ExpandoObject)
+  - DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.#ctor
+  - DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetDynamicMemberNameAndValues(System.Dynamic.IDynamicMetaObjectProvider)
+  - DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetDynamicMemberNames(System.Dynamic.IDynamicMetaObjectProvider)
+  - DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.TryGetMember(System.Dynamic.IDynamicMetaObjectProvider,System.String,System.Object@)
+  - DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.TrySetMember(System.Dynamic.IDynamicMetaObjectProvider,System.String,System.Object)
   langs:
   - csharp
   - vb
@@ -21,18 +19,18 @@ items:
   type: Class
   source:
     remote:
-      path: src/DotNetHelper.FastMember.Extension/Helpers/DynamicObjectHelper.cs
+      path: src/DotNetHelper.FastMember.Extension/Helpers/DynamicMetaObjectHelper.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
     id: DynamicObjectHelper
-    path: ../src/DotNetHelper.FastMember.Extension/Helpers/DynamicObjectHelper.cs
-    startLine: 8
+    path: ../src/DotNetHelper.FastMember.Extension/Helpers/DynamicMetaObjectHelper.cs
+    startLine: 10
   assemblies:
   - DotNetHelper.FastMember.Extension
   namespace: DotNetHelper.FastMember.Extension.Helpers
   syntax:
-    content: public static class DynamicObjectHelper
-    content.vb: Public Module DynamicObjectHelper
+    content: public class DynamicObjectHelper
+    content.vb: Public Class DynamicObjectHelper
   inheritance:
   - System.Object
   inheritedMembers:
@@ -43,282 +41,198 @@ items:
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  extensionMethods:
+  - System.Object.DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField``1(System.String)
+  - System.Object.DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty``1(System.String)
   modifiers.csharp:
   - public
-  - static
   - class
   modifiers.vb:
   - Public
-  - Module
-- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.AddProperty(System.Dynamic.ExpandoObject,System.String,System.Object)
-  commentId: M:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.AddProperty(System.Dynamic.ExpandoObject,System.String,System.Object)
-  id: AddProperty(System.Dynamic.ExpandoObject,System.String,System.Object)
+  - Class
+- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.#ctor
+  commentId: M:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.#ctor
+  id: '#ctor'
   parent: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper
   langs:
   - csharp
   - vb
-  name: AddProperty(ExpandoObject, String, Object)
-  nameWithType: DynamicObjectHelper.AddProperty(ExpandoObject, String, Object)
-  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.AddProperty(System.Dynamic.ExpandoObject, System.String, System.Object)
+  name: DynamicObjectHelper()
+  nameWithType: DynamicObjectHelper.DynamicObjectHelper()
+  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.DynamicObjectHelper()
+  type: Constructor
+  source:
+    remote:
+      path: src/DotNetHelper.FastMember.Extension/Helpers/DynamicMetaObjectHelper.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+    id: .ctor
+    path: ../src/DotNetHelper.FastMember.Extension/Helpers/DynamicMetaObjectHelper.cs
+    startLine: 23
+  assemblies:
+  - DotNetHelper.FastMember.Extension
+  namespace: DotNetHelper.FastMember.Extension.Helpers
+  summary: "\nInitializes a new instance of the <see cref=\"!:DynamicMetaObjectHelper\"></see> class.\n"
+  example: []
+  syntax:
+    content: public DynamicObjectHelper()
+    content.vb: Public Sub New
+  overload: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetDynamicMemberNames(System.Dynamic.IDynamicMetaObjectProvider)
+  commentId: M:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetDynamicMemberNames(System.Dynamic.IDynamicMetaObjectProvider)
+  id: GetDynamicMemberNames(System.Dynamic.IDynamicMetaObjectProvider)
+  parent: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper
+  langs:
+  - csharp
+  - vb
+  name: GetDynamicMemberNames(IDynamicMetaObjectProvider)
+  nameWithType: DynamicObjectHelper.GetDynamicMemberNames(IDynamicMetaObjectProvider)
+  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetDynamicMemberNames(System.Dynamic.IDynamicMetaObjectProvider)
   type: Method
   source:
     remote:
-      path: src/DotNetHelper.FastMember.Extension/Helpers/DynamicObjectHelper.cs
+      path: src/DotNetHelper.FastMember.Extension/Helpers/DynamicMetaObjectHelper.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
-    id: AddProperty
-    path: ../src/DotNetHelper.FastMember.Extension/Helpers/DynamicObjectHelper.cs
-    startLine: 11
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+    id: GetDynamicMemberNames
+    path: ../src/DotNetHelper.FastMember.Extension/Helpers/DynamicMetaObjectHelper.cs
+    startLine: 41
   assemblies:
   - DotNetHelper.FastMember.Extension
   namespace: DotNetHelper.FastMember.Extension.Helpers
   syntax:
-    content: public static void AddProperty(ExpandoObject expandoObject, string propertyName, object value)
+    content: public List<string> GetDynamicMemberNames(IDynamicMetaObjectProvider dynamicObject)
     parameters:
-    - id: expandoObject
-      type: System.Dynamic.ExpandoObject
-    - id: propertyName
+    - id: dynamicObject
+      type: System.Dynamic.IDynamicMetaObjectProvider
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: Public Function GetDynamicMemberNames(dynamicObject As IDynamicMetaObjectProvider) As List(Of String)
+  overload: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetDynamicMemberNames*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetDynamicMemberNameAndValues(System.Dynamic.IDynamicMetaObjectProvider)
+  commentId: M:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetDynamicMemberNameAndValues(System.Dynamic.IDynamicMetaObjectProvider)
+  id: GetDynamicMemberNameAndValues(System.Dynamic.IDynamicMetaObjectProvider)
+  parent: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper
+  langs:
+  - csharp
+  - vb
+  name: GetDynamicMemberNameAndValues(IDynamicMetaObjectProvider)
+  nameWithType: DynamicObjectHelper.GetDynamicMemberNameAndValues(IDynamicMetaObjectProvider)
+  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetDynamicMemberNameAndValues(System.Dynamic.IDynamicMetaObjectProvider)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.FastMember.Extension/Helpers/DynamicMetaObjectHelper.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+    id: GetDynamicMemberNameAndValues
+    path: ../src/DotNetHelper.FastMember.Extension/Helpers/DynamicMetaObjectHelper.cs
+    startLine: 47
+  assemblies:
+  - DotNetHelper.FastMember.Extension
+  namespace: DotNetHelper.FastMember.Extension.Helpers
+  syntax:
+    content: public Dictionary<string, object> GetDynamicMemberNameAndValues(IDynamicMetaObjectProvider dynamicObject)
+    parameters:
+    - id: dynamicObject
+      type: System.Dynamic.IDynamicMetaObjectProvider
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+    content.vb: Public Function GetDynamicMemberNameAndValues(dynamicObject As IDynamicMetaObjectProvider) As Dictionary(Of String, Object)
+  overload: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetDynamicMemberNameAndValues*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.TryGetMember(System.Dynamic.IDynamicMetaObjectProvider,System.String,System.Object@)
+  commentId: M:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.TryGetMember(System.Dynamic.IDynamicMetaObjectProvider,System.String,System.Object@)
+  id: TryGetMember(System.Dynamic.IDynamicMetaObjectProvider,System.String,System.Object@)
+  parent: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper
+  langs:
+  - csharp
+  - vb
+  name: TryGetMember(IDynamicMetaObjectProvider, String, out Object)
+  nameWithType: DynamicObjectHelper.TryGetMember(IDynamicMetaObjectProvider, String, out Object)
+  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.TryGetMember(System.Dynamic.IDynamicMetaObjectProvider, System.String, out System.Object)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.FastMember.Extension/Helpers/DynamicMetaObjectHelper.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+    id: TryGetMember
+    path: ../src/DotNetHelper.FastMember.Extension/Helpers/DynamicMetaObjectHelper.cs
+    startLine: 60
+  assemblies:
+  - DotNetHelper.FastMember.Extension
+  namespace: DotNetHelper.FastMember.Extension.Helpers
+  syntax:
+    content: public bool TryGetMember(IDynamicMetaObjectProvider dynamicProvider, string name, out object value)
+    parameters:
+    - id: dynamicProvider
+      type: System.Dynamic.IDynamicMetaObjectProvider
+    - id: name
       type: System.String
     - id: value
       type: System.Object
-    content.vb: Public Shared Sub AddProperty(expandoObject As ExpandoObject, propertyName As String, value As Object)
-  overload: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.AddProperty*
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.RemoveProperty(System.Dynamic.ExpandoObject,System.String)
-  commentId: M:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.RemoveProperty(System.Dynamic.ExpandoObject,System.String)
-  id: RemoveProperty(System.Dynamic.ExpandoObject,System.String)
-  parent: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper
-  langs:
-  - csharp
-  - vb
-  name: RemoveProperty(ExpandoObject, String)
-  nameWithType: DynamicObjectHelper.RemoveProperty(ExpandoObject, String)
-  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.RemoveProperty(System.Dynamic.ExpandoObject, System.String)
-  type: Method
-  source:
-    remote:
-      path: src/DotNetHelper.FastMember.Extension/Helpers/DynamicObjectHelper.cs
-      branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
-    id: RemoveProperty
-    path: ../src/DotNetHelper.FastMember.Extension/Helpers/DynamicObjectHelper.cs
-    startLine: 21
-  assemblies:
-  - DotNetHelper.FastMember.Extension
-  namespace: DotNetHelper.FastMember.Extension.Helpers
-  syntax:
-    content: public static void RemoveProperty(ExpandoObject expandoObject, string propertyName)
-    parameters:
-    - id: expandoObject
-      type: System.Dynamic.ExpandoObject
-    - id: propertyName
-      type: System.String
-    content.vb: Public Shared Sub RemoveProperty(expandoObject As ExpandoObject, propertyName As String)
-  overload: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.RemoveProperty*
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.AddPropertyChangedHander(System.Dynamic.ExpandoObject,System.ComponentModel.PropertyChangedEventHandler)
-  commentId: M:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.AddPropertyChangedHander(System.Dynamic.ExpandoObject,System.ComponentModel.PropertyChangedEventHandler)
-  id: AddPropertyChangedHander(System.Dynamic.ExpandoObject,System.ComponentModel.PropertyChangedEventHandler)
-  parent: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper
-  langs:
-  - csharp
-  - vb
-  name: AddPropertyChangedHander(ExpandoObject, PropertyChangedEventHandler)
-  nameWithType: DynamicObjectHelper.AddPropertyChangedHander(ExpandoObject, PropertyChangedEventHandler)
-  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.AddPropertyChangedHander(System.Dynamic.ExpandoObject, System.ComponentModel.PropertyChangedEventHandler)
-  type: Method
-  source:
-    remote:
-      path: src/DotNetHelper.FastMember.Extension/Helpers/DynamicObjectHelper.cs
-      branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
-    id: AddPropertyChangedHander
-    path: ../src/DotNetHelper.FastMember.Extension/Helpers/DynamicObjectHelper.cs
-    startLine: 32
-  assemblies:
-  - DotNetHelper.FastMember.Extension
-  namespace: DotNetHelper.FastMember.Extension.Helpers
-  syntax:
-    content: public static void AddPropertyChangedHander(ExpandoObject expandoObject, PropertyChangedEventHandler action)
-    parameters:
-    - id: expandoObject
-      type: System.Dynamic.ExpandoObject
-    - id: action
-      type: System.ComponentModel.PropertyChangedEventHandler
-    content.vb: Public Shared Sub AddPropertyChangedHander(expandoObject As ExpandoObject, action As PropertyChangedEventHandler)
-  overload: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.AddPropertyChangedHander*
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.ToDataReader(System.Dynamic.ExpandoObject)
-  commentId: M:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.ToDataReader(System.Dynamic.ExpandoObject)
-  id: ToDataReader(System.Dynamic.ExpandoObject)
-  parent: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper
-  langs:
-  - csharp
-  - vb
-  name: ToDataReader(ExpandoObject)
-  nameWithType: DynamicObjectHelper.ToDataReader(ExpandoObject)
-  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.ToDataReader(System.Dynamic.ExpandoObject)
-  type: Method
-  source:
-    remote:
-      path: src/DotNetHelper.FastMember.Extension/Helpers/DynamicObjectHelper.cs
-      branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
-    id: ToDataReader
-    path: ../src/DotNetHelper.FastMember.Extension/Helpers/DynamicObjectHelper.cs
-    startLine: 37
-  assemblies:
-  - DotNetHelper.FastMember.Extension
-  namespace: DotNetHelper.FastMember.Extension.Helpers
-  syntax:
-    content: public static IDataReader ToDataReader(ExpandoObject expandoObject)
-    parameters:
-    - id: expandoObject
-      type: System.Dynamic.ExpandoObject
     return:
-      type: System.Data.IDataReader
-    content.vb: Public Shared Function ToDataReader(expandoObject As ExpandoObject) As IDataReader
-  overload: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.ToDataReader*
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.ToDataTable(System.Dynamic.ExpandoObject)
-  commentId: M:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.ToDataTable(System.Dynamic.ExpandoObject)
-  id: ToDataTable(System.Dynamic.ExpandoObject)
-  parent: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper
-  langs:
-  - csharp
-  - vb
-  name: ToDataTable(ExpandoObject)
-  nameWithType: DynamicObjectHelper.ToDataTable(ExpandoObject)
-  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.ToDataTable(System.Dynamic.ExpandoObject)
-  type: Method
-  source:
-    remote:
-      path: src/DotNetHelper.FastMember.Extension/Helpers/DynamicObjectHelper.cs
-      branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
-    id: ToDataTable
-    path: ../src/DotNetHelper.FastMember.Extension/Helpers/DynamicObjectHelper.cs
-    startLine: 44
-  assemblies:
-  - DotNetHelper.FastMember.Extension
-  namespace: DotNetHelper.FastMember.Extension.Helpers
-  syntax:
-    content: public static DataTable ToDataTable(ExpandoObject expandoObject)
-    parameters:
-    - id: expandoObject
-      type: System.Dynamic.ExpandoObject
-    return:
-      type: System.Data.DataTable
-    content.vb: Public Shared Function ToDataTable(expandoObject As ExpandoObject) As DataTable
-  overload: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.ToDataTable*
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetProperties(System.Dynamic.ExpandoObject)
-  commentId: M:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetProperties(System.Dynamic.ExpandoObject)
-  id: GetProperties(System.Dynamic.ExpandoObject)
-  parent: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper
-  langs:
-  - csharp
-  - vb
-  name: GetProperties(ExpandoObject)
-  nameWithType: DynamicObjectHelper.GetProperties(ExpandoObject)
-  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetProperties(System.Dynamic.ExpandoObject)
-  type: Method
-  source:
-    remote:
-      path: src/DotNetHelper.FastMember.Extension/Helpers/DynamicObjectHelper.cs
-      branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
-    id: GetProperties
-    path: ../src/DotNetHelper.FastMember.Extension/Helpers/DynamicObjectHelper.cs
-    startLine: 55
-  assemblies:
-  - DotNetHelper.FastMember.Extension
-  namespace: DotNetHelper.FastMember.Extension.Helpers
-  summary: "\nreturn a dictionary of properties and values\n"
-  example: []
-  syntax:
-    content: public static IDictionary<string, object> GetProperties(ExpandoObject expandoObject)
-    parameters:
-    - id: expandoObject
-      type: System.Dynamic.ExpandoObject
-      description: ''
-    return:
-      type: System.Collections.Generic.IDictionary{System.String,System.Object}
-      description: ''
-    content.vb: Public Shared Function GetProperties(expandoObject As ExpandoObject) As IDictionary(Of String, Object)
-  overload: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetProperties*
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetPropertyValue(System.Dynamic.ExpandoObject,System.String,System.Boolean)
-  commentId: M:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetPropertyValue(System.Dynamic.ExpandoObject,System.String,System.Boolean)
-  id: GetPropertyValue(System.Dynamic.ExpandoObject,System.String,System.Boolean)
-  parent: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper
-  langs:
-  - csharp
-  - vb
-  name: GetPropertyValue(ExpandoObject, String, Boolean)
-  nameWithType: DynamicObjectHelper.GetPropertyValue(ExpandoObject, String, Boolean)
-  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetPropertyValue(System.Dynamic.ExpandoObject, System.String, System.Boolean)
-  type: Method
-  source:
-    remote:
-      path: src/DotNetHelper.FastMember.Extension/Helpers/DynamicObjectHelper.cs
-      branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
-    id: GetPropertyValue
-    path: ../src/DotNetHelper.FastMember.Extension/Helpers/DynamicObjectHelper.cs
-    startLine: 62
-  assemblies:
-  - DotNetHelper.FastMember.Extension
-  namespace: DotNetHelper.FastMember.Extension.Helpers
-  syntax:
-    content: public static object GetPropertyValue(ExpandoObject expandoObject, string propertyName, bool searchAllChildrens = true)
-    parameters:
-    - id: expandoObject
-      type: System.Dynamic.ExpandoObject
-    - id: propertyName
-      type: System.String
-    - id: searchAllChildrens
       type: System.Boolean
-    return:
-      type: System.Object
-    content.vb: Public Shared Function GetPropertyValue(expandoObject As ExpandoObject, propertyName As String, searchAllChildrens As Boolean = True) As Object
-  overload: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetPropertyValue*
+    content.vb: Public Function TryGetMember(dynamicProvider As IDynamicMetaObjectProvider, name As String, ByRef value As Object) As Boolean
+  overload: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.TryGetMember*
+  nameWithType.vb: DynamicObjectHelper.TryGetMember(IDynamicMetaObjectProvider, String, ByRef Object)
   modifiers.csharp:
   - public
-  - static
   modifiers.vb:
   - Public
-  - Shared
+  fullName.vb: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.TryGetMember(System.Dynamic.IDynamicMetaObjectProvider, System.String, ByRef System.Object)
+  name.vb: TryGetMember(IDynamicMetaObjectProvider, String, ByRef Object)
+- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.TrySetMember(System.Dynamic.IDynamicMetaObjectProvider,System.String,System.Object)
+  commentId: M:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.TrySetMember(System.Dynamic.IDynamicMetaObjectProvider,System.String,System.Object)
+  id: TrySetMember(System.Dynamic.IDynamicMetaObjectProvider,System.String,System.Object)
+  parent: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper
+  langs:
+  - csharp
+  - vb
+  name: TrySetMember(IDynamicMetaObjectProvider, String, Object)
+  nameWithType: DynamicObjectHelper.TrySetMember(IDynamicMetaObjectProvider, String, Object)
+  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.TrySetMember(System.Dynamic.IDynamicMetaObjectProvider, System.String, System.Object)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.FastMember.Extension/Helpers/DynamicMetaObjectHelper.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+    id: TrySetMember
+    path: ../src/DotNetHelper.FastMember.Extension/Helpers/DynamicMetaObjectHelper.cs
+    startLine: 79
+  assemblies:
+  - DotNetHelper.FastMember.Extension
+  namespace: DotNetHelper.FastMember.Extension.Helpers
+  syntax:
+    content: public bool TrySetMember(IDynamicMetaObjectProvider dynamicProvider, string name, object value)
+    parameters:
+    - id: dynamicProvider
+      type: System.Dynamic.IDynamicMetaObjectProvider
+    - id: name
+      type: System.String
+    - id: value
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Function TrySetMember(dynamicProvider As IDynamicMetaObjectProvider, name As String, value As Object) As Boolean
+  overload: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.TrySetMember*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: DotNetHelper.FastMember.Extension.Helpers
   commentId: N:DotNetHelper.FastMember.Extension.Helpers
@@ -611,203 +525,324 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Object.DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField``1(System.String)
+  commentId: M:DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField``1(System.Object,System.String)
+  parent: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension
+  definition: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField``1(System.Object,System.String)
+  name: GetPrivateField<T>(String)
+  nameWithType: FastMemberExtension.GetPrivateField<T>(String)
+  fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField<T>(System.String)
+  nameWithType.vb: FastMemberExtension.GetPrivateField(Of T)(String)
+  fullName.vb: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField(Of T)(System.String)
+  name.vb: GetPrivateField(Of T)(String)
+  spec.csharp:
+  - uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField``1(System.String)
+    name: GetPrivateField<T>
+    nameWithType: FastMemberExtension.GetPrivateField<T>
+    fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField``1(System.String)
+    name: GetPrivateField(Of T)
+    nameWithType: FastMemberExtension.GetPrivateField(Of T)
+    fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty``1(System.String)
+  commentId: M:DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty``1(System.Object,System.String)
+  parent: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension
+  definition: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty``1(System.Object,System.String)
+  name: GetPrivateProperty<T>(String)
+  nameWithType: FastMemberExtension.GetPrivateProperty<T>(String)
+  fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty<T>(System.String)
+  nameWithType.vb: FastMemberExtension.GetPrivateProperty(Of T)(String)
+  fullName.vb: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty(Of T)(System.String)
+  name.vb: GetPrivateProperty(Of T)(String)
+  spec.csharp:
+  - uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty``1(System.String)
+    name: GetPrivateProperty<T>
+    nameWithType: FastMemberExtension.GetPrivateProperty<T>
+    fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty``1(System.String)
+    name: GetPrivateProperty(Of T)
+    nameWithType: FastMemberExtension.GetPrivateProperty(Of T)
+    fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
   name: System
   nameWithType: System
   fullName: System
-- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.AddProperty*
-  commentId: Overload:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.AddProperty
-  name: AddProperty
-  nameWithType: DynamicObjectHelper.AddProperty
-  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.AddProperty
-- uid: System.Dynamic.ExpandoObject
-  commentId: T:System.Dynamic.ExpandoObject
+- uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField``1(System.Object,System.String)
+  commentId: M:DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField``1(System.Object,System.String)
+  isExternal: true
+  name: GetPrivateField<T>(Object, String)
+  nameWithType: FastMemberExtension.GetPrivateField<T>(Object, String)
+  fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField<T>(System.Object, System.String)
+  nameWithType.vb: FastMemberExtension.GetPrivateField(Of T)(Object, String)
+  fullName.vb: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField(Of T)(System.Object, System.String)
+  name.vb: GetPrivateField(Of T)(Object, String)
+  spec.csharp:
+  - uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField``1(System.Object,System.String)
+    name: GetPrivateField<T>
+    nameWithType: FastMemberExtension.GetPrivateField<T>
+    fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField``1(System.Object,System.String)
+    name: GetPrivateField(Of T)
+    nameWithType: FastMemberExtension.GetPrivateField(Of T)
+    fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension
+  commentId: T:DotNetHelper.FastMember.Extension.Extension.FastMemberExtension
+  parent: DotNetHelper.FastMember.Extension.Extension
+  name: FastMemberExtension
+  nameWithType: FastMemberExtension
+  fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension
+- uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty``1(System.Object,System.String)
+  commentId: M:DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty``1(System.Object,System.String)
+  isExternal: true
+  name: GetPrivateProperty<T>(Object, String)
+  nameWithType: FastMemberExtension.GetPrivateProperty<T>(Object, String)
+  fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty<T>(System.Object, System.String)
+  nameWithType.vb: FastMemberExtension.GetPrivateProperty(Of T)(Object, String)
+  fullName.vb: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty(Of T)(System.Object, System.String)
+  name.vb: GetPrivateProperty(Of T)(Object, String)
+  spec.csharp:
+  - uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty``1(System.Object,System.String)
+    name: GetPrivateProperty<T>
+    nameWithType: FastMemberExtension.GetPrivateProperty<T>
+    fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty``1(System.Object,System.String)
+    name: GetPrivateProperty(Of T)
+    nameWithType: FastMemberExtension.GetPrivateProperty(Of T)
+    fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DotNetHelper.FastMember.Extension.Extension
+  commentId: N:DotNetHelper.FastMember.Extension.Extension
+  name: DotNetHelper.FastMember.Extension.Extension
+  nameWithType: DotNetHelper.FastMember.Extension.Extension
+  fullName: DotNetHelper.FastMember.Extension.Extension
+- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.#ctor*
+  commentId: Overload:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.#ctor
+  name: DynamicObjectHelper
+  nameWithType: DynamicObjectHelper.DynamicObjectHelper
+  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.DynamicObjectHelper
+- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetDynamicMemberNames*
+  commentId: Overload:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetDynamicMemberNames
+  name: GetDynamicMemberNames
+  nameWithType: DynamicObjectHelper.GetDynamicMemberNames
+  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetDynamicMemberNames
+- uid: System.Dynamic.IDynamicMetaObjectProvider
+  commentId: T:System.Dynamic.IDynamicMetaObjectProvider
   parent: System.Dynamic
   isExternal: true
-  name: ExpandoObject
-  nameWithType: ExpandoObject
-  fullName: System.Dynamic.ExpandoObject
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  name: String
-  nameWithType: String
-  fullName: System.String
+  name: IDynamicMetaObjectProvider
+  nameWithType: IDynamicMetaObjectProvider
+  fullName: System.Dynamic.IDynamicMetaObjectProvider
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<String>
+  nameWithType: List<String>
+  fullName: System.Collections.Generic.List<System.String>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of System.String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Dynamic
   commentId: N:System.Dynamic
   isExternal: true
   name: System.Dynamic
   nameWithType: System.Dynamic
   fullName: System.Dynamic
-- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.RemoveProperty*
-  commentId: Overload:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.RemoveProperty
-  name: RemoveProperty
-  nameWithType: DynamicObjectHelper.RemoveProperty
-  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.RemoveProperty
-- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.AddPropertyChangedHander*
-  commentId: Overload:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.AddPropertyChangedHander
-  name: AddPropertyChangedHander
-  nameWithType: DynamicObjectHelper.AddPropertyChangedHander
-  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.AddPropertyChangedHander
-- uid: System.ComponentModel.PropertyChangedEventHandler
-  commentId: T:System.ComponentModel.PropertyChangedEventHandler
-  parent: System.ComponentModel
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
   isExternal: true
-  name: PropertyChangedEventHandler
-  nameWithType: PropertyChangedEventHandler
-  fullName: System.ComponentModel.PropertyChangedEventHandler
-- uid: System.ComponentModel
-  commentId: N:System.ComponentModel
-  isExternal: true
-  name: System.ComponentModel
-  nameWithType: System.ComponentModel
-  fullName: System.ComponentModel
-- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.ToDataReader*
-  commentId: Overload:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.ToDataReader
-  name: ToDataReader
-  nameWithType: DynamicObjectHelper.ToDataReader
-  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.ToDataReader
-- uid: System.Data.IDataReader
-  commentId: T:System.Data.IDataReader
-  parent: System.Data
-  isExternal: true
-  name: IDataReader
-  nameWithType: IDataReader
-  fullName: System.Data.IDataReader
-- uid: System.Data
-  commentId: N:System.Data
-  isExternal: true
-  name: System.Data
-  nameWithType: System.Data
-  fullName: System.Data
-- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.ToDataTable*
-  commentId: Overload:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.ToDataTable
-  name: ToDataTable
-  nameWithType: DynamicObjectHelper.ToDataTable
-  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.ToDataTable
-- uid: System.Data.DataTable
-  commentId: T:System.Data.DataTable
-  parent: System.Data
-  isExternal: true
-  name: DataTable
-  nameWithType: DataTable
-  fullName: System.Data.DataTable
-- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetProperties*
-  commentId: Overload:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetProperties
-  name: GetProperties
-  nameWithType: DynamicObjectHelper.GetProperties
-  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetProperties
-- uid: System.Collections.Generic.IDictionary{System.String,System.Object}
-  commentId: T:System.Collections.Generic.IDictionary{System.String,System.Object}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.IDictionary`2
-  name: IDictionary<String, Object>
-  nameWithType: IDictionary<String, Object>
-  fullName: System.Collections.Generic.IDictionary<System.String, System.Object>
-  nameWithType.vb: IDictionary(Of String, Object)
-  fullName.vb: System.Collections.Generic.IDictionary(Of System.String, System.Object)
-  name.vb: IDictionary(Of String, Object)
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
   spec.csharp:
-  - uid: System.Collections.Generic.IDictionary`2
-    name: IDictionary
-    nameWithType: IDictionary
-    fullName: System.Collections.Generic.IDictionary
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.IDictionary`2
-    name: IDictionary
-    nameWithType: IDictionary
-    fullName: System.Collections.Generic.IDictionary
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Collections.Generic.IDictionary`2
-  commentId: T:System.Collections.Generic.IDictionary`2
-  isExternal: true
-  name: IDictionary<TKey, TValue>
-  nameWithType: IDictionary<TKey, TValue>
-  fullName: System.Collections.Generic.IDictionary<TKey, TValue>
-  nameWithType.vb: IDictionary(Of TKey, TValue)
-  fullName.vb: System.Collections.Generic.IDictionary(Of TKey, TValue)
-  name.vb: IDictionary(Of TKey, TValue)
-  spec.csharp:
-  - uid: System.Collections.Generic.IDictionary`2
-    name: IDictionary
-    nameWithType: IDictionary
-    fullName: System.Collections.Generic.IDictionary
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - name: TKey
-    nameWithType: TKey
-    fullName: TKey
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: TValue
-    nameWithType: TValue
-    fullName: TValue
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.IDictionary`2
-    name: IDictionary
-    nameWithType: IDictionary
-    fullName: System.Collections.Generic.IDictionary
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - name: TKey
-    nameWithType: TKey
-    fullName: TKey
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: TValue
-    nameWithType: TValue
-    fullName: TValue
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: )
     nameWithType: )
     fullName: )
@@ -817,11 +852,134 @@ references:
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
-- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetPropertyValue*
-  commentId: Overload:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetPropertyValue
-  name: GetPropertyValue
-  nameWithType: DynamicObjectHelper.GetPropertyValue
-  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetPropertyValue
+- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetDynamicMemberNameAndValues*
+  commentId: Overload:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetDynamicMemberNameAndValues
+  name: GetDynamicMemberNameAndValues
+  nameWithType: DynamicObjectHelper.GetDynamicMemberNameAndValues
+  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetDynamicMemberNameAndValues
+- uid: System.Collections.Generic.Dictionary{System.String,System.Object}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  name: Dictionary<String, Object>
+  nameWithType: Dictionary<String, Object>
+  fullName: System.Collections.Generic.Dictionary<System.String, System.Object>
+  nameWithType.vb: Dictionary(Of String, Object)
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.String, System.Object)
+  name.vb: Dictionary(Of String, Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.TryGetMember*
+  commentId: Overload:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.TryGetMember
+  name: TryGetMember
+  nameWithType: DynamicObjectHelper.TryGetMember
+  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.TryGetMember
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System
@@ -829,3 +987,8 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
+- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.TrySetMember*
+  commentId: Overload:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.TrySetMember
+  name: TrySetMember
+  nameWithType: DynamicObjectHelper.TrySetMember
+  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.TrySetMember

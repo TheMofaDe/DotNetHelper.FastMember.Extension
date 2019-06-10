@@ -7,57 +7,6 @@ references:
   commentId: N:DotNetHelper.FastMember.Extension
   fullName: DotNetHelper.FastMember.Extension
   nameWithType: DotNetHelper.FastMember.Extension
-- uid: DotNetHelper.FastMember.Extension.Comparer
-  name: DotNetHelper.FastMember.Extension.Comparer
-  href: api/DotNetHelper.FastMember.Extension.Comparer.html
-  commentId: N:DotNetHelper.FastMember.Extension.Comparer
-  fullName: DotNetHelper.FastMember.Extension.Comparer
-  nameWithType: DotNetHelper.FastMember.Extension.Comparer
-- uid: DotNetHelper.FastMember.Extension.Comparer.EqualityComparerString
-  name: EqualityComparerString
-  href: api/DotNetHelper.FastMember.Extension.Comparer.EqualityComparerString.html
-  commentId: T:DotNetHelper.FastMember.Extension.Comparer.EqualityComparerString
-  fullName: DotNetHelper.FastMember.Extension.Comparer.EqualityComparerString
-  nameWithType: EqualityComparerString
-- uid: DotNetHelper.FastMember.Extension.Comparer.EqualityComparerString.#ctor(System.StringComparison)
-  name: EqualityComparerString(StringComparison)
-  href: api/DotNetHelper.FastMember.Extension.Comparer.EqualityComparerString.html#DotNetHelper_FastMember_Extension_Comparer_EqualityComparerString__ctor_System_StringComparison_
-  commentId: M:DotNetHelper.FastMember.Extension.Comparer.EqualityComparerString.#ctor(System.StringComparison)
-  fullName: DotNetHelper.FastMember.Extension.Comparer.EqualityComparerString.EqualityComparerString(System.StringComparison)
-  nameWithType: EqualityComparerString.EqualityComparerString(StringComparison)
-- uid: DotNetHelper.FastMember.Extension.Comparer.EqualityComparerString.#ctor*
-  name: EqualityComparerString
-  href: api/DotNetHelper.FastMember.Extension.Comparer.EqualityComparerString.html#DotNetHelper_FastMember_Extension_Comparer_EqualityComparerString__ctor_
-  commentId: Overload:DotNetHelper.FastMember.Extension.Comparer.EqualityComparerString.#ctor
-  isSpec: "True"
-  fullName: DotNetHelper.FastMember.Extension.Comparer.EqualityComparerString.EqualityComparerString
-  nameWithType: EqualityComparerString.EqualityComparerString
-- uid: DotNetHelper.FastMember.Extension.Comparer.EqualityComparerString.Equals(System.String,System.String)
-  name: Equals(String, String)
-  href: api/DotNetHelper.FastMember.Extension.Comparer.EqualityComparerString.html#DotNetHelper_FastMember_Extension_Comparer_EqualityComparerString_Equals_System_String_System_String_
-  commentId: M:DotNetHelper.FastMember.Extension.Comparer.EqualityComparerString.Equals(System.String,System.String)
-  fullName: DotNetHelper.FastMember.Extension.Comparer.EqualityComparerString.Equals(System.String, System.String)
-  nameWithType: EqualityComparerString.Equals(String, String)
-- uid: DotNetHelper.FastMember.Extension.Comparer.EqualityComparerString.Equals*
-  name: Equals
-  href: api/DotNetHelper.FastMember.Extension.Comparer.EqualityComparerString.html#DotNetHelper_FastMember_Extension_Comparer_EqualityComparerString_Equals_
-  commentId: Overload:DotNetHelper.FastMember.Extension.Comparer.EqualityComparerString.Equals
-  isSpec: "True"
-  fullName: DotNetHelper.FastMember.Extension.Comparer.EqualityComparerString.Equals
-  nameWithType: EqualityComparerString.Equals
-- uid: DotNetHelper.FastMember.Extension.Comparer.EqualityComparerString.GetHashCode(System.String)
-  name: GetHashCode(String)
-  href: api/DotNetHelper.FastMember.Extension.Comparer.EqualityComparerString.html#DotNetHelper_FastMember_Extension_Comparer_EqualityComparerString_GetHashCode_System_String_
-  commentId: M:DotNetHelper.FastMember.Extension.Comparer.EqualityComparerString.GetHashCode(System.String)
-  fullName: DotNetHelper.FastMember.Extension.Comparer.EqualityComparerString.GetHashCode(System.String)
-  nameWithType: EqualityComparerString.GetHashCode(String)
-- uid: DotNetHelper.FastMember.Extension.Comparer.EqualityComparerString.GetHashCode*
-  name: GetHashCode
-  href: api/DotNetHelper.FastMember.Extension.Comparer.EqualityComparerString.html#DotNetHelper_FastMember_Extension_Comparer_EqualityComparerString_GetHashCode_
-  commentId: Overload:DotNetHelper.FastMember.Extension.Comparer.EqualityComparerString.GetHashCode
-  isSpec: "True"
-  fullName: DotNetHelper.FastMember.Extension.Comparer.EqualityComparerString.GetHashCode
-  nameWithType: EqualityComparerString.GetHashCode
 - uid: DotNetHelper.FastMember.Extension.Exceptions
   name: DotNetHelper.FastMember.Extension.Exceptions
   href: api/DotNetHelper.FastMember.Extension.Exceptions.html
@@ -101,50 +50,160 @@ references:
   isSpec: "True"
   fullName: DotNetHelper.FastMember.Extension.Exceptions.PropertyMapException.PropertyMapException
   nameWithType: PropertyMapException.PropertyMapException
+- uid: DotNetHelper.FastMember.Extension.Extension
+  name: DotNetHelper.FastMember.Extension.Extension
+  href: api/DotNetHelper.FastMember.Extension.Extension.html
+  commentId: N:DotNetHelper.FastMember.Extension.Extension
+  fullName: DotNetHelper.FastMember.Extension.Extension
+  nameWithType: DotNetHelper.FastMember.Extension.Extension
+- uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension
+  name: FastMemberExtension
+  href: api/DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.html
+  commentId: T:DotNetHelper.FastMember.Extension.Extension.FastMemberExtension
+  fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension
+  nameWithType: FastMemberExtension
+- uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberAttribute*
+  name: GetMemberAttribute
+  href: api/DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.html#DotNetHelper_FastMember_Extension_Extension_FastMemberExtension_GetMemberAttribute_
+  commentId: Overload:DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberAttribute
+  isSpec: "True"
+  fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberAttribute
+  nameWithType: FastMemberExtension.GetMemberAttribute
+- uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberAttribute``1(FastMember.Member)
+  name: GetMemberAttribute<T>(Member)
+  href: api/DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.html#DotNetHelper_FastMember_Extension_Extension_FastMemberExtension_GetMemberAttribute__1_FastMember_Member_
+  commentId: M:DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberAttribute``1(FastMember.Member)
+  name.vb: GetMemberAttribute(Of T)(Member)
+  fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberAttribute<T>(FastMember.Member)
+  fullName.vb: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberAttribute(Of T)(FastMember.Member)
+  nameWithType: FastMemberExtension.GetMemberAttribute<T>(Member)
+  nameWithType.vb: FastMemberExtension.GetMemberAttribute(Of T)(Member)
+- uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberInfo(FastMember.Member)
+  name: GetMemberInfo(Member)
+  href: api/DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.html#DotNetHelper_FastMember_Extension_Extension_FastMemberExtension_GetMemberInfo_FastMember_Member_
+  commentId: M:DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberInfo(FastMember.Member)
+  fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberInfo(FastMember.Member)
+  nameWithType: FastMemberExtension.GetMemberInfo(Member)
+- uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberInfo*
+  name: GetMemberInfo
+  href: api/DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.html#DotNetHelper_FastMember_Extension_Extension_FastMemberExtension_GetMemberInfo_
+  commentId: Overload:DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberInfo
+  isSpec: "True"
+  fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberInfo
+  nameWithType: FastMemberExtension.GetMemberInfo
+- uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField*
+  name: GetPrivateField
+  href: api/DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.html#DotNetHelper_FastMember_Extension_Extension_FastMemberExtension_GetPrivateField_
+  commentId: Overload:DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField
+  isSpec: "True"
+  fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField
+  nameWithType: FastMemberExtension.GetPrivateField
+- uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField``1(System.Object,System.String)
+  name: GetPrivateField<T>(Object, String)
+  href: api/DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.html#DotNetHelper_FastMember_Extension_Extension_FastMemberExtension_GetPrivateField__1_System_Object_System_String_
+  commentId: M:DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField``1(System.Object,System.String)
+  name.vb: GetPrivateField(Of T)(Object, String)
+  fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField<T>(System.Object, System.String)
+  fullName.vb: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField(Of T)(System.Object, System.String)
+  nameWithType: FastMemberExtension.GetPrivateField<T>(Object, String)
+  nameWithType.vb: FastMemberExtension.GetPrivateField(Of T)(Object, String)
+- uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty*
+  name: GetPrivateProperty
+  href: api/DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.html#DotNetHelper_FastMember_Extension_Extension_FastMemberExtension_GetPrivateProperty_
+  commentId: Overload:DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty
+  isSpec: "True"
+  fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty
+  nameWithType: FastMemberExtension.GetPrivateProperty
+- uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty``1(System.Object,System.String)
+  name: GetPrivateProperty<T>(Object, String)
+  href: api/DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.html#DotNetHelper_FastMember_Extension_Extension_FastMemberExtension_GetPrivateProperty__1_System_Object_System_String_
+  commentId: M:DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty``1(System.Object,System.String)
+  name.vb: GetPrivateProperty(Of T)(Object, String)
+  fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty<T>(System.Object, System.String)
+  fullName.vb: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty(Of T)(System.Object, System.String)
+  nameWithType: FastMemberExtension.GetPrivateProperty<T>(Object, String)
+  nameWithType.vb: FastMemberExtension.GetPrivateProperty(Of T)(Object, String)
 - uid: DotNetHelper.FastMember.Extension.ExtFastMember
   name: ExtFastMember
   href: api/DotNetHelper.FastMember.Extension.ExtFastMember.html
   commentId: T:DotNetHelper.FastMember.Extension.ExtFastMember
   fullName: DotNetHelper.FastMember.Extension.ExtFastMember
   nameWithType: ExtFastMember
-- uid: DotNetHelper.FastMember.Extension.ExtFastMember.GetAdvanceMembers(System.Type,System.Boolean)
-  name: GetAdvanceMembers(Type, Boolean)
-  href: api/DotNetHelper.FastMember.Extension.ExtFastMember.html#DotNetHelper_FastMember_Extension_ExtFastMember_GetAdvanceMembers_System_Type_System_Boolean_
-  commentId: M:DotNetHelper.FastMember.Extension.ExtFastMember.GetAdvanceMembers(System.Type,System.Boolean)
-  fullName: DotNetHelper.FastMember.Extension.ExtFastMember.GetAdvanceMembers(System.Type, System.Boolean)
-  nameWithType: ExtFastMember.GetAdvanceMembers(Type, Boolean)
-- uid: DotNetHelper.FastMember.Extension.ExtFastMember.GetAdvanceMembers*
-  name: GetAdvanceMembers
-  href: api/DotNetHelper.FastMember.Extension.ExtFastMember.html#DotNetHelper_FastMember_Extension_ExtFastMember_GetAdvanceMembers_
-  commentId: Overload:DotNetHelper.FastMember.Extension.ExtFastMember.GetAdvanceMembers
+- uid: DotNetHelper.FastMember.Extension.ExtFastMember.GetMemberValue(System.Dynamic.IDynamicMetaObjectProvider,System.String)
+  name: GetMemberValue(IDynamicMetaObjectProvider, String)
+  href: api/DotNetHelper.FastMember.Extension.ExtFastMember.html#DotNetHelper_FastMember_Extension_ExtFastMember_GetMemberValue_System_Dynamic_IDynamicMetaObjectProvider_System_String_
+  commentId: M:DotNetHelper.FastMember.Extension.ExtFastMember.GetMemberValue(System.Dynamic.IDynamicMetaObjectProvider,System.String)
+  fullName: DotNetHelper.FastMember.Extension.ExtFastMember.GetMemberValue(System.Dynamic.IDynamicMetaObjectProvider, System.String)
+  nameWithType: ExtFastMember.GetMemberValue(IDynamicMetaObjectProvider, String)
+- uid: DotNetHelper.FastMember.Extension.ExtFastMember.GetMemberValue*
+  name: GetMemberValue
+  href: api/DotNetHelper.FastMember.Extension.ExtFastMember.html#DotNetHelper_FastMember_Extension_ExtFastMember_GetMemberValue_
+  commentId: Overload:DotNetHelper.FastMember.Extension.ExtFastMember.GetMemberValue
   isSpec: "True"
-  fullName: DotNetHelper.FastMember.Extension.ExtFastMember.GetAdvanceMembers
-  nameWithType: ExtFastMember.GetAdvanceMembers
-- uid: DotNetHelper.FastMember.Extension.ExtFastMember.GetAdvanceMembers``1(System.Boolean)
-  name: GetAdvanceMembers<T>(Boolean)
-  href: api/DotNetHelper.FastMember.Extension.ExtFastMember.html#DotNetHelper_FastMember_Extension_ExtFastMember_GetAdvanceMembers__1_System_Boolean_
-  commentId: M:DotNetHelper.FastMember.Extension.ExtFastMember.GetAdvanceMembers``1(System.Boolean)
-  name.vb: GetAdvanceMembers(Of T)(Boolean)
-  fullName: DotNetHelper.FastMember.Extension.ExtFastMember.GetAdvanceMembers<T>(System.Boolean)
-  fullName.vb: DotNetHelper.FastMember.Extension.ExtFastMember.GetAdvanceMembers(Of T)(System.Boolean)
-  nameWithType: ExtFastMember.GetAdvanceMembers<T>(Boolean)
-  nameWithType.vb: ExtFastMember.GetAdvanceMembers(Of T)(Boolean)
-- uid: DotNetHelper.FastMember.Extension.ExtFastMember.GetDynamicAdvanceMembers*
-  name: GetDynamicAdvanceMembers
-  href: api/DotNetHelper.FastMember.Extension.ExtFastMember.html#DotNetHelper_FastMember_Extension_ExtFastMember_GetDynamicAdvanceMembers_
-  commentId: Overload:DotNetHelper.FastMember.Extension.ExtFastMember.GetDynamicAdvanceMembers
+  fullName: DotNetHelper.FastMember.Extension.ExtFastMember.GetMemberValue
+  nameWithType: ExtFastMember.GetMemberValue
+- uid: DotNetHelper.FastMember.Extension.ExtFastMember.GetMemberValue``1(``0,System.String)
+  name: GetMemberValue<T>(T, String)
+  href: api/DotNetHelper.FastMember.Extension.ExtFastMember.html#DotNetHelper_FastMember_Extension_ExtFastMember_GetMemberValue__1___0_System_String_
+  commentId: M:DotNetHelper.FastMember.Extension.ExtFastMember.GetMemberValue``1(``0,System.String)
+  name.vb: GetMemberValue(Of T)(T, String)
+  fullName: DotNetHelper.FastMember.Extension.ExtFastMember.GetMemberValue<T>(T, System.String)
+  fullName.vb: DotNetHelper.FastMember.Extension.ExtFastMember.GetMemberValue(Of T)(T, System.String)
+  nameWithType: ExtFastMember.GetMemberValue<T>(T, String)
+  nameWithType.vb: ExtFastMember.GetMemberValue(Of T)(T, String)
+- uid: DotNetHelper.FastMember.Extension.ExtFastMember.GetMemberWrappers(System.Dynamic.IDynamicMetaObjectProvider)
+  name: GetMemberWrappers(IDynamicMetaObjectProvider)
+  href: api/DotNetHelper.FastMember.Extension.ExtFastMember.html#DotNetHelper_FastMember_Extension_ExtFastMember_GetMemberWrappers_System_Dynamic_IDynamicMetaObjectProvider_
+  commentId: M:DotNetHelper.FastMember.Extension.ExtFastMember.GetMemberWrappers(System.Dynamic.IDynamicMetaObjectProvider)
+  fullName: DotNetHelper.FastMember.Extension.ExtFastMember.GetMemberWrappers(System.Dynamic.IDynamicMetaObjectProvider)
+  nameWithType: ExtFastMember.GetMemberWrappers(IDynamicMetaObjectProvider)
+- uid: DotNetHelper.FastMember.Extension.ExtFastMember.GetMemberWrappers(System.Type,System.Boolean)
+  name: GetMemberWrappers(Type, Boolean)
+  href: api/DotNetHelper.FastMember.Extension.ExtFastMember.html#DotNetHelper_FastMember_Extension_ExtFastMember_GetMemberWrappers_System_Type_System_Boolean_
+  commentId: M:DotNetHelper.FastMember.Extension.ExtFastMember.GetMemberWrappers(System.Type,System.Boolean)
+  fullName: DotNetHelper.FastMember.Extension.ExtFastMember.GetMemberWrappers(System.Type, System.Boolean)
+  nameWithType: ExtFastMember.GetMemberWrappers(Type, Boolean)
+- uid: DotNetHelper.FastMember.Extension.ExtFastMember.GetMemberWrappers*
+  name: GetMemberWrappers
+  href: api/DotNetHelper.FastMember.Extension.ExtFastMember.html#DotNetHelper_FastMember_Extension_ExtFastMember_GetMemberWrappers_
+  commentId: Overload:DotNetHelper.FastMember.Extension.ExtFastMember.GetMemberWrappers
   isSpec: "True"
-  fullName: DotNetHelper.FastMember.Extension.ExtFastMember.GetDynamicAdvanceMembers
-  nameWithType: ExtFastMember.GetDynamicAdvanceMembers
-- uid: DotNetHelper.FastMember.Extension.ExtFastMember.GetDynamicAdvanceMembers``1(``0)
-  name: GetDynamicAdvanceMembers<T>(T)
-  href: api/DotNetHelper.FastMember.Extension.ExtFastMember.html#DotNetHelper_FastMember_Extension_ExtFastMember_GetDynamicAdvanceMembers__1___0_
-  commentId: M:DotNetHelper.FastMember.Extension.ExtFastMember.GetDynamicAdvanceMembers``1(``0)
-  name.vb: GetDynamicAdvanceMembers(Of T)(T)
-  fullName: DotNetHelper.FastMember.Extension.ExtFastMember.GetDynamicAdvanceMembers<T>(T)
-  fullName.vb: DotNetHelper.FastMember.Extension.ExtFastMember.GetDynamicAdvanceMembers(Of T)(T)
-  nameWithType: ExtFastMember.GetDynamicAdvanceMembers<T>(T)
-  nameWithType.vb: ExtFastMember.GetDynamicAdvanceMembers(Of T)(T)
+  fullName: DotNetHelper.FastMember.Extension.ExtFastMember.GetMemberWrappers
+  nameWithType: ExtFastMember.GetMemberWrappers
+- uid: DotNetHelper.FastMember.Extension.ExtFastMember.GetMemberWrappers``1(``0)
+  name: GetMemberWrappers<T>(T)
+  href: api/DotNetHelper.FastMember.Extension.ExtFastMember.html#DotNetHelper_FastMember_Extension_ExtFastMember_GetMemberWrappers__1___0_
+  commentId: M:DotNetHelper.FastMember.Extension.ExtFastMember.GetMemberWrappers``1(``0)
+  name.vb: GetMemberWrappers(Of T)(T)
+  fullName: DotNetHelper.FastMember.Extension.ExtFastMember.GetMemberWrappers<T>(T)
+  fullName.vb: DotNetHelper.FastMember.Extension.ExtFastMember.GetMemberWrappers(Of T)(T)
+  nameWithType: ExtFastMember.GetMemberWrappers<T>(T)
+  nameWithType.vb: ExtFastMember.GetMemberWrappers(Of T)(T)
+- uid: DotNetHelper.FastMember.Extension.ExtFastMember.GetMemberWrappers``1(System.Boolean)
+  name: GetMemberWrappers<T>(Boolean)
+  href: api/DotNetHelper.FastMember.Extension.ExtFastMember.html#DotNetHelper_FastMember_Extension_ExtFastMember_GetMemberWrappers__1_System_Boolean_
+  commentId: M:DotNetHelper.FastMember.Extension.ExtFastMember.GetMemberWrappers``1(System.Boolean)
+  name.vb: GetMemberWrappers(Of T)(Boolean)
+  fullName: DotNetHelper.FastMember.Extension.ExtFastMember.GetMemberWrappers<T>(System.Boolean)
+  fullName.vb: DotNetHelper.FastMember.Extension.ExtFastMember.GetMemberWrappers(Of T)(System.Boolean)
+  nameWithType: ExtFastMember.GetMemberWrappers<T>(Boolean)
+  nameWithType.vb: ExtFastMember.GetMemberWrappers(Of T)(Boolean)
+- uid: DotNetHelper.FastMember.Extension.ExtFastMember.SetMemberValue*
+  name: SetMemberValue
+  href: api/DotNetHelper.FastMember.Extension.ExtFastMember.html#DotNetHelper_FastMember_Extension_ExtFastMember_SetMemberValue_
+  commentId: Overload:DotNetHelper.FastMember.Extension.ExtFastMember.SetMemberValue
+  isSpec: "True"
+  fullName: DotNetHelper.FastMember.Extension.ExtFastMember.SetMemberValue
+  nameWithType: ExtFastMember.SetMemberValue
+- uid: DotNetHelper.FastMember.Extension.ExtFastMember.SetMemberValue``1(``0,System.String,System.Object)
+  name: SetMemberValue<T>(T, String, Object)
+  href: api/DotNetHelper.FastMember.Extension.ExtFastMember.html#DotNetHelper_FastMember_Extension_ExtFastMember_SetMemberValue__1___0_System_String_System_Object_
+  commentId: M:DotNetHelper.FastMember.Extension.ExtFastMember.SetMemberValue``1(``0,System.String,System.Object)
+  name.vb: SetMemberValue(Of T)(T, String, Object)
+  fullName: DotNetHelper.FastMember.Extension.ExtFastMember.SetMemberValue<T>(T, System.String, System.Object)
+  fullName.vb: DotNetHelper.FastMember.Extension.ExtFastMember.SetMemberValue(Of T)(T, System.String, System.Object)
+  nameWithType: ExtFastMember.SetMemberValue<T>(T, String, Object)
+  nameWithType.vb: ExtFastMember.SetMemberValue(Of T)(T, String, Object)
 - uid: DotNetHelper.FastMember.Extension.Helpers
   name: DotNetHelper.FastMember.Extension.Helpers
   href: api/DotNetHelper.FastMember.Extension.Helpers.html
@@ -157,135 +216,74 @@ references:
   commentId: T:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper
   fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper
   nameWithType: DynamicObjectHelper
-- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.AddProperty(System.Dynamic.ExpandoObject,System.String,System.Object)
-  name: AddProperty(ExpandoObject, String, Object)
-  href: api/DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.html#DotNetHelper_FastMember_Extension_Helpers_DynamicObjectHelper_AddProperty_System_Dynamic_ExpandoObject_System_String_System_Object_
-  commentId: M:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.AddProperty(System.Dynamic.ExpandoObject,System.String,System.Object)
-  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.AddProperty(System.Dynamic.ExpandoObject, System.String, System.Object)
-  nameWithType: DynamicObjectHelper.AddProperty(ExpandoObject, String, Object)
-- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.AddProperty*
-  name: AddProperty
-  href: api/DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.html#DotNetHelper_FastMember_Extension_Helpers_DynamicObjectHelper_AddProperty_
-  commentId: Overload:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.AddProperty
+- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.#ctor
+  name: DynamicObjectHelper()
+  href: api/DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.html#DotNetHelper_FastMember_Extension_Helpers_DynamicObjectHelper__ctor
+  commentId: M:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.#ctor
+  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.DynamicObjectHelper()
+  nameWithType: DynamicObjectHelper.DynamicObjectHelper()
+- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.#ctor*
+  name: DynamicObjectHelper
+  href: api/DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.html#DotNetHelper_FastMember_Extension_Helpers_DynamicObjectHelper__ctor_
+  commentId: Overload:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.#ctor
   isSpec: "True"
-  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.AddProperty
-  nameWithType: DynamicObjectHelper.AddProperty
-- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.AddPropertyChangedHander(System.Dynamic.ExpandoObject,System.ComponentModel.PropertyChangedEventHandler)
-  name: AddPropertyChangedHander(ExpandoObject, PropertyChangedEventHandler)
-  href: api/DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.html#DotNetHelper_FastMember_Extension_Helpers_DynamicObjectHelper_AddPropertyChangedHander_System_Dynamic_ExpandoObject_System_ComponentModel_PropertyChangedEventHandler_
-  commentId: M:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.AddPropertyChangedHander(System.Dynamic.ExpandoObject,System.ComponentModel.PropertyChangedEventHandler)
-  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.AddPropertyChangedHander(System.Dynamic.ExpandoObject, System.ComponentModel.PropertyChangedEventHandler)
-  nameWithType: DynamicObjectHelper.AddPropertyChangedHander(ExpandoObject, PropertyChangedEventHandler)
-- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.AddPropertyChangedHander*
-  name: AddPropertyChangedHander
-  href: api/DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.html#DotNetHelper_FastMember_Extension_Helpers_DynamicObjectHelper_AddPropertyChangedHander_
-  commentId: Overload:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.AddPropertyChangedHander
+  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.DynamicObjectHelper
+  nameWithType: DynamicObjectHelper.DynamicObjectHelper
+- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetDynamicMemberNameAndValues(System.Dynamic.IDynamicMetaObjectProvider)
+  name: GetDynamicMemberNameAndValues(IDynamicMetaObjectProvider)
+  href: api/DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.html#DotNetHelper_FastMember_Extension_Helpers_DynamicObjectHelper_GetDynamicMemberNameAndValues_System_Dynamic_IDynamicMetaObjectProvider_
+  commentId: M:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetDynamicMemberNameAndValues(System.Dynamic.IDynamicMetaObjectProvider)
+  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetDynamicMemberNameAndValues(System.Dynamic.IDynamicMetaObjectProvider)
+  nameWithType: DynamicObjectHelper.GetDynamicMemberNameAndValues(IDynamicMetaObjectProvider)
+- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetDynamicMemberNameAndValues*
+  name: GetDynamicMemberNameAndValues
+  href: api/DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.html#DotNetHelper_FastMember_Extension_Helpers_DynamicObjectHelper_GetDynamicMemberNameAndValues_
+  commentId: Overload:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetDynamicMemberNameAndValues
   isSpec: "True"
-  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.AddPropertyChangedHander
-  nameWithType: DynamicObjectHelper.AddPropertyChangedHander
-- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetProperties(System.Dynamic.ExpandoObject)
-  name: GetProperties(ExpandoObject)
-  href: api/DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.html#DotNetHelper_FastMember_Extension_Helpers_DynamicObjectHelper_GetProperties_System_Dynamic_ExpandoObject_
-  commentId: M:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetProperties(System.Dynamic.ExpandoObject)
-  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetProperties(System.Dynamic.ExpandoObject)
-  nameWithType: DynamicObjectHelper.GetProperties(ExpandoObject)
-- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetProperties*
-  name: GetProperties
-  href: api/DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.html#DotNetHelper_FastMember_Extension_Helpers_DynamicObjectHelper_GetProperties_
-  commentId: Overload:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetProperties
+  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetDynamicMemberNameAndValues
+  nameWithType: DynamicObjectHelper.GetDynamicMemberNameAndValues
+- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetDynamicMemberNames(System.Dynamic.IDynamicMetaObjectProvider)
+  name: GetDynamicMemberNames(IDynamicMetaObjectProvider)
+  href: api/DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.html#DotNetHelper_FastMember_Extension_Helpers_DynamicObjectHelper_GetDynamicMemberNames_System_Dynamic_IDynamicMetaObjectProvider_
+  commentId: M:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetDynamicMemberNames(System.Dynamic.IDynamicMetaObjectProvider)
+  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetDynamicMemberNames(System.Dynamic.IDynamicMetaObjectProvider)
+  nameWithType: DynamicObjectHelper.GetDynamicMemberNames(IDynamicMetaObjectProvider)
+- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetDynamicMemberNames*
+  name: GetDynamicMemberNames
+  href: api/DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.html#DotNetHelper_FastMember_Extension_Helpers_DynamicObjectHelper_GetDynamicMemberNames_
+  commentId: Overload:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetDynamicMemberNames
   isSpec: "True"
-  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetProperties
-  nameWithType: DynamicObjectHelper.GetProperties
-- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetPropertyValue(System.Dynamic.ExpandoObject,System.String,System.Boolean)
-  name: GetPropertyValue(ExpandoObject, String, Boolean)
-  href: api/DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.html#DotNetHelper_FastMember_Extension_Helpers_DynamicObjectHelper_GetPropertyValue_System_Dynamic_ExpandoObject_System_String_System_Boolean_
-  commentId: M:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetPropertyValue(System.Dynamic.ExpandoObject,System.String,System.Boolean)
-  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetPropertyValue(System.Dynamic.ExpandoObject, System.String, System.Boolean)
-  nameWithType: DynamicObjectHelper.GetPropertyValue(ExpandoObject, String, Boolean)
-- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetPropertyValue*
-  name: GetPropertyValue
-  href: api/DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.html#DotNetHelper_FastMember_Extension_Helpers_DynamicObjectHelper_GetPropertyValue_
-  commentId: Overload:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetPropertyValue
+  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetDynamicMemberNames
+  nameWithType: DynamicObjectHelper.GetDynamicMemberNames
+- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.TryGetMember(System.Dynamic.IDynamicMetaObjectProvider,System.String,System.Object@)
+  name: TryGetMember(IDynamicMetaObjectProvider, String, out Object)
+  href: api/DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.html#DotNetHelper_FastMember_Extension_Helpers_DynamicObjectHelper_TryGetMember_System_Dynamic_IDynamicMetaObjectProvider_System_String_System_Object__
+  commentId: M:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.TryGetMember(System.Dynamic.IDynamicMetaObjectProvider,System.String,System.Object@)
+  name.vb: TryGetMember(IDynamicMetaObjectProvider, String, ByRef Object)
+  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.TryGetMember(System.Dynamic.IDynamicMetaObjectProvider, System.String, out System.Object)
+  fullName.vb: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.TryGetMember(System.Dynamic.IDynamicMetaObjectProvider, System.String, ByRef System.Object)
+  nameWithType: DynamicObjectHelper.TryGetMember(IDynamicMetaObjectProvider, String, out Object)
+  nameWithType.vb: DynamicObjectHelper.TryGetMember(IDynamicMetaObjectProvider, String, ByRef Object)
+- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.TryGetMember*
+  name: TryGetMember
+  href: api/DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.html#DotNetHelper_FastMember_Extension_Helpers_DynamicObjectHelper_TryGetMember_
+  commentId: Overload:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.TryGetMember
   isSpec: "True"
-  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.GetPropertyValue
-  nameWithType: DynamicObjectHelper.GetPropertyValue
-- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.RemoveProperty(System.Dynamic.ExpandoObject,System.String)
-  name: RemoveProperty(ExpandoObject, String)
-  href: api/DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.html#DotNetHelper_FastMember_Extension_Helpers_DynamicObjectHelper_RemoveProperty_System_Dynamic_ExpandoObject_System_String_
-  commentId: M:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.RemoveProperty(System.Dynamic.ExpandoObject,System.String)
-  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.RemoveProperty(System.Dynamic.ExpandoObject, System.String)
-  nameWithType: DynamicObjectHelper.RemoveProperty(ExpandoObject, String)
-- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.RemoveProperty*
-  name: RemoveProperty
-  href: api/DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.html#DotNetHelper_FastMember_Extension_Helpers_DynamicObjectHelper_RemoveProperty_
-  commentId: Overload:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.RemoveProperty
+  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.TryGetMember
+  nameWithType: DynamicObjectHelper.TryGetMember
+- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.TrySetMember(System.Dynamic.IDynamicMetaObjectProvider,System.String,System.Object)
+  name: TrySetMember(IDynamicMetaObjectProvider, String, Object)
+  href: api/DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.html#DotNetHelper_FastMember_Extension_Helpers_DynamicObjectHelper_TrySetMember_System_Dynamic_IDynamicMetaObjectProvider_System_String_System_Object_
+  commentId: M:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.TrySetMember(System.Dynamic.IDynamicMetaObjectProvider,System.String,System.Object)
+  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.TrySetMember(System.Dynamic.IDynamicMetaObjectProvider, System.String, System.Object)
+  nameWithType: DynamicObjectHelper.TrySetMember(IDynamicMetaObjectProvider, String, Object)
+- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.TrySetMember*
+  name: TrySetMember
+  href: api/DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.html#DotNetHelper_FastMember_Extension_Helpers_DynamicObjectHelper_TrySetMember_
+  commentId: Overload:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.TrySetMember
   isSpec: "True"
-  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.RemoveProperty
-  nameWithType: DynamicObjectHelper.RemoveProperty
-- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.ToDataReader(System.Dynamic.ExpandoObject)
-  name: ToDataReader(ExpandoObject)
-  href: api/DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.html#DotNetHelper_FastMember_Extension_Helpers_DynamicObjectHelper_ToDataReader_System_Dynamic_ExpandoObject_
-  commentId: M:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.ToDataReader(System.Dynamic.ExpandoObject)
-  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.ToDataReader(System.Dynamic.ExpandoObject)
-  nameWithType: DynamicObjectHelper.ToDataReader(ExpandoObject)
-- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.ToDataReader*
-  name: ToDataReader
-  href: api/DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.html#DotNetHelper_FastMember_Extension_Helpers_DynamicObjectHelper_ToDataReader_
-  commentId: Overload:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.ToDataReader
-  isSpec: "True"
-  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.ToDataReader
-  nameWithType: DynamicObjectHelper.ToDataReader
-- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.ToDataTable(System.Dynamic.ExpandoObject)
-  name: ToDataTable(ExpandoObject)
-  href: api/DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.html#DotNetHelper_FastMember_Extension_Helpers_DynamicObjectHelper_ToDataTable_System_Dynamic_ExpandoObject_
-  commentId: M:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.ToDataTable(System.Dynamic.ExpandoObject)
-  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.ToDataTable(System.Dynamic.ExpandoObject)
-  nameWithType: DynamicObjectHelper.ToDataTable(ExpandoObject)
-- uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.ToDataTable*
-  name: ToDataTable
-  href: api/DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.html#DotNetHelper_FastMember_Extension_Helpers_DynamicObjectHelper_ToDataTable_
-  commentId: Overload:DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.ToDataTable
-  isSpec: "True"
-  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.ToDataTable
-  nameWithType: DynamicObjectHelper.ToDataTable
-- uid: DotNetHelper.FastMember.Extension.Helpers.ExpressionHelper
-  name: ExpressionHelper
-  href: api/DotNetHelper.FastMember.Extension.Helpers.ExpressionHelper.html
-  commentId: T:DotNetHelper.FastMember.Extension.Helpers.ExpressionHelper
-  fullName: DotNetHelper.FastMember.Extension.Helpers.ExpressionHelper
-  nameWithType: ExpressionHelper
-- uid: DotNetHelper.FastMember.Extension.Helpers.ExpressionHelper.GetPropertyNamesFromExpression*
-  name: GetPropertyNamesFromExpression
-  href: api/DotNetHelper.FastMember.Extension.Helpers.ExpressionHelper.html#DotNetHelper_FastMember_Extension_Helpers_ExpressionHelper_GetPropertyNamesFromExpression_
-  commentId: Overload:DotNetHelper.FastMember.Extension.Helpers.ExpressionHelper.GetPropertyNamesFromExpression
-  isSpec: "True"
-  fullName: DotNetHelper.FastMember.Extension.Helpers.ExpressionHelper.GetPropertyNamesFromExpression
-  nameWithType: ExpressionHelper.GetPropertyNamesFromExpression
-- uid: DotNetHelper.FastMember.Extension.Helpers.ExpressionHelper.GetPropertyNamesFromExpression``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})
-  name: GetPropertyNamesFromExpression<T>(Expression<Func<T, Object>>)
-  href: api/DotNetHelper.FastMember.Extension.Helpers.ExpressionHelper.html#DotNetHelper_FastMember_Extension_Helpers_ExpressionHelper_GetPropertyNamesFromExpression__1_System_Linq_Expressions_Expression_System_Func___0_System_Object___
-  commentId: M:DotNetHelper.FastMember.Extension.Helpers.ExpressionHelper.GetPropertyNamesFromExpression``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})
-  name.vb: GetPropertyNamesFromExpression(Of T)(Expression(Of Func(Of T, Object)))
-  fullName: DotNetHelper.FastMember.Extension.Helpers.ExpressionHelper.GetPropertyNamesFromExpression<T>(System.Linq.Expressions.Expression<System.Func<T, System.Object>>)
-  fullName.vb: DotNetHelper.FastMember.Extension.Helpers.ExpressionHelper.GetPropertyNamesFromExpression(Of T)(System.Linq.Expressions.Expression(Of System.Func(Of T, System.Object)))
-  nameWithType: ExpressionHelper.GetPropertyNamesFromExpression<T>(Expression<Func<T, Object>>)
-  nameWithType.vb: ExpressionHelper.GetPropertyNamesFromExpression(Of T)(Expression(Of Func(Of T, Object)))
-- uid: DotNetHelper.FastMember.Extension.Helpers.ExpressionHelper.GetPropertyNamesFromExpressions*
-  name: GetPropertyNamesFromExpressions
-  href: api/DotNetHelper.FastMember.Extension.Helpers.ExpressionHelper.html#DotNetHelper_FastMember_Extension_Helpers_ExpressionHelper_GetPropertyNamesFromExpressions_
-  commentId: Overload:DotNetHelper.FastMember.Extension.Helpers.ExpressionHelper.GetPropertyNamesFromExpressions
-  isSpec: "True"
-  fullName: DotNetHelper.FastMember.Extension.Helpers.ExpressionHelper.GetPropertyNamesFromExpressions
-  nameWithType: ExpressionHelper.GetPropertyNamesFromExpressions
-- uid: DotNetHelper.FastMember.Extension.Helpers.ExpressionHelper.GetPropertyNamesFromExpressions``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}}[])
-  name: GetPropertyNamesFromExpressions<T>(Expression<Func<T, Object>>[])
-  href: api/DotNetHelper.FastMember.Extension.Helpers.ExpressionHelper.html#DotNetHelper_FastMember_Extension_Helpers_ExpressionHelper_GetPropertyNamesFromExpressions__1_System_Linq_Expressions_Expression_System_Func___0_System_Object_____
-  commentId: M:DotNetHelper.FastMember.Extension.Helpers.ExpressionHelper.GetPropertyNamesFromExpressions``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}}[])
-  name.vb: GetPropertyNamesFromExpressions(Of T)(Expression(Of Func(Of T, Object))())
-  fullName: DotNetHelper.FastMember.Extension.Helpers.ExpressionHelper.GetPropertyNamesFromExpressions<T>(System.Linq.Expressions.Expression<System.Func<T, System.Object>>[])
-  fullName.vb: DotNetHelper.FastMember.Extension.Helpers.ExpressionHelper.GetPropertyNamesFromExpressions(Of T)(System.Linq.Expressions.Expression(Of System.Func(Of T, System.Object))())
-  nameWithType: ExpressionHelper.GetPropertyNamesFromExpressions<T>(Expression<Func<T, Object>>[])
-  nameWithType.vb: ExpressionHelper.GetPropertyNamesFromExpressions(Of T)(Expression(Of Func(Of T, Object))())
+  fullName: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.TrySetMember
+  nameWithType: DynamicObjectHelper.TrySetMember
 - uid: DotNetHelper.FastMember.Extension.Helpers.New`1
   name: New<T>
   href: api/DotNetHelper.FastMember.Extension.Helpers.New-1.html
@@ -309,197 +307,159 @@ references:
   commentId: N:DotNetHelper.FastMember.Extension.Models
   fullName: DotNetHelper.FastMember.Extension.Models
   nameWithType: DotNetHelper.FastMember.Extension.Models
-- uid: DotNetHelper.FastMember.Extension.Models.AdvanceMember
-  name: AdvanceMember
-  href: api/DotNetHelper.FastMember.Extension.Models.AdvanceMember.html
-  commentId: T:DotNetHelper.FastMember.Extension.Models.AdvanceMember
-  fullName: DotNetHelper.FastMember.Extension.Models.AdvanceMember
-  nameWithType: AdvanceMember
-- uid: DotNetHelper.FastMember.Extension.Models.AdvanceMember.#ctor(FastMember.Member)
-  name: AdvanceMember(Member)
-  href: api/DotNetHelper.FastMember.Extension.Models.AdvanceMember.html#DotNetHelper_FastMember_Extension_Models_AdvanceMember__ctor_FastMember_Member_
-  commentId: M:DotNetHelper.FastMember.Extension.Models.AdvanceMember.#ctor(FastMember.Member)
-  fullName: DotNetHelper.FastMember.Extension.Models.AdvanceMember.AdvanceMember(FastMember.Member)
-  nameWithType: AdvanceMember.AdvanceMember(Member)
-- uid: DotNetHelper.FastMember.Extension.Models.AdvanceMember.#ctor*
-  name: AdvanceMember
-  href: api/DotNetHelper.FastMember.Extension.Models.AdvanceMember.html#DotNetHelper_FastMember_Extension_Models_AdvanceMember__ctor_
-  commentId: Overload:DotNetHelper.FastMember.Extension.Models.AdvanceMember.#ctor
+- uid: DotNetHelper.FastMember.Extension.Models.MemberWrapper
+  name: MemberWrapper
+  href: api/DotNetHelper.FastMember.Extension.Models.MemberWrapper.html
+  commentId: T:DotNetHelper.FastMember.Extension.Models.MemberWrapper
+  fullName: DotNetHelper.FastMember.Extension.Models.MemberWrapper
+  nameWithType: MemberWrapper
+- uid: DotNetHelper.FastMember.Extension.Models.MemberWrapper.CanRead
+  name: CanRead
+  href: api/DotNetHelper.FastMember.Extension.Models.MemberWrapper.html#DotNetHelper_FastMember_Extension_Models_MemberWrapper_CanRead
+  commentId: P:DotNetHelper.FastMember.Extension.Models.MemberWrapper.CanRead
+  fullName: DotNetHelper.FastMember.Extension.Models.MemberWrapper.CanRead
+  nameWithType: MemberWrapper.CanRead
+- uid: DotNetHelper.FastMember.Extension.Models.MemberWrapper.CanRead*
+  name: CanRead
+  href: api/DotNetHelper.FastMember.Extension.Models.MemberWrapper.html#DotNetHelper_FastMember_Extension_Models_MemberWrapper_CanRead_
+  commentId: Overload:DotNetHelper.FastMember.Extension.Models.MemberWrapper.CanRead
   isSpec: "True"
-  fullName: DotNetHelper.FastMember.Extension.Models.AdvanceMember.AdvanceMember
-  nameWithType: AdvanceMember.AdvanceMember
-- uid: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetCustomAttribute*
+  fullName: DotNetHelper.FastMember.Extension.Models.MemberWrapper.CanRead
+  nameWithType: MemberWrapper.CanRead
+- uid: DotNetHelper.FastMember.Extension.Models.MemberWrapper.CanWrite
+  name: CanWrite
+  href: api/DotNetHelper.FastMember.Extension.Models.MemberWrapper.html#DotNetHelper_FastMember_Extension_Models_MemberWrapper_CanWrite
+  commentId: P:DotNetHelper.FastMember.Extension.Models.MemberWrapper.CanWrite
+  fullName: DotNetHelper.FastMember.Extension.Models.MemberWrapper.CanWrite
+  nameWithType: MemberWrapper.CanWrite
+- uid: DotNetHelper.FastMember.Extension.Models.MemberWrapper.CanWrite*
+  name: CanWrite
+  href: api/DotNetHelper.FastMember.Extension.Models.MemberWrapper.html#DotNetHelper_FastMember_Extension_Models_MemberWrapper_CanWrite_
+  commentId: Overload:DotNetHelper.FastMember.Extension.Models.MemberWrapper.CanWrite
+  isSpec: "True"
+  fullName: DotNetHelper.FastMember.Extension.Models.MemberWrapper.CanWrite
+  nameWithType: MemberWrapper.CanWrite
+- uid: DotNetHelper.FastMember.Extension.Models.MemberWrapper.GetCustomAttribute*
   name: GetCustomAttribute
-  href: api/DotNetHelper.FastMember.Extension.Models.AdvanceMember.html#DotNetHelper_FastMember_Extension_Models_AdvanceMember_GetCustomAttribute_
-  commentId: Overload:DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetCustomAttribute
+  href: api/DotNetHelper.FastMember.Extension.Models.MemberWrapper.html#DotNetHelper_FastMember_Extension_Models_MemberWrapper_GetCustomAttribute_
+  commentId: Overload:DotNetHelper.FastMember.Extension.Models.MemberWrapper.GetCustomAttribute
   isSpec: "True"
-  fullName: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetCustomAttribute
-  nameWithType: AdvanceMember.GetCustomAttribute
-- uid: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetCustomAttribute``1
+  fullName: DotNetHelper.FastMember.Extension.Models.MemberWrapper.GetCustomAttribute
+  nameWithType: MemberWrapper.GetCustomAttribute
+- uid: DotNetHelper.FastMember.Extension.Models.MemberWrapper.GetCustomAttribute``1
   name: GetCustomAttribute<T>()
-  href: api/DotNetHelper.FastMember.Extension.Models.AdvanceMember.html#DotNetHelper_FastMember_Extension_Models_AdvanceMember_GetCustomAttribute__1
-  commentId: M:DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetCustomAttribute``1
+  href: api/DotNetHelper.FastMember.Extension.Models.MemberWrapper.html#DotNetHelper_FastMember_Extension_Models_MemberWrapper_GetCustomAttribute__1
+  commentId: M:DotNetHelper.FastMember.Extension.Models.MemberWrapper.GetCustomAttribute``1
   name.vb: GetCustomAttribute(Of T)()
-  fullName: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetCustomAttribute<T>()
-  fullName.vb: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetCustomAttribute(Of T)()
-  nameWithType: AdvanceMember.GetCustomAttribute<T>()
-  nameWithType.vb: AdvanceMember.GetCustomAttribute(Of T)()
-- uid: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetMemberInfo
+  fullName: DotNetHelper.FastMember.Extension.Models.MemberWrapper.GetCustomAttribute<T>()
+  fullName.vb: DotNetHelper.FastMember.Extension.Models.MemberWrapper.GetCustomAttribute(Of T)()
+  nameWithType: MemberWrapper.GetCustomAttribute<T>()
+  nameWithType.vb: MemberWrapper.GetCustomAttribute(Of T)()
+- uid: DotNetHelper.FastMember.Extension.Models.MemberWrapper.GetMemberInfo
   name: GetMemberInfo()
-  href: api/DotNetHelper.FastMember.Extension.Models.AdvanceMember.html#DotNetHelper_FastMember_Extension_Models_AdvanceMember_GetMemberInfo
-  commentId: M:DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetMemberInfo
-  fullName: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetMemberInfo()
-  nameWithType: AdvanceMember.GetMemberInfo()
-- uid: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetMemberInfo*
+  href: api/DotNetHelper.FastMember.Extension.Models.MemberWrapper.html#DotNetHelper_FastMember_Extension_Models_MemberWrapper_GetMemberInfo
+  commentId: M:DotNetHelper.FastMember.Extension.Models.MemberWrapper.GetMemberInfo
+  fullName: DotNetHelper.FastMember.Extension.Models.MemberWrapper.GetMemberInfo()
+  nameWithType: MemberWrapper.GetMemberInfo()
+- uid: DotNetHelper.FastMember.Extension.Models.MemberWrapper.GetMemberInfo*
   name: GetMemberInfo
-  href: api/DotNetHelper.FastMember.Extension.Models.AdvanceMember.html#DotNetHelper_FastMember_Extension_Models_AdvanceMember_GetMemberInfo_
-  commentId: Overload:DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetMemberInfo
+  href: api/DotNetHelper.FastMember.Extension.Models.MemberWrapper.html#DotNetHelper_FastMember_Extension_Models_MemberWrapper_GetMemberInfo_
+  commentId: Overload:DotNetHelper.FastMember.Extension.Models.MemberWrapper.GetMemberInfo
   isSpec: "True"
-  fullName: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetMemberInfo
-  nameWithType: AdvanceMember.GetMemberInfo
-- uid: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetValue(System.Object)
+  fullName: DotNetHelper.FastMember.Extension.Models.MemberWrapper.GetMemberInfo
+  nameWithType: MemberWrapper.GetMemberInfo
+- uid: DotNetHelper.FastMember.Extension.Models.MemberWrapper.GetValue(System.Object)
   name: GetValue(Object)
-  href: api/DotNetHelper.FastMember.Extension.Models.AdvanceMember.html#DotNetHelper_FastMember_Extension_Models_AdvanceMember_GetValue_System_Object_
-  commentId: M:DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetValue(System.Object)
-  fullName: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetValue(System.Object)
-  nameWithType: AdvanceMember.GetValue(Object)
-- uid: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetValue(System.Object,FastMember.TypeAccessor)
+  href: api/DotNetHelper.FastMember.Extension.Models.MemberWrapper.html#DotNetHelper_FastMember_Extension_Models_MemberWrapper_GetValue_System_Object_
+  commentId: M:DotNetHelper.FastMember.Extension.Models.MemberWrapper.GetValue(System.Object)
+  fullName: DotNetHelper.FastMember.Extension.Models.MemberWrapper.GetValue(System.Object)
+  nameWithType: MemberWrapper.GetValue(Object)
+- uid: DotNetHelper.FastMember.Extension.Models.MemberWrapper.GetValue(System.Object,FastMember.TypeAccessor)
   name: GetValue(Object, TypeAccessor)
-  href: api/DotNetHelper.FastMember.Extension.Models.AdvanceMember.html#DotNetHelper_FastMember_Extension_Models_AdvanceMember_GetValue_System_Object_FastMember_TypeAccessor_
-  commentId: M:DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetValue(System.Object,FastMember.TypeAccessor)
-  fullName: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetValue(System.Object, FastMember.TypeAccessor)
-  nameWithType: AdvanceMember.GetValue(Object, TypeAccessor)
-- uid: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetValue*
+  href: api/DotNetHelper.FastMember.Extension.Models.MemberWrapper.html#DotNetHelper_FastMember_Extension_Models_MemberWrapper_GetValue_System_Object_FastMember_TypeAccessor_
+  commentId: M:DotNetHelper.FastMember.Extension.Models.MemberWrapper.GetValue(System.Object,FastMember.TypeAccessor)
+  fullName: DotNetHelper.FastMember.Extension.Models.MemberWrapper.GetValue(System.Object, FastMember.TypeAccessor)
+  nameWithType: MemberWrapper.GetValue(Object, TypeAccessor)
+- uid: DotNetHelper.FastMember.Extension.Models.MemberWrapper.GetValue*
   name: GetValue
-  href: api/DotNetHelper.FastMember.Extension.Models.AdvanceMember.html#DotNetHelper_FastMember_Extension_Models_AdvanceMember_GetValue_
-  commentId: Overload:DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetValue
+  href: api/DotNetHelper.FastMember.Extension.Models.MemberWrapper.html#DotNetHelper_FastMember_Extension_Models_MemberWrapper_GetValue_
+  commentId: Overload:DotNetHelper.FastMember.Extension.Models.MemberWrapper.GetValue
   isSpec: "True"
-  fullName: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetValue
-  nameWithType: AdvanceMember.GetValue
-- uid: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetValue``1(``0)
+  fullName: DotNetHelper.FastMember.Extension.Models.MemberWrapper.GetValue
+  nameWithType: MemberWrapper.GetValue
+- uid: DotNetHelper.FastMember.Extension.Models.MemberWrapper.GetValue``1(``0)
   name: GetValue<T>(T)
-  href: api/DotNetHelper.FastMember.Extension.Models.AdvanceMember.html#DotNetHelper_FastMember_Extension_Models_AdvanceMember_GetValue__1___0_
-  commentId: M:DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetValue``1(``0)
+  href: api/DotNetHelper.FastMember.Extension.Models.MemberWrapper.html#DotNetHelper_FastMember_Extension_Models_MemberWrapper_GetValue__1___0_
+  commentId: M:DotNetHelper.FastMember.Extension.Models.MemberWrapper.GetValue``1(``0)
   name.vb: GetValue(Of T)(T)
-  fullName: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetValue<T>(T)
-  fullName.vb: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetValue(Of T)(T)
-  nameWithType: AdvanceMember.GetValue<T>(T)
-  nameWithType.vb: AdvanceMember.GetValue(Of T)(T)
-- uid: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetValue``1(``0,FastMember.TypeAccessor)
+  fullName: DotNetHelper.FastMember.Extension.Models.MemberWrapper.GetValue<T>(T)
+  fullName.vb: DotNetHelper.FastMember.Extension.Models.MemberWrapper.GetValue(Of T)(T)
+  nameWithType: MemberWrapper.GetValue<T>(T)
+  nameWithType.vb: MemberWrapper.GetValue(Of T)(T)
+- uid: DotNetHelper.FastMember.Extension.Models.MemberWrapper.GetValue``1(``0,FastMember.TypeAccessor)
   name: GetValue<T>(T, TypeAccessor)
-  href: api/DotNetHelper.FastMember.Extension.Models.AdvanceMember.html#DotNetHelper_FastMember_Extension_Models_AdvanceMember_GetValue__1___0_FastMember_TypeAccessor_
-  commentId: M:DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetValue``1(``0,FastMember.TypeAccessor)
+  href: api/DotNetHelper.FastMember.Extension.Models.MemberWrapper.html#DotNetHelper_FastMember_Extension_Models_MemberWrapper_GetValue__1___0_FastMember_TypeAccessor_
+  commentId: M:DotNetHelper.FastMember.Extension.Models.MemberWrapper.GetValue``1(``0,FastMember.TypeAccessor)
   name.vb: GetValue(Of T)(T, TypeAccessor)
-  fullName: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetValue<T>(T, FastMember.TypeAccessor)
-  fullName.vb: DotNetHelper.FastMember.Extension.Models.AdvanceMember.GetValue(Of T)(T, FastMember.TypeAccessor)
-  nameWithType: AdvanceMember.GetValue<T>(T, TypeAccessor)
-  nameWithType.vb: AdvanceMember.GetValue(Of T)(T, TypeAccessor)
-- uid: DotNetHelper.FastMember.Extension.Models.AdvanceMember.Member
-  name: Member
-  href: api/DotNetHelper.FastMember.Extension.Models.AdvanceMember.html#DotNetHelper_FastMember_Extension_Models_AdvanceMember_Member
-  commentId: P:DotNetHelper.FastMember.Extension.Models.AdvanceMember.Member
-  fullName: DotNetHelper.FastMember.Extension.Models.AdvanceMember.Member
-  nameWithType: AdvanceMember.Member
-- uid: DotNetHelper.FastMember.Extension.Models.AdvanceMember.Member*
-  name: Member
-  href: api/DotNetHelper.FastMember.Extension.Models.AdvanceMember.html#DotNetHelper_FastMember_Extension_Models_AdvanceMember_Member_
-  commentId: Overload:DotNetHelper.FastMember.Extension.Models.AdvanceMember.Member
+  fullName: DotNetHelper.FastMember.Extension.Models.MemberWrapper.GetValue<T>(T, FastMember.TypeAccessor)
+  fullName.vb: DotNetHelper.FastMember.Extension.Models.MemberWrapper.GetValue(Of T)(T, FastMember.TypeAccessor)
+  nameWithType: MemberWrapper.GetValue<T>(T, TypeAccessor)
+  nameWithType.vb: MemberWrapper.GetValue(Of T)(T, TypeAccessor)
+- uid: DotNetHelper.FastMember.Extension.Models.MemberWrapper.IsADynamicMember
+  name: IsADynamicMember
+  href: api/DotNetHelper.FastMember.Extension.Models.MemberWrapper.html#DotNetHelper_FastMember_Extension_Models_MemberWrapper_IsADynamicMember
+  commentId: P:DotNetHelper.FastMember.Extension.Models.MemberWrapper.IsADynamicMember
+  fullName: DotNetHelper.FastMember.Extension.Models.MemberWrapper.IsADynamicMember
+  nameWithType: MemberWrapper.IsADynamicMember
+- uid: DotNetHelper.FastMember.Extension.Models.MemberWrapper.IsADynamicMember*
+  name: IsADynamicMember
+  href: api/DotNetHelper.FastMember.Extension.Models.MemberWrapper.html#DotNetHelper_FastMember_Extension_Models_MemberWrapper_IsADynamicMember_
+  commentId: Overload:DotNetHelper.FastMember.Extension.Models.MemberWrapper.IsADynamicMember
   isSpec: "True"
-  fullName: DotNetHelper.FastMember.Extension.Models.AdvanceMember.Member
-  nameWithType: AdvanceMember.Member
-- uid: DotNetHelper.FastMember.Extension.Models.AdvanceMember.SetMemberValue*
-  name: SetMemberValue
-  href: api/DotNetHelper.FastMember.Extension.Models.AdvanceMember.html#DotNetHelper_FastMember_Extension_Models_AdvanceMember_SetMemberValue_
-  commentId: Overload:DotNetHelper.FastMember.Extension.Models.AdvanceMember.SetMemberValue
-  isSpec: "True"
-  fullName: DotNetHelper.FastMember.Extension.Models.AdvanceMember.SetMemberValue
-  nameWithType: AdvanceMember.SetMemberValue
-- uid: DotNetHelper.FastMember.Extension.Models.AdvanceMember.SetMemberValue``1(``0,System.Object)
-  name: SetMemberValue<T>(T, Object)
-  href: api/DotNetHelper.FastMember.Extension.Models.AdvanceMember.html#DotNetHelper_FastMember_Extension_Models_AdvanceMember_SetMemberValue__1___0_System_Object_
-  commentId: M:DotNetHelper.FastMember.Extension.Models.AdvanceMember.SetMemberValue``1(``0,System.Object)
-  name.vb: SetMemberValue(Of T)(T, Object)
-  fullName: DotNetHelper.FastMember.Extension.Models.AdvanceMember.SetMemberValue<T>(T, System.Object)
-  fullName.vb: DotNetHelper.FastMember.Extension.Models.AdvanceMember.SetMemberValue(Of T)(T, System.Object)
-  nameWithType: AdvanceMember.SetMemberValue<T>(T, Object)
-  nameWithType.vb: AdvanceMember.SetMemberValue(Of T)(T, Object)
-- uid: DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember
-  name: DynamicAdvanceMember
-  href: api/DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.html
-  commentId: T:DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember
-  fullName: DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember
-  nameWithType: DynamicAdvanceMember
-- uid: DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.#ctor(System.String,System.Type)
-  name: DynamicAdvanceMember(String, Type)
-  href: api/DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.html#DotNetHelper_FastMember_Extension_Models_DynamicAdvanceMember__ctor_System_String_System_Type_
-  commentId: M:DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.#ctor(System.String,System.Type)
-  fullName: DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.DynamicAdvanceMember(System.String, System.Type)
-  nameWithType: DynamicAdvanceMember.DynamicAdvanceMember(String, Type)
-- uid: DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.#ctor*
-  name: DynamicAdvanceMember
-  href: api/DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.html#DotNetHelper_FastMember_Extension_Models_DynamicAdvanceMember__ctor_
-  commentId: Overload:DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.#ctor
-  isSpec: "True"
-  fullName: DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.DynamicAdvanceMember
-  nameWithType: DynamicAdvanceMember.DynamicAdvanceMember
-- uid: DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.GetValue*
-  name: GetValue
-  href: api/DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.html#DotNetHelper_FastMember_Extension_Models_DynamicAdvanceMember_GetValue_
-  commentId: Overload:DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.GetValue
-  isSpec: "True"
-  fullName: DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.GetValue
-  nameWithType: DynamicAdvanceMember.GetValue
-- uid: DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.GetValue``1(``0)
-  name: GetValue<T>(T)
-  href: api/DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.html#DotNetHelper_FastMember_Extension_Models_DynamicAdvanceMember_GetValue__1___0_
-  commentId: M:DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.GetValue``1(``0)
-  name.vb: GetValue(Of T)(T)
-  fullName: DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.GetValue<T>(T)
-  fullName.vb: DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.GetValue(Of T)(T)
-  nameWithType: DynamicAdvanceMember.GetValue<T>(T)
-  nameWithType.vb: DynamicAdvanceMember.GetValue(Of T)(T)
-- uid: DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.Name
+  fullName: DotNetHelper.FastMember.Extension.Models.MemberWrapper.IsADynamicMember
+  nameWithType: MemberWrapper.IsADynamicMember
+- uid: DotNetHelper.FastMember.Extension.Models.MemberWrapper.Name
   name: Name
-  href: api/DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.html#DotNetHelper_FastMember_Extension_Models_DynamicAdvanceMember_Name
-  commentId: P:DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.Name
-  fullName: DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.Name
-  nameWithType: DynamicAdvanceMember.Name
-- uid: DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.Name*
+  href: api/DotNetHelper.FastMember.Extension.Models.MemberWrapper.html#DotNetHelper_FastMember_Extension_Models_MemberWrapper_Name
+  commentId: P:DotNetHelper.FastMember.Extension.Models.MemberWrapper.Name
+  fullName: DotNetHelper.FastMember.Extension.Models.MemberWrapper.Name
+  nameWithType: MemberWrapper.Name
+- uid: DotNetHelper.FastMember.Extension.Models.MemberWrapper.Name*
   name: Name
-  href: api/DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.html#DotNetHelper_FastMember_Extension_Models_DynamicAdvanceMember_Name_
-  commentId: Overload:DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.Name
+  href: api/DotNetHelper.FastMember.Extension.Models.MemberWrapper.html#DotNetHelper_FastMember_Extension_Models_MemberWrapper_Name_
+  commentId: Overload:DotNetHelper.FastMember.Extension.Models.MemberWrapper.Name
   isSpec: "True"
-  fullName: DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.Name
-  nameWithType: DynamicAdvanceMember.Name
-- uid: DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.SetMemberValue*
+  fullName: DotNetHelper.FastMember.Extension.Models.MemberWrapper.Name
+  nameWithType: MemberWrapper.Name
+- uid: DotNetHelper.FastMember.Extension.Models.MemberWrapper.SetMemberValue*
   name: SetMemberValue
-  href: api/DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.html#DotNetHelper_FastMember_Extension_Models_DynamicAdvanceMember_SetMemberValue_
-  commentId: Overload:DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.SetMemberValue
+  href: api/DotNetHelper.FastMember.Extension.Models.MemberWrapper.html#DotNetHelper_FastMember_Extension_Models_MemberWrapper_SetMemberValue_
+  commentId: Overload:DotNetHelper.FastMember.Extension.Models.MemberWrapper.SetMemberValue
   isSpec: "True"
-  fullName: DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.SetMemberValue
-  nameWithType: DynamicAdvanceMember.SetMemberValue
-- uid: DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.SetMemberValue``1(``0,System.Object)
+  fullName: DotNetHelper.FastMember.Extension.Models.MemberWrapper.SetMemberValue
+  nameWithType: MemberWrapper.SetMemberValue
+- uid: DotNetHelper.FastMember.Extension.Models.MemberWrapper.SetMemberValue``1(``0,System.Object)
   name: SetMemberValue<T>(T, Object)
-  href: api/DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.html#DotNetHelper_FastMember_Extension_Models_DynamicAdvanceMember_SetMemberValue__1___0_System_Object_
-  commentId: M:DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.SetMemberValue``1(``0,System.Object)
+  href: api/DotNetHelper.FastMember.Extension.Models.MemberWrapper.html#DotNetHelper_FastMember_Extension_Models_MemberWrapper_SetMemberValue__1___0_System_Object_
+  commentId: M:DotNetHelper.FastMember.Extension.Models.MemberWrapper.SetMemberValue``1(``0,System.Object)
   name.vb: SetMemberValue(Of T)(T, Object)
-  fullName: DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.SetMemberValue<T>(T, System.Object)
-  fullName.vb: DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.SetMemberValue(Of T)(T, System.Object)
-  nameWithType: DynamicAdvanceMember.SetMemberValue<T>(T, Object)
-  nameWithType.vb: DynamicAdvanceMember.SetMemberValue(Of T)(T, Object)
-- uid: DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.Type
+  fullName: DotNetHelper.FastMember.Extension.Models.MemberWrapper.SetMemberValue<T>(T, System.Object)
+  fullName.vb: DotNetHelper.FastMember.Extension.Models.MemberWrapper.SetMemberValue(Of T)(T, System.Object)
+  nameWithType: MemberWrapper.SetMemberValue<T>(T, Object)
+  nameWithType.vb: MemberWrapper.SetMemberValue(Of T)(T, Object)
+- uid: DotNetHelper.FastMember.Extension.Models.MemberWrapper.Type
   name: Type
-  href: api/DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.html#DotNetHelper_FastMember_Extension_Models_DynamicAdvanceMember_Type
-  commentId: P:DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.Type
-  fullName: DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.Type
-  nameWithType: DynamicAdvanceMember.Type
-- uid: DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.Type*
+  href: api/DotNetHelper.FastMember.Extension.Models.MemberWrapper.html#DotNetHelper_FastMember_Extension_Models_MemberWrapper_Type
+  commentId: P:DotNetHelper.FastMember.Extension.Models.MemberWrapper.Type
+  fullName: DotNetHelper.FastMember.Extension.Models.MemberWrapper.Type
+  nameWithType: MemberWrapper.Type
+- uid: DotNetHelper.FastMember.Extension.Models.MemberWrapper.Type*
   name: Type
-  href: api/DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.html#DotNetHelper_FastMember_Extension_Models_DynamicAdvanceMember_Type_
-  commentId: Overload:DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.Type
+  href: api/DotNetHelper.FastMember.Extension.Models.MemberWrapper.html#DotNetHelper_FastMember_Extension_Models_MemberWrapper_Type_
+  commentId: Overload:DotNetHelper.FastMember.Extension.Models.MemberWrapper.Type
   isSpec: "True"
-  fullName: DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember.Type
-  nameWithType: DynamicAdvanceMember.Type
+  fullName: DotNetHelper.FastMember.Extension.Models.MemberWrapper.Type
+  nameWithType: MemberWrapper.Type
 - uid: DotNetHelper.FastMember.Extension.ObjectMapper
   name: ObjectMapper
   href: api/DotNetHelper.FastMember.Extension.ObjectMapper.html

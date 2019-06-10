@@ -4,8 +4,7 @@ items:
   commentId: N:DotNetHelper.FastMember.Extension.Models
   id: DotNetHelper.FastMember.Extension.Models
   children:
-  - DotNetHelper.FastMember.Extension.Models.AdvanceMember
-  - DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember
+  - DotNetHelper.FastMember.Extension.Models.MemberWrapper
   langs:
   - csharp
   - vb
@@ -16,13 +15,8 @@ items:
   assemblies:
   - DotNetHelper.FastMember.Extension
 references:
-- uid: DotNetHelper.FastMember.Extension.Models.AdvanceMember
-  commentId: T:DotNetHelper.FastMember.Extension.Models.AdvanceMember
-  name: AdvanceMember
-  nameWithType: AdvanceMember
-  fullName: DotNetHelper.FastMember.Extension.Models.AdvanceMember
-- uid: DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember
-  commentId: T:DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember
-  name: DynamicAdvanceMember
-  nameWithType: DynamicAdvanceMember
-  fullName: DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember
+- uid: DotNetHelper.FastMember.Extension.Models.MemberWrapper
+  commentId: T:DotNetHelper.FastMember.Extension.Models.MemberWrapper
+  name: MemberWrapper
+  nameWithType: MemberWrapper
+  fullName: DotNetHelper.FastMember.Extension.Models.MemberWrapper

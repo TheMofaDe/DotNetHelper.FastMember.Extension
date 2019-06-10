@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: DotNetHelper.FastMember.Extension.Extension
+  commentId: N:DotNetHelper.FastMember.Extension.Extension
+  id: DotNetHelper.FastMember.Extension.Extension
+  children:
+  - DotNetHelper.FastMember.Extension.Extension.FastMemberExtension
+  langs:
+  - csharp
+  - vb
+  name: DotNetHelper.FastMember.Extension.Extension
+  nameWithType: DotNetHelper.FastMember.Extension.Extension
+  fullName: DotNetHelper.FastMember.Extension.Extension
+  type: Namespace
+  assemblies:
+  - DotNetHelper.FastMember.Extension
+references:
+- uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension
+  commentId: T:DotNetHelper.FastMember.Extension.Extension.FastMemberExtension
+  parent: DotNetHelper.FastMember.Extension.Extension
+  name: FastMemberExtension
+  nameWithType: FastMemberExtension
+  fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension
+- uid: DotNetHelper.FastMember.Extension.Extension
+  commentId: N:DotNetHelper.FastMember.Extension.Extension
+  name: DotNetHelper.FastMember.Extension.Extension
+  nameWithType: DotNetHelper.FastMember.Extension.Extension
+  fullName: DotNetHelper.FastMember.Extension.Extension

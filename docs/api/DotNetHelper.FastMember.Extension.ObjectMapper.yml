@@ -21,7 +21,7 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/ObjectMapper.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
     id: ObjectMapper
     path: ../src/DotNetHelper.FastMember.Extension/ObjectMapper.cs
     startLine: 11
@@ -63,7 +63,7 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/ObjectMapper.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
     id: MapProperties
     path: ../src/DotNetHelper.FastMember.Extension/ObjectMapper.cs
     startLine: 67
@@ -114,7 +114,7 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/ObjectMapper.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
     id: MapPropertiesDontThrow
     path: ../src/DotNetHelper.FastMember.Extension/ObjectMapper.cs
     startLine: 81
@@ -165,10 +165,10 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/ObjectMapper.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
     id: MapExcept
     path: ../src/DotNetHelper.FastMember.Extension/ObjectMapper.cs
-    startLine: 105
+    startLine: 103
   assemblies:
   - DotNetHelper.FastMember.Extension
   namespace: DotNetHelper.FastMember.Extension
@@ -218,10 +218,10 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/ObjectMapper.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
     id: MapExceptDontThrow
     path: ../src/DotNetHelper.FastMember.Extension/ObjectMapper.cs
-    startLine: 122
+    startLine: 120
   assemblies:
   - DotNetHelper.FastMember.Extension
   namespace: DotNetHelper.FastMember.Extension
@@ -271,10 +271,10 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/ObjectMapper.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNet-Starter-Template
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
     id: MapOnly
     path: ../src/DotNetHelper.FastMember.Extension/ObjectMapper.cs
-    startLine: 146
+    startLine: 144
   assemblies:
   - DotNetHelper.FastMember.Extension
   namespace: DotNetHelper.FastMember.Extension

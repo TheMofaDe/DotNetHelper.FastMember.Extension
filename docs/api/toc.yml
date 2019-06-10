@@ -6,30 +6,26 @@
     name: ExtFastMember
   - uid: DotNetHelper.FastMember.Extension.ObjectMapper
     name: ObjectMapper
-- uid: DotNetHelper.FastMember.Extension.Comparer
-  name: DotNetHelper.FastMember.Extension.Comparer
-  items:
-  - uid: DotNetHelper.FastMember.Extension.Comparer.EqualityComparerString
-    name: EqualityComparerString
 - uid: DotNetHelper.FastMember.Extension.Exceptions
   name: DotNetHelper.FastMember.Extension.Exceptions
   items:
   - uid: DotNetHelper.FastMember.Extension.Exceptions.PropertyMapException
     name: PropertyMapException
+- uid: DotNetHelper.FastMember.Extension.Extension
+  name: DotNetHelper.FastMember.Extension.Extension
+  items:
+  - uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension
+    name: FastMemberExtension
 - uid: DotNetHelper.FastMember.Extension.Helpers
   name: DotNetHelper.FastMember.Extension.Helpers
   items:
   - uid: DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper
     name: DynamicObjectHelper
-  - uid: DotNetHelper.FastMember.Extension.Helpers.ExpressionHelper
-    name: ExpressionHelper
   - uid: DotNetHelper.FastMember.Extension.Helpers.New`1
     name: New<T>
     name.vb: New(Of T)
 - uid: DotNetHelper.FastMember.Extension.Models
   name: DotNetHelper.FastMember.Extension.Models
   items:
-  - uid: DotNetHelper.FastMember.Extension.Models.AdvanceMember
-    name: AdvanceMember
-  - uid: DotNetHelper.FastMember.Extension.Models.DynamicAdvanceMember
-    name: DynamicAdvanceMember
+  - uid: DotNetHelper.FastMember.Extension.Models.MemberWrapper
+    name: MemberWrapper

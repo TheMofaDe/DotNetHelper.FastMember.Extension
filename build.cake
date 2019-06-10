@@ -133,7 +133,7 @@ Task("Test")
  
 
     // run using dotnet test
-    var projects = GetFiles("./src/**/*.Tests.csproj");
+    var projects = GetFiles("./tests/**/*.Tests.csproj");
     foreach(var project in projects)
     {
         foreach(var targetFramework in MyProject.TargetFrameworks){
@@ -163,7 +163,7 @@ Task("Test")
 
     foreach(var targetFramework in MyProject.TargetFrameworks){
     // run using NUnit
-    var testAssemblies = GetFiles("./src/**/bin/" + parameters.Configuration + "/" + targetFramework + "/*.Tests.dll");
+    var testAssemblies = GetFiles("./tests/**/bin/" + parameters.Configuration + "/" + targetFramework + "/*.Tests.dll");
 
     var nunitSettings = new NUnit3Settings
     {
@@ -183,10 +183,10 @@ Task("Test")
 Task("Generate-Docs")
 .Does<BuildParameters>((parameters) => 
 {
-	DocFxMetadata("./docs/docfx.json");
-	DocFxBuild("./docs/docfx.json");
-	if(DirectoryExists(parameters.Paths.Directories.Artifacts))
-	Zip("./docs/_site/", parameters.Paths.Directories.Artifacts + "/docfx.zip");
+	 DocFxMetadata("./docs/docfx.json");
+	 DocFxBuild("./docs/docfx.json");
+	 if(DirectoryExists(parameters.Paths.Directories.Artifacts))
+	 Zip("./docs/_site/", parameters.Paths.Directories.Artifacts + "/docfx.zip");
 });
 
 
@@ -522,13 +522,13 @@ Task("Publish-Coverage")
     .IsDependentOn("Test")
     .Does<BuildParameters>((parameters) =>
 {
-    var coverageFiles = GetFiles(parameters.Paths.Directories.TestCoverageOutput + "/*.coverage.xml");
+    var coverageFiles = GetFiles(parameters.Paths.Directories.TestCoverageOutput + "/*.xml");
 
     var token = parameters.Credentials.CodeCov.Token;
     if(string.IsNullOrEmpty(token)) {
         throw new InvalidOperationException("Could not resolve CodeCov token.");
     }
-
+	
     foreach (var coverageFile in coverageFiles) {
         // Upload a coverage report using the CodecovSettings.
         Codecov(new CodecovSettings {

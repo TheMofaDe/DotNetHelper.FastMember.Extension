@@ -1,0 +1,597 @@
+### YamlMime:ManagedReference
+items:
+- uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension
+  commentId: T:DotNetHelper.FastMember.Extension.Extension.FastMemberExtension
+  id: FastMemberExtension
+  parent: DotNetHelper.FastMember.Extension.Extension
+  children:
+  - DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberAttribute``1(FastMember.Member)
+  - DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberInfo(FastMember.Member)
+  - DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField``1(System.Object,System.String)
+  - DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty``1(System.Object,System.String)
+  langs:
+  - csharp
+  - vb
+  name: FastMemberExtension
+  nameWithType: FastMemberExtension
+  fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension
+  type: Class
+  source:
+    remote:
+      path: src/DotNetHelper.FastMember.Extension/Extensions/FastMemberExtension.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+    id: FastMemberExtension
+    path: ../src/DotNetHelper.FastMember.Extension/Extensions/FastMemberExtension.cs
+    startLine: 9
+  assemblies:
+  - DotNetHelper.FastMember.Extension
+  namespace: DotNetHelper.FastMember.Extension.Extension
+  summary: "\nREFERENCE FROM https://stackoverflow.com/questions/21976125/how-to-get-the-attribute-data-of-a-member-with-fastmember\n"
+  example: []
+  syntax:
+    content: public static class FastMemberExtension
+    content.vb: Public Module FastMemberExtension
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField``1(System.Object,System.String)
+  commentId: M:DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField``1(System.Object,System.String)
+  id: GetPrivateField``1(System.Object,System.String)
+  isExtensionMethod: true
+  parent: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension
+  langs:
+  - csharp
+  - vb
+  name: GetPrivateField<T>(Object, String)
+  nameWithType: FastMemberExtension.GetPrivateField<T>(Object, String)
+  fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField<T>(System.Object, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.FastMember.Extension/Extensions/FastMemberExtension.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+    id: GetPrivateField
+    path: ../src/DotNetHelper.FastMember.Extension/Extensions/FastMemberExtension.cs
+    startLine: 12
+  assemblies:
+  - DotNetHelper.FastMember.Extension
+  namespace: DotNetHelper.FastMember.Extension.Extension
+  syntax:
+    content: public static T GetPrivateField<T>(this object obj, string name)
+    parameters:
+    - id: obj
+      type: System.Object
+    - id: name
+      type: System.String
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetPrivateField(Of T)(obj As Object, name As String) As T
+  overload: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField*
+  nameWithType.vb: FastMemberExtension.GetPrivateField(Of T)(Object, String)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField(Of T)(System.Object, System.String)
+  name.vb: GetPrivateField(Of T)(Object, String)
+- uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty``1(System.Object,System.String)
+  commentId: M:DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty``1(System.Object,System.String)
+  id: GetPrivateProperty``1(System.Object,System.String)
+  isExtensionMethod: true
+  parent: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension
+  langs:
+  - csharp
+  - vb
+  name: GetPrivateProperty<T>(Object, String)
+  nameWithType: FastMemberExtension.GetPrivateProperty<T>(Object, String)
+  fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty<T>(System.Object, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.FastMember.Extension/Extensions/FastMemberExtension.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+    id: GetPrivateProperty
+    path: ../src/DotNetHelper.FastMember.Extension/Extensions/FastMemberExtension.cs
+    startLine: 21
+  assemblies:
+  - DotNetHelper.FastMember.Extension
+  namespace: DotNetHelper.FastMember.Extension.Extension
+  syntax:
+    content: public static T GetPrivateProperty<T>(this object obj, string name)
+    parameters:
+    - id: obj
+      type: System.Object
+    - id: name
+      type: System.String
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetPrivateProperty(Of T)(obj As Object, name As String) As T
+  overload: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty*
+  nameWithType.vb: FastMemberExtension.GetPrivateProperty(Of T)(Object, String)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty(Of T)(System.Object, System.String)
+  name.vb: GetPrivateProperty(Of T)(Object, String)
+- uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberInfo(FastMember.Member)
+  commentId: M:DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberInfo(FastMember.Member)
+  id: GetMemberInfo(FastMember.Member)
+  isExtensionMethod: true
+  parent: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension
+  langs:
+  - csharp
+  - vb
+  name: GetMemberInfo(Member)
+  nameWithType: FastMemberExtension.GetMemberInfo(Member)
+  fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberInfo(FastMember.Member)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.FastMember.Extension/Extensions/FastMemberExtension.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+    id: GetMemberInfo
+    path: ../src/DotNetHelper.FastMember.Extension/Extensions/FastMemberExtension.cs
+    startLine: 30
+  assemblies:
+  - DotNetHelper.FastMember.Extension
+  namespace: DotNetHelper.FastMember.Extension.Extension
+  syntax:
+    content: public static MemberInfo GetMemberInfo(this Member member)
+    parameters:
+    - id: member
+      type: FastMember.Member
+    return:
+      type: System.Reflection.MemberInfo
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetMemberInfo(member As Member) As MemberInfo
+  overload: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberInfo*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberAttribute``1(FastMember.Member)
+  commentId: M:DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberAttribute``1(FastMember.Member)
+  id: GetMemberAttribute``1(FastMember.Member)
+  isExtensionMethod: true
+  parent: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension
+  langs:
+  - csharp
+  - vb
+  name: GetMemberAttribute<T>(Member)
+  nameWithType: FastMemberExtension.GetMemberAttribute<T>(Member)
+  fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberAttribute<T>(FastMember.Member)
+  type: Method
+  source:
+    remote:
+      path: src/DotNetHelper.FastMember.Extension/Extensions/FastMemberExtension.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+    id: GetMemberAttribute
+    path: ../src/DotNetHelper.FastMember.Extension/Extensions/FastMemberExtension.cs
+    startLine: 35
+  assemblies:
+  - DotNetHelper.FastMember.Extension
+  namespace: DotNetHelper.FastMember.Extension.Extension
+  syntax:
+    content: >-
+      public static T GetMemberAttribute<T>(this Member member)
+          where T : Attribute
+    parameters:
+    - id: member
+      type: FastMember.Member
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetMemberAttribute(Of T As Attribute)(member As Member) As T
+  overload: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberAttribute*
+  nameWithType.vb: FastMemberExtension.GetMemberAttribute(Of T)(Member)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberAttribute(Of T)(FastMember.Member)
+  name.vb: GetMemberAttribute(Of T)(Member)
+references:
+- uid: DotNetHelper.FastMember.Extension.Extension
+  commentId: N:DotNetHelper.FastMember.Extension.Extension
+  name: DotNetHelper.FastMember.Extension.Extension
+  nameWithType: DotNetHelper.FastMember.Extension.Extension
+  fullName: DotNetHelper.FastMember.Extension.Extension
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField*
+  commentId: Overload:DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField
+  name: GetPrivateField
+  nameWithType: FastMemberExtension.GetPrivateField
+  fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty*
+  commentId: Overload:DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty
+  name: GetPrivateProperty
+  nameWithType: FastMemberExtension.GetPrivateProperty
+  fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty
+- uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberInfo*
+  commentId: Overload:DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberInfo
+  name: GetMemberInfo
+  nameWithType: FastMemberExtension.GetMemberInfo
+  fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberInfo
+- uid: FastMember.Member
+  commentId: T:FastMember.Member
+  parent: FastMember
+  isExternal: true
+  name: Member
+  nameWithType: Member
+  fullName: FastMember.Member
+- uid: System.Reflection.MemberInfo
+  commentId: T:System.Reflection.MemberInfo
+  parent: System.Reflection
+  isExternal: true
+  name: MemberInfo
+  nameWithType: MemberInfo
+  fullName: System.Reflection.MemberInfo
+- uid: FastMember
+  commentId: N:FastMember
+  isExternal: true
+  name: FastMember
+  nameWithType: FastMember
+  fullName: FastMember
+- uid: System.Reflection
+  commentId: N:System.Reflection
+  isExternal: true
+  name: System.Reflection
+  nameWithType: System.Reflection
+  fullName: System.Reflection
+- uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberAttribute*
+  commentId: Overload:DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberAttribute
+  name: GetMemberAttribute
+  nameWithType: FastMemberExtension.GetMemberAttribute
+  fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberAttribute
