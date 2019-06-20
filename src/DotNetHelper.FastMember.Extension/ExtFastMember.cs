@@ -80,6 +80,7 @@ namespace DotNetHelper.FastMember.Extension
         /// <param name="poco">If Null Default Value Will Be Used For Members</param>
         /// <param name="includeNonPublicAccessor"></param>
         /// <returns>A List Of Advance Members Of T</returns>
+        /// <exception cref="InvalidOperationException"> This method doesn't support dynamic types. Please use</exception>
         public static List<MemberWrapper> GetMemberWrappers<T>(bool includeNonPublicAccessor) where T : class
         {
             if (typeof(T).IsTypeDynamic())
@@ -142,7 +143,9 @@ namespace DotNetHelper.FastMember.Extension
             }
             var accessor = TypeAccessor.Create(typeof(T), true);
             var members = accessor.GetMembers().ToList();
-            if (string.IsNullOrEmpty(propertyName) || !accessor.GetMembers().ToList().Exists(a => string.Equals(a.Name, propertyName, StringComparison.CurrentCultureIgnoreCase))) throw new InvalidOperationException("SetMemberValue Method Can't Work If You Pass It Null Object Or Invalid Property Name");
+            var propertyMember = members.FirstOrDefault(a => string.Equals(a.Name, propertyName, StringComparison.CurrentCultureIgnoreCase));
+            if (propertyMember == null) throw new InvalidOperationException($"No property found named '{propertyName}' of type {typeof(T).FullName}");
+
 
             var needToBeType = members.First(m => m.Name == propertyName).Type;
 
@@ -160,7 +163,8 @@ namespace DotNetHelper.FastMember.Extension
                     }
                     else
                     {
-                        throw;
+                        throw new InvalidOperationException($"Is the property {propertyName} of type {typeof(T).FullName} missing a setter ??? check inner exception for more detail ",e);
+
                     }
                 }
             }

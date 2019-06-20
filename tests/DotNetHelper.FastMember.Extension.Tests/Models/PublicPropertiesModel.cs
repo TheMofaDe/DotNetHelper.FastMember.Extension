@@ -10,6 +10,12 @@ namespace DotNetHelper.FastMember.Extension.Tests
         public bool? NullBoolean { get; set; } = null;
     }
 
+    public class GenericModelWithGetOnlyProperties
+    {
+        public bool IsPublicProperty { get; } = true;
+        public bool? NullBoolean { get;  } = null;
+    }
+
     public class PublicPropertiesNoAccessor
     {
         public bool IsPublicProperty  = true;

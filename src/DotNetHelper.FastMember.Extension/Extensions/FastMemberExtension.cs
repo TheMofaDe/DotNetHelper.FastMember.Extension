@@ -33,9 +33,9 @@ namespace DotNetHelper.FastMember.Extension.Extension
                 return GetPrivateField<MemberInfo>(member, "member");
             }
 
-            public static T GetMemberAttribute<T>(this Member member) where T : Attribute
+            public static T GetMemberAttribute<T>(this Member member,bool inherit = false) where T : Attribute
             {
-                return GetPrivateField<MemberInfo>(member, "member").GetCustomAttribute<T>();
+                return GetPrivateField<MemberInfo>(member, "member").GetCustomAttribute<T>(inherit);
             }
         
     }

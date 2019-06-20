@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Dynamic;
 using System.Linq;
@@ -115,6 +116,32 @@ namespace Tests
         }
 
 
+
+        [Test]
+        public void Test_SetMemberValue_Throws_Exception_On_Non_Settable_Members()
+        {
+
+            var obj = new GenericModelWithGetOnlyProperties()
+            {
+            };
+            var members = ExtFastMember.GetMemberWrappers<PublicPropertiesNoAccessor>(true);
+
+
+            foreach (var member in members)
+            {
+                if (member.Name == "IsPublicProperty")
+                {
+                    Assert.That(() => member.SetMemberValue(obj, false),
+                        Throws.Exception
+                            .TypeOf<InvalidOperationException>()
+                            .With.InnerException.TypeOf<ArgumentOutOfRangeException>());
+                   
+                }
+               
+            }
+        }
+
+        
 
 
 

@@ -31,7 +31,7 @@ namespace DotNetHelper.FastMember.Extension.Models
             }
             catch (NotSupportedException)
             {
-                // we can still get and set the value of fields and if its read-only you compiler will stop it
+                // we can still get and set the value of fields and if its read-only your compiler will stop it
                 CanRead = member.GetMemberInfo().MemberType == MemberTypes.Field;
             }
             try
