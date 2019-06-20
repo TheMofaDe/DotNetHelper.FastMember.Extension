@@ -168,7 +168,7 @@ namespace DotNetHelper.FastMember.Extension
                     }
                 }
             }
-            if (value == null)
+            if (value == null || value == DBNull.Value)
             {
                 SetValue(null);
                 return;
