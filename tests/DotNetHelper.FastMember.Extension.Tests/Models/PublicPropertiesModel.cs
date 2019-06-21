@@ -23,4 +23,13 @@ namespace DotNetHelper.FastMember.Extension.Tests
         public bool? NullBoolean = null;
     }
 
+
+    public class NullableFields
+    {
+        public decimal? Decimal { get; set; }
+        public DateTime? DateTime { get; set; }
+        public DateTimeOffset? DateTimeOffset { get; set; }
+        public object Object { get; set; }
+    }
+
 }

@@ -35,6 +35,34 @@ namespace Tests
         }
 
 
+        [Test]
+        public void Test_SettingNullablePropertiesValue_To_Null()
+        {
+
+            var obj = new NullableFields();
+            ExtFastMember.SetMemberValue(obj, "Decimal", null);
+            ExtFastMember.SetMemberValue(obj, "DateTime", null);
+            ExtFastMember.SetMemberValue(obj, "DateTimeOffset", null);
+            ExtFastMember.SetMemberValue(obj, "Object", null);
+
+            ExtFastMember.SetMemberValue(obj, "Decimal", DBNull.Value);
+            ExtFastMember.SetMemberValue(obj, "DateTime", DBNull.Value);
+            ExtFastMember.SetMemberValue(obj, "DateTimeOffset", DBNull.Value);
+            ExtFastMember.SetMemberValue(obj, "Object", DBNull.Value);
+        }
+
+        [Test]
+        public void Test_SettingNullablePropertiesValue()
+        {
+
+            var obj = new NullableFields();
+            ExtFastMember.SetMemberValue(obj, "Decimal", 2);
+            ExtFastMember.SetMemberValue(obj, "DateTime", DateTime.Now);
+            ExtFastMember.SetMemberValue(obj, "DateTimeOffset", DateTimeOffset.Now);
+            ExtFastMember.SetMemberValue(obj, "Object", "dsf");
+
+        }
+
 
 
 
