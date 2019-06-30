@@ -163,7 +163,7 @@ Task("Test")
 			OldStyle = true,
 			MergeOutput = false
         }     
-        .WithFilter("+[*]* -[*.Tests*]*")
+        .WithFilter("+[*]* +[*.Tests*]*")
 		.WithFilter("-[*NUnit3.*]*"));
 
         }    
