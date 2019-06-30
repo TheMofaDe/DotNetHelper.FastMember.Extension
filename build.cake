@@ -143,7 +143,7 @@ Task("Test")
 
 		var tf = targetFramework.Replace("netstandard","netcoreapp");
 
-	    var testAssemblies = GetFiles("./tests/**/bin/" + parameters.Configuration + "/" + tf + "/*DotNetHelper.ObjectToSql.Tests.dll");
+	    var testAssemblies = GetFiles("./tests/**/bin/" + parameters.Configuration + "/" + tf + "/*Tests.dll");
 
 		var nunitSettings = new NUnit3Settings
 		{
@@ -166,11 +166,9 @@ Task("Test")
         .WithFilter("+[*]* -[*.Tests*]*")
 		.WithFilter("-[*NUnit3.*]*"));
 
-        }
-		    
+        }    
      }
 	  //  ReportGenerator(coverageFile,parameters.Paths.Directories.TestCoverageOutput + "/" + "htmlreports");
-
 });
 
 
