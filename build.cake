@@ -25,7 +25,8 @@
 #tool "nuget:?package=GitVersion.CommandLine&version=5.0.0-beta2-95"
 #tool "nuget:?package=docfx.console&version=2.41.0"
 #tool "nuget:?package=WiX.Toolset.UnofficialFork&version=3.11.1"
-//#tool "nuget:?package=WiX.Toolset"
+#tool "nuget:?package=OpenCover&version=4.7.922"
+#tool nuget:?package=ReportGenerator&version=4.0.4
 
 // Install .NET Core Global tools.
 #tool "dotnet:?package=GitReleaseManager.Tool&version=0.8.0"
@@ -134,59 +135,52 @@ Task("Test")
 
     // run using dotnet test
     var projects = GetFiles("./tests/**/*.Tests.csproj");
+	var coverageFile = parameters.Paths.Directories.TestCoverageOutput + $"/CodeCoverage.xml";
     foreach(var project in projects)
     {
+
         foreach(var targetFramework in MyProject.TargetFrameworks){
-        var settings = new DotNetCoreTestSettings
-        {
-            Framework = targetFramework,
-            NoBuild = true,
-            NoRestore = true,
-            Configuration = parameters.Configuration
-        };
 
-        var coverletSettings = new CoverletSettings {
-            CollectCoverage = true,
-            CoverletOutputFormat = CoverletOutputFormat.opencover,
-            CoverletOutputDirectory = parameters.Paths.Directories.TestCoverageOutput + "/",
-            CoverletOutputName = $"{project.GetFilenameWithoutExtension()}-{targetFramework}.coverage.xml"
-        };
+		var tf = targetFramework.Replace("netstandard","netcoreapp");
 
-        if (IsRunningOnUnix())
-        {
-            settings.Filter = "TestCategory!=NoMono";
+	    var testAssemblies = GetFiles("./tests/**/bin/" + parameters.Configuration + "/" + tf + "/*DotNetHelper.ObjectToSql.Tests.dll");
+
+		var nunitSettings = new NUnit3Settings
+		{
+		    Results = new List<NUnit3Result> { new NUnit3Result { FileName = parameters.Paths.Directories.TestCoverageOutput + $"/TestResult.xml"  } }
+		};
+		if(IsRunningOnUnix()) {
+		    nunitSettings.Where = "cat!=NoMono";
+		    nunitSettings.Agents = 1;
+		}
+
+       OpenCover(tool => {
+			tool.NUnit3(testAssemblies, nunitSettings);
+        },
+        new FilePath(coverageFile),
+        new OpenCoverSettings(){
+            LogLevel = OpenCoverLogLevel.Info,
+			OldStyle = true,
+			MergeOutput = false
+        }     
+        .WithFilter("+[*]* -[*.Tests*]*")
+		.WithFilter("-[*NUnit3.*]*"));
+
         }
+		    
+     }
+	  //  ReportGenerator(coverageFile,parameters.Paths.Directories.TestCoverageOutput + "/" + "htmlreports");
 
-        DotNetCoreTest(project.FullPath,  settings, coverletSettings);
-        }
-    }
-
-    foreach(var targetFramework in MyProject.TargetFrameworks){
-    // run using NUnit
-    var testAssemblies = GetFiles("./tests/**/bin/" + parameters.Configuration + "/" + targetFramework + "/*.Tests.dll");
-
-    var nunitSettings = new NUnit3Settings
-    {
-        Results = new List<NUnit3Result> { new NUnit3Result { FileName = parameters.Paths.Files.TestCoverageOutputFilePath } }
-    };
-
-    if(IsRunningOnUnix()) {
-        nunitSettings.Where = "cat!=NoMono";
-        nunitSettings.Agents = 1;
-    }
-
-    NUnit3(testAssemblies, nunitSettings);
-    }
 });
 
 
 Task("Generate-Docs")
 .Does<BuildParameters>((parameters) => 
 {
-	 DocFxMetadata("./docs/docfx.json");
-	 DocFxBuild("./docs/docfx.json");
-	 if(DirectoryExists(parameters.Paths.Directories.Artifacts))
-	 Zip("./docs/_site/", parameters.Paths.Directories.Artifacts + "/docfx.zip");
+	DocFxMetadata("./docs/docfx.json");
+	DocFxBuild("./docs/docfx.json");
+	if(DirectoryExists(parameters.Paths.Directories.Artifacts))
+	Zip("./docs/_site/", parameters.Paths.Directories.Artifacts + "/docfx.zip");
 });
 
 
@@ -522,19 +516,21 @@ Task("Publish-Coverage")
     .IsDependentOn("Test")
     .Does<BuildParameters>((parameters) =>
 {
-    var coverageFiles = GetFiles(parameters.Paths.Directories.TestCoverageOutput + "/*.xml");
+    var coverageFiles = GetFiles(parameters.Paths.Directories.TestCoverageOutput + "/*TestResult.xml");
 
     var token = parameters.Credentials.CodeCov.Token;
     if(string.IsNullOrEmpty(token)) {
         throw new InvalidOperationException("Could not resolve CodeCov token.");
     }
-	
+
     foreach (var coverageFile in coverageFiles) {
         // Upload a coverage report using the CodecovSettings.
         Codecov(new CodecovSettings {
             Files = new [] { coverageFile.ToString() },
             Token = token
+			,Required = false
         });
+		Information("Uploading Coverage File --> " + coverageFile.ToString());
     }
 });
 

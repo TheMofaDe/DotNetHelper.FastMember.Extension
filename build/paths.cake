@@ -29,19 +29,12 @@ public class BuildPaths
 
         var artifactsDir                  = (DirectoryPath)(context.Directory("./artifacts") + context.Directory("v" + semVersion));
         var artifactsBinDir               = artifactsDir.Combine("bin");
-     //   var artifactsBinFullFxDir         = artifactsBinDir.Combine("net452");  // TODO :: Configurable per project. enter the framework your targeting
-     //   var artifactsBinFullFxILMergeDir  = artifactsBinFullFxDir.Combine("il-merge");
-     //   var artifactsBinFullFxPortableDir = artifactsBinFullFxDir.Combine("portable");
-     //   var artifactsBinFullFxCmdlineDir  = artifactsBinFullFxDir.Combine("cmdline");
         var nugetRootDir                  = artifactsDir.Combine("nuget");
         var buildArtifactDir              = artifactsDir.Combine("build-artifact");
         var testCoverageOutputDir         = artifactsDir.Combine("code-coverage");
 
-//         var zipArtifactPathCoreClr = artifactsDir.CombineWithFilePath("DotNetHelper-Contracts-bin-fx-v" + semVersion + ".zip"); // TODO :: Configurable per project
-//         var zipArtifactPathDesktop = artifactsDir.CombineWithFilePath("DotNetHelper-Contracts-bin-fullfx-v" + semVersion + ".zip"); // TODO :: Configurable per project
-//         var zipArtifactPathStandard = artifactsDir.CombineWithFilePath("DotNetHelper-Contracts-bin-standardfx-v" + semVersion + ".zip"); // TODO :: Configurable per project
- 
-        var testCoverageOutputFilePath = testCoverageOutputDir.CombineWithFilePath("TestResult.xml");
+
+        var testCoverageOutputFilePath = testCoverageOutputDir.CombineWithFilePath("CodeCoverage");
 
         var releaseNotesOutputFilePath = buildArtifactDir.CombineWithFilePath("releasenotes.md");
         var gemOutputFilePath  = buildArtifactDir.CombineWithFilePath("-" + version.GemVersion + ".gem");

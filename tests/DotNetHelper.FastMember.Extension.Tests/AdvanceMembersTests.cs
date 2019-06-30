@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using DotNetHelper.FastMember.Extension;
 using DotNetHelper.FastMember.Extension.Models;
 using DotNetHelper.FastMember.Extension.Tests;
+using DotNetHelper.FastMember.Extension.Tests.Models;
 using NUnit.Framework;
 
 namespace Tests
@@ -15,6 +16,15 @@ namespace Tests
         [SetUp]
         public void Setup()
         {
+        }
+
+        [Test]
+        public void Test_Setting_List_Property()
+        {
+            var list = new List<int>() {1, 2, 3, 4};
+            var employee = new Employee();
+            ExtFastMember.SetMemberValue(employee, "ListOfNumbers", list);
+            Assert.AreEqual(list,employee.ListOfNumbers);
         }
 
         [Test]
