@@ -153,7 +153,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
     id: GetMemberWrappers
     path: ../src/DotNetHelper.FastMember.Extension/ExtFastMember.cs
-    startLine: 82
+    startLine: 83
   assemblies:
   - DotNetHelper.FastMember.Extension
   namespace: DotNetHelper.FastMember.Extension
@@ -175,6 +175,10 @@ items:
       description: A List Of Advance Members Of T
     content.vb: Public Shared Function GetMemberWrappers(Of T As Class)(includeNonPublicAccessor As Boolean) As List(Of MemberWrapper)
   overload: DotNetHelper.FastMember.Extension.ExtFastMember.GetMemberWrappers*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: This method doesn&apos;t support dynamic types. Please use
   nameWithType.vb: ExtFastMember.GetMemberWrappers(Of T)(Boolean)
   modifiers.csharp:
   - public
@@ -202,7 +206,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
     id: GetMemberWrappers
     path: ../src/DotNetHelper.FastMember.Extension/ExtFastMember.cs
-    startLine: 116
+    startLine: 117
   assemblies:
   - DotNetHelper.FastMember.Extension
   namespace: DotNetHelper.FastMember.Extension
@@ -250,7 +254,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
     id: SetMemberValue
     path: ../src/DotNetHelper.FastMember.Extension/ExtFastMember.cs
-    startLine: 132
+    startLine: 133
   assemblies:
   - DotNetHelper.FastMember.Extension
   namespace: DotNetHelper.FastMember.Extension
@@ -294,7 +298,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
     id: GetMemberValue
     path: ../src/DotNetHelper.FastMember.Extension/ExtFastMember.cs
-    startLine: 191
+    startLine: 195
   assemblies:
   - DotNetHelper.FastMember.Extension
   namespace: DotNetHelper.FastMember.Extension
@@ -340,7 +344,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
     id: GetMemberValue
     path: ../src/DotNetHelper.FastMember.Extension/ExtFastMember.cs
-    startLine: 197
+    startLine: 201
   assemblies:
   - DotNetHelper.FastMember.Extension
   namespace: DotNetHelper.FastMember.Extension
@@ -778,6 +782,9 @@ references:
   name: System.Dynamic
   nameWithType: System.Dynamic
   fullName: System.Dynamic
+- uid: System.InvalidOperationException
+  commentId: T:System.InvalidOperationException
+  isExternal: true
 - uid: '{T}'
   commentId: '!:T'
   definition: T

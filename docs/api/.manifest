@@ -8,7 +8,7 @@
   "DotNetHelper.FastMember.Extension.Exceptions.PropertyMapException.#ctor(System.String,System.Exception)": "DotNetHelper.FastMember.Extension.Exceptions.PropertyMapException.yml",
   "DotNetHelper.FastMember.Extension.Extension": "DotNetHelper.FastMember.Extension.Extension.yml",
   "DotNetHelper.FastMember.Extension.Extension.FastMemberExtension": "DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.yml",
-  "DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberAttribute``1(FastMember.Member)": "DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.yml",
+  "DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberAttribute``1(FastMember.Member,System.Boolean)": "DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.yml",
   "DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberInfo(FastMember.Member)": "DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.yml",
   "DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField``1(System.Object,System.String)": "DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.yml",
   "DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty``1(System.Object,System.String)": "DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.yml",

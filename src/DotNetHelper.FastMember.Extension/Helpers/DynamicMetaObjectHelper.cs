@@ -19,7 +19,7 @@ namespace DotNetHelper.FastMember.Extension.Helpers
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="DynamicMetaObjectHelper"/> class.
+        /// Initializes a new instance of the <see cref="DynamicObjectHelper"/> class.
         /// </summary>
         public DynamicObjectHelper()
         {

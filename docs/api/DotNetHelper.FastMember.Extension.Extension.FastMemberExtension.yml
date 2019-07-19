@@ -5,7 +5,7 @@ items:
   id: FastMemberExtension
   parent: DotNetHelper.FastMember.Extension.Extension
   children:
-  - DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberAttribute``1(FastMember.Member)
+  - DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberAttribute``1(FastMember.Member,System.Boolean)
   - DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberInfo(FastMember.Member)
   - DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateField``1(System.Object,System.String)
   - DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetPrivateProperty``1(System.Object,System.String)
@@ -186,17 +186,17 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberAttribute``1(FastMember.Member)
-  commentId: M:DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberAttribute``1(FastMember.Member)
-  id: GetMemberAttribute``1(FastMember.Member)
+- uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberAttribute``1(FastMember.Member,System.Boolean)
+  commentId: M:DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberAttribute``1(FastMember.Member,System.Boolean)
+  id: GetMemberAttribute``1(FastMember.Member,System.Boolean)
   isExtensionMethod: true
   parent: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension
   langs:
   - csharp
   - vb
-  name: GetMemberAttribute<T>(Member)
-  nameWithType: FastMemberExtension.GetMemberAttribute<T>(Member)
-  fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberAttribute<T>(FastMember.Member)
+  name: GetMemberAttribute<T>(Member, Boolean)
+  nameWithType: FastMemberExtension.GetMemberAttribute<T>(Member, Boolean)
+  fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberAttribute<T>(FastMember.Member, System.Boolean)
   type: Method
   source:
     remote:
@@ -211,11 +211,13 @@ items:
   namespace: DotNetHelper.FastMember.Extension.Extension
   syntax:
     content: >-
-      public static T GetMemberAttribute<T>(this Member member)
+      public static T GetMemberAttribute<T>(this Member member, bool inherit = false)
           where T : Attribute
     parameters:
     - id: member
       type: FastMember.Member
+    - id: inherit
+      type: System.Boolean
     typeParameters:
     - id: T
     return:
@@ -223,17 +225,17 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetMemberAttribute(Of T As Attribute)(member As Member) As T
+      Public Shared Function GetMemberAttribute(Of T As Attribute)(member As Member, inherit As Boolean = False) As T
   overload: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberAttribute*
-  nameWithType.vb: FastMemberExtension.GetMemberAttribute(Of T)(Member)
+  nameWithType.vb: FastMemberExtension.GetMemberAttribute(Of T)(Member, Boolean)
   modifiers.csharp:
   - public
   - static
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberAttribute(Of T)(FastMember.Member)
-  name.vb: GetMemberAttribute(Of T)(Member)
+  fullName.vb: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberAttribute(Of T)(FastMember.Member, System.Boolean)
+  name.vb: GetMemberAttribute(Of T)(Member, Boolean)
 references:
 - uid: DotNetHelper.FastMember.Extension.Extension
   commentId: N:DotNetHelper.FastMember.Extension.Extension
@@ -595,3 +597,10 @@ references:
   name: GetMemberAttribute
   nameWithType: FastMemberExtension.GetMemberAttribute
   fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberAttribute
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean

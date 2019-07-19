@@ -8,19 +8,19 @@
     <title>DotNetHelper.FastMember.Extension | DotNetHelper.FastMember.Extension </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="DotNetHelper.FastMember.Extension | DotNetHelper.FastMember.Extension ">
-    <meta name="generator" content="docfx 2.41.0.0">
+    <meta name="generator" content="docfx 2.43.1.0">
     
     <link rel="shortcut icon" href="logo/favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
     <link rel="stylesheet" href="styles/docfx.css">
     <link rel="stylesheet" href="styles/main.css">
-    <meta property="docfx:navrel" content="toc">
-    <meta property="docfx:tocrel" content="toc">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="">
     
-  </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -50,10 +50,13 @@
                           <a href="index.html" title="Home">Home</a>
                       </li>
                       <li>
-                          <a href="articles/sample.html" title="Articles">Articles</a>
+                          <a href="api/DotNetHelper.FastMember.Extension.html" title="API">API</a>
                       </li>
                       <li>
-                          <a href="api/DotNetHelper.FastMember.Extension.html" title="API Documentation">API Documentation</a>
+                          <a href="https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension/blob/master/CHANGELOG.md" title="Change Log">Change Log</a>
+                      </li>
+                      <li>
+                          <a href="https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension" title="Github">Github</a>
                       </li>
                 </ul>    </div>
           </div>
@@ -83,14 +86,30 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="dotnethelperfastmemberextension">DotNetHelper.FastMember.Extension</h1>
 
-<p>Description</p>
-<h2 id="how-to-use">How to use</h2>
-<pre><code class="lang-csharp">// code snippet
+<h4 id="an-object-instance-creator--object-mapper-that-uses-fast-member-for-reflection-purposes-works-with-dynamic-generics-and-anonymous-types"><em>An object instance creator &amp; object mapper that uses Fast Member for reflection purposes. Works with dynamic, generics, and anonymous types</em></h4>
+<p>|| <a href="https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension"><strong>View on Github</strong></a> ||</p>
+<h2 id="get--set-dynamic-generics-and-anonymous-object-values">GET &amp; SET Dynamic, Generics, and Anonymous Object Values</h2>
+<pre><code class="lang-csharp">public class Employee {
+      public FirstName { get; set; }
+      public LastName  { get; set; }
+}
+
+// CREATE A GENERIC, DYNAMIC, &amp; ANONYMOUS OBJECT 
+            var employee = new Employee() { FirstName = &quot;generic&quot; };
+            dynamic dynamicEmployee = new ExpandoObject();
+            var anonymousEmployee = new { FirstName = &quot;I'm so Anonymous&quot; };
+
+// SET PROPERTY VALUE FOR GENERICS &amp; DYNAMICS OBJECTS
+            ExtFastMember.SetMemberValue(employee, &quot;FirstName&quot;, &quot;I'm so generic&quot;);
+            ExtFastMember.SetMemberValue(dynamicEmployee, &quot;FirstName&quot;, &quot;I'm so Dynamic&quot;);
+
+// GET PROPERTY VALUES FOR GENERICS &amp; DYNAMICS &amp; ANONYMOUS OBJECTS
+            Console.WriteLine(ExtFastMember.GetMemberValue(employee,&quot;FirstName&quot;)); // PRINTS : I'm so generic
+            Console.WriteLine(ExtFastMember.GetMemberValue(dynamicEmployee, &quot;FirstName&quot;));  // PRINTS : I'm so Dynamic
+            Console.WriteLine(ExtFastMember.GetMemberValue(anonymousEmployee, &quot;FirstName&quot;));  // PRINTS : I'm so Anonymous
 </code></pre>
-<h2 id="targeted-net-frameworks">Targeted .NET Frameworks</h2>
-<pre><code>NET452
-NETSTANDARD2.0
-</code></pre>
+<!-- Links. -->
+<!-- Documentation Links. -->
 </article>
           </div>
           
@@ -99,7 +118,7 @@ NETSTANDARD2.0
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/TheMofaDe/DotNet-Starter-Template/blob/master/docs/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension/blob/master/docs/index.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -118,7 +137,7 @@ NETSTANDARD2.0
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Copyright � 2019 Joseph McNeal Jr
+            Copyright © 2019  <strong>Joseph McNeal Jr</strong>
             
           </div>
         </div>

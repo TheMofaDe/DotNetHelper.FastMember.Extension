@@ -69,15 +69,15 @@ references:
   isSpec: "True"
   fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberAttribute
   nameWithType: FastMemberExtension.GetMemberAttribute
-- uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberAttribute``1(FastMember.Member)
-  name: GetMemberAttribute<T>(Member)
-  href: api/DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.html#DotNetHelper_FastMember_Extension_Extension_FastMemberExtension_GetMemberAttribute__1_FastMember_Member_
-  commentId: M:DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberAttribute``1(FastMember.Member)
-  name.vb: GetMemberAttribute(Of T)(Member)
-  fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberAttribute<T>(FastMember.Member)
-  fullName.vb: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberAttribute(Of T)(FastMember.Member)
-  nameWithType: FastMemberExtension.GetMemberAttribute<T>(Member)
-  nameWithType.vb: FastMemberExtension.GetMemberAttribute(Of T)(Member)
+- uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberAttribute``1(FastMember.Member,System.Boolean)
+  name: GetMemberAttribute<T>(Member, Boolean)
+  href: api/DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.html#DotNetHelper_FastMember_Extension_Extension_FastMemberExtension_GetMemberAttribute__1_FastMember_Member_System_Boolean_
+  commentId: M:DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberAttribute``1(FastMember.Member,System.Boolean)
+  name.vb: GetMemberAttribute(Of T)(Member, Boolean)
+  fullName: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberAttribute<T>(FastMember.Member, System.Boolean)
+  fullName.vb: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberAttribute(Of T)(FastMember.Member, System.Boolean)
+  nameWithType: FastMemberExtension.GetMemberAttribute<T>(Member, Boolean)
+  nameWithType.vb: FastMemberExtension.GetMemberAttribute(Of T)(Member, Boolean)
 - uid: DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.GetMemberInfo(FastMember.Member)
   name: GetMemberInfo(Member)
   href: api/DotNetHelper.FastMember.Extension.Extension.FastMemberExtension.html#DotNetHelper_FastMember_Extension_Extension_FastMemberExtension_GetMemberInfo_FastMember_Member_
@@ -546,3 +546,6 @@ references:
   fullName.vb: DotNetHelper.FastMember.Extension.ObjectMapper.MapPropertiesDontThrow(Of T1, T2)(T1, T2, System.Boolean, System.StringComparison, System.Collections.Generic.IDictionary(Of System.Type, System.IFormatProvider))
   nameWithType: ObjectMapper.MapPropertiesDontThrow<T1, T2>(T1, T2, Boolean, StringComparison, IDictionary<Type, IFormatProvider>)
   nameWithType.vb: ObjectMapper.MapPropertiesDontThrow(Of T1, T2)(T1, T2, Boolean, StringComparison, IDictionary(Of Type, IFormatProvider))
+- uid: TSD
+  name: THIS IS THE HOME PAGE TO TUTORIALS
+  href: tutorials/index.html

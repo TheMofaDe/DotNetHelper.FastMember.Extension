@@ -136,9 +136,9 @@ namespace DotNetHelper.FastMember.Extension
             poco.IsNullThrow(nameof(poco));
             propertyName.IsNullThrow(nameof(propertyName));
 
-            if (poco is IDynamicMetaObjectProvider dynamicobject)
+            if (poco is IDynamicMetaObjectProvider dynamicObject)
             {
-                new DynamicObjectHelper().TrySetMember(dynamicobject, propertyName, value);
+                new DynamicObjectHelper().TrySetMember(dynamicObject, propertyName, value);
                 return;
             }
             var accessor = TypeAccessor.Create(typeof(T), true);

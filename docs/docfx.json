@@ -18,12 +18,20 @@
 
     "content": [
       {
-        "files": [ "**/*.yml", "**/**/*.yml" ],
+        "files": [ "*.yml", "*.md" ],
         "src": "api",
         "dest": "api"
       },
       {
-        "files": [ "articles/**/*.md", "*.md", "toc.yml" ]
+        "files": [ "*.md", "toc.yml" ],
+        "src": ".",
+        "dest": "."
+      },
+
+      {
+        "files": [ "*.md", "*.yml", "**/*.md", "**/*.yml" ],
+        "src": "./tutorials",
+        "dest": "./tutorials"
       }
     ],
     "resource": [
@@ -34,18 +42,26 @@
     ],
     "globalMetadata": {
       "_appTitle": "DotNetHelper.FastMember.Extension",
+      //"_gitContribute": {
+      //  "repo": "https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension",
+      //  "branch": "master",
+      //  "apiSpecFolder": "docs-ref-overwrite"
+      //},
       "_disableContribution": false,
       "_disableBreadcrumb": false,
       "_appFaviconPath": "logo/favicon.ico",
       "_disableNavbar": false,
       "_enableSearch": true,
-      //   "_navRel": "../toc.html",
+      "_navRel": "toc.html",
       //    "_appLogoPath": "logo/lucene-net-color.png",
-      "_appFooter": "Copyright © 2019 Joseph McNeal Jr"
+      "_appFooter": "Copyright Â© 2019  <strong>Joseph McNeal Jr</strong>"
     },
     "dest": "./",
     "globalMetadataFiles": [],
-    "template": [ "statictoc" ],
+
+    //"template": [ "default", "statictoc", "templates/material" ],
+    "template": [ "default", "statictoc", "templates/darkfx" ],
+    //"template": [ "default", "statictoc", "templates/darkfx" ],
     "postProcessors": [],
     "markdownEngineName": "markdig",
     "noLangKeyword": false,

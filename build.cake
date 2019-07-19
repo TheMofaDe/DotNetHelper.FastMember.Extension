@@ -23,7 +23,7 @@
 #tool "nuget:?package=Codecov&version=1.1.0"
 #tool "nuget:?package=nuget.commandline&version=4.9.2"
 #tool "nuget:?package=GitVersion.CommandLine&version=5.0.0-beta2-95"
-#tool "nuget:?package=docfx.console&version=2.41.0"
+#tool "nuget:?package=docfx.console&version=2.43.1"
 #tool "nuget:?package=WiX.Toolset.UnofficialFork&version=3.11.1"
 #tool "nuget:?package=OpenCover&version=4.7.922"
 #tool nuget:?package=ReportGenerator&version=4.0.4
@@ -127,6 +127,7 @@ Task("Build")
 #region Tests
 
 Task("Test")
+    .WithCriteria<BuildParameters>((context, parameters) => parameters.IsRunningOnWindows,  "Unit tests will only run on windows agent.")
     .WithCriteria<BuildParameters>((context, parameters) => parameters.EnabledUnitTests, "Unit tests were disabled.")
     .IsDependentOn("Build")
     .Does<BuildParameters>((parameters) =>
@@ -143,7 +144,7 @@ Task("Test")
 
 		var tf = targetFramework.Replace("netstandard","netcoreapp");
 
-	    var testAssemblies = GetFiles("./tests/**/bin/" + parameters.Configuration + "/" + tf + "/*Tests.dll");
+	    var testAssemblies = GetFiles("./tests/**/bin/" + parameters.Configuration + "/" + tf + "/*.Tests.dll");
 
 		var nunitSettings = new NUnit3Settings
 		{
@@ -163,16 +164,20 @@ Task("Test")
 			OldStyle = true,
 			MergeOutput = false
         }     
-        .WithFilter("+[*]* +[*.Tests*]*")
-		.WithFilter("-[*NUnit3.*]*"));
+        //.WithFilter("+[*.Tests*]*")
+		//.WithFilter("-[*NUnit3.*]*")
+		);
 
-        }    
+        }
+		    
      }
 	  //  ReportGenerator(coverageFile,parameters.Paths.Directories.TestCoverageOutput + "/" + "htmlreports");
+
 });
 
 
 Task("Generate-Docs")
+.WithCriteria<BuildParameters>((context, parameters) => parameters.IsRunningOnWindows,  "Generate-Docs will only run on windows agent.")
 .Does<BuildParameters>((parameters) => 
 {
 	DocFxMetadata("./docs/docfx.json");
@@ -514,7 +519,7 @@ Task("Publish-Coverage")
     .IsDependentOn("Test")
     .Does<BuildParameters>((parameters) =>
 {
-    var coverageFiles = GetFiles(parameters.Paths.Directories.TestCoverageOutput + "/*TestResult.xml");
+    var coverageFiles = GetFiles(parameters.Paths.Directories.TestCoverageOutput + "/*Coverage.xml");
 
     var token = parameters.Credentials.CodeCov.Token;
     if(string.IsNullOrEmpty(token)) {
@@ -526,7 +531,7 @@ Task("Publish-Coverage")
         Codecov(new CodecovSettings {
             Files = new [] { coverageFile.ToString() },
             Token = token
-			,Required = false
+		//	,Required = true
         });
 		Information("Uploading Coverage File --> " + coverageFile.ToString());
     }
@@ -549,8 +554,8 @@ Task("Publish-AppVeyor")
         if (FileExists(package.PackagePath)) { AppVeyor.UploadArtifact(package.PackagePath); }
     }
 
-    if (FileExists(parameters.Paths.Files.TestCoverageOutputFilePath)) {
-        AppVeyor.UploadTestResults(parameters.Paths.Files.TestCoverageOutputFilePath, AppVeyorTestResultsType.NUnit3);
+    if (FileExists(parameters.Paths.Directories.TestCoverageOutput + $"/TestResult.xml")) {
+        AppVeyor.UploadTestResults(parameters.Paths.Directories.TestCoverageOutput + $"/TestResult.xml" , AppVeyorTestResultsType.NUnit3);
     }
 })
 .OnError(exception =>

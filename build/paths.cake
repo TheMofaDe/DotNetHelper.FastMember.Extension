@@ -34,7 +34,7 @@ public class BuildPaths
         var testCoverageOutputDir         = artifactsDir.Combine("code-coverage");
 
 
-        var testCoverageOutputFilePath = testCoverageOutputDir.CombineWithFilePath("CodeCoverage");
+        var testCoverageOutputFilePath = testCoverageOutputDir.CombineWithFilePath("TestResult.xml");
 
         var releaseNotesOutputFilePath = buildArtifactDir.CombineWithFilePath("releasenotes.md");
         var gemOutputFilePath  = buildArtifactDir.CombineWithFilePath("-" + version.GemVersion + ".gem");

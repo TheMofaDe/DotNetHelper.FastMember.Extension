@@ -1,7 +1,14 @@
+# HELP LINK https://dotnet.github.io/docfx/tutorial/intro_toc.html
+# NAME : name of item this field allows white space 
+# HREF : on item click redirect lnk
+# UID  : reference file by unique identifier in header of markdown file
 - name: Home
-  href: index.md
-- name: Articles
-  href: articles/
-  homepage: articles/sample.md
-- name: API Documentation
-  href: api/DotNetHelper.FastMember.Extension.html  # if project name have a dash you need to replace it with a underscore 
+  href: ~/index.html
+#- name: Tutorials
+#  href: ~/tutorials/index.html
+- name: API
+  href: ~/api/DotNetHelper.FastMember.Extension.html  # if your project contains a dash it will need to be replace with a underscore on this line only
+- name: Change Log
+  href: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension/blob/master/CHANGELOG.md
+- name: Github
+  href: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
