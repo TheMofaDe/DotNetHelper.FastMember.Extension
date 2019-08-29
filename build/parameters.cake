@@ -90,7 +90,7 @@ public class BuildParameters
             IsLocalBuild             = buildSystem.IsLocalBuild,
             IsRunningOnAppVeyor      = buildSystem.IsRunningOnAppVeyor,
             IsRunningOnTravis        = buildSystem.IsRunningOnTravisCI,
-            IsRunningOnAzurePipeline = buildSystem.IsRunningOnVSTS,
+            IsRunningOnAzurePipeline = buildSystem.IsRunningOnAzurePipelines,
 
             IsMainRepo    = IsOnMainRepo(context),
             IsMainBranch  = IsOnMainBranch(context),
@@ -126,6 +126,7 @@ public class BuildParameters
 
         var files = Paths.Files;
         Artifacts = BuildArtifacts.GetArtifacts(new[] {
+            files.TestResultOutputFilePath,
             files.TestCoverageOutputFilePath,
             files.ReleaseNotesOutputFilePath,
             files.VsixOutputFilePath,
@@ -185,7 +186,7 @@ public class BuildParameters
         {
             repositoryName = buildSystem.TravisCI.Environment.Repository.Slug;
         }
-        else if (buildSystem.IsRunningOnVSTS)
+        else if (buildSystem.IsRunningOnAzurePipelines)
         {
             repositoryName = buildSystem.TFBuild.Environment.Repository.RepoName;
         }
@@ -211,7 +212,7 @@ public class BuildParameters
         {
             repositoryBranch = buildSystem.TravisCI.Environment.Build.Branch;
         }
-        else if (buildSystem.IsRunningOnVSTS)
+        else if (buildSystem.IsRunningOnAzurePipelines)
         {
             repositoryBranch = buildSystem.TFBuild.Environment.Repository.Branch;
         }
@@ -236,7 +237,7 @@ public class BuildParameters
             var value = buildSystem.TravisCI.Environment.Repository.PullRequest;
             return !string.IsNullOrWhiteSpace(value) && !string.Equals(value, false.ToString(), StringComparison.InvariantCultureIgnoreCase);
         }
-        else if (buildSystem.IsRunningOnVSTS)
+        else if (buildSystem.IsRunningOnAzurePipelines)
         {
             var value = context.EnvironmentVariable("SYSTEM_PULLREQUEST_ISFORK");
             return !string.IsNullOrWhiteSpace(value) && !string.Equals(value, false.ToString(), StringComparison.InvariantCultureIgnoreCase);

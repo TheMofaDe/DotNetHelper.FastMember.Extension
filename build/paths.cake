@@ -33,16 +33,8 @@ public class BuildPaths
         var buildArtifactDir              = artifactsDir.Combine("build-artifact");
         var testCoverageOutputDir         = artifactsDir.Combine("code-coverage");
 
-
-        var testCoverageOutputFilePath = testCoverageOutputDir.CombineWithFilePath("TestResult.xml");
-
-        var releaseNotesOutputFilePath = buildArtifactDir.CombineWithFilePath("releasenotes.md");
-        var gemOutputFilePath  = buildArtifactDir.CombineWithFilePath("-" + version.GemVersion + ".gem");
-
         var tfsSuffix = parameters.IsStableRelease() ? "" : "preview-";
-        var vsixOutputFilePath = buildArtifactDir.CombineWithFilePath("-" + tfsSuffix + version.TfxVersion + ".vsix");
-        var vsixCoreFxOutputFilePath = buildArtifactDir.CombineWithFilePath("-netcore-" + tfsSuffix + version.TfxVersion + ".vsix");
-
+     
         // Directories
         var buildDirectories = new BuildDirectories(
             artifactsDir,
@@ -54,11 +46,12 @@ public class BuildPaths
         // Files
         var buildFiles = new BuildFiles(
             context,
-            testCoverageOutputFilePath,
-            releaseNotesOutputFilePath,
-            vsixOutputFilePath,
-            vsixCoreFxOutputFilePath,
-            gemOutputFilePath);
+            testCoverageOutputDir.CombineWithFilePath("CodeCoverage.xml"),
+            testCoverageOutputDir.CombineWithFilePath("TestResult.xml"),
+            buildArtifactDir.CombineWithFilePath("releasenotes.md"),
+            buildArtifactDir.CombineWithFilePath("-" + tfsSuffix + version.TfxVersion + ".vsix"),
+            buildArtifactDir.CombineWithFilePath("-netcore-" + tfsSuffix + version.TfxVersion + ".vsix"),
+            buildArtifactDir.CombineWithFilePath("-" + version.GemVersion + ".gem"));
 
         return new BuildPaths
         {
@@ -71,6 +64,7 @@ public class BuildPaths
 public class BuildFiles
 {
     public FilePath TestCoverageOutputFilePath { get; private set; }
+    public FilePath TestResultOutputFilePath { get; private set; }
     public FilePath ReleaseNotesOutputFilePath { get; private set; }
     public FilePath VsixOutputFilePath { get; private set; }
     public FilePath VsixCoreFxOutputFilePath { get; private set; }
@@ -79,6 +73,7 @@ public class BuildFiles
     public BuildFiles(
         ICakeContext context,
         FilePath testCoverageOutputFilePath,
+        FilePath testResultOutputFilePath,
         FilePath releaseNotesOutputFilePath,
         FilePath vsixOutputFilePath,
         FilePath vsixCoreFxOutputFilePath,
@@ -86,6 +81,7 @@ public class BuildFiles
         )
     {
         TestCoverageOutputFilePath = testCoverageOutputFilePath;
+        TestResultOutputFilePath = testResultOutputFilePath;
         ReleaseNotesOutputFilePath = releaseNotesOutputFilePath;
         VsixOutputFilePath = vsixOutputFilePath;
         VsixCoreFxOutputFilePath = vsixCoreFxOutputFilePath;
