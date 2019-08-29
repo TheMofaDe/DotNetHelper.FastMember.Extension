@@ -77,7 +77,6 @@ namespace DotNetHelper.FastMember.Extension
         /// 
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        /// <param name="poco">If Null Default Value Will Be Used For Members</param>
         /// <param name="includeNonPublicAccessor"></param>
         /// <returns>A List Of Advance Members Of T</returns>
         /// <exception cref="InvalidOperationException"> This method doesn't support dynamic types. Please use</exception>
@@ -182,7 +181,8 @@ namespace DotNetHelper.FastMember.Extension
                 }
                 else
                 {
-                    value = needToBeType.IsEnum
+                    if(needToBeType != typeof(object))
+                        value = needToBeType.IsEnum
                         ? Enum.Parse(needToBeType.IsNullable().underlyingType, value.ToString(), true)
                         : Convert.ChangeType(value, needToBeType.IsNullable().underlyingType, null);
                 }

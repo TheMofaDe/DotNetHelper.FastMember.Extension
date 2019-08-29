@@ -7,9 +7,11 @@
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     <RepositoryType>git</RepositoryType>
     <PackageTags>FastMember,Extensions,Reflection,Object Mapper,Instance Creator</PackageTags>
-    <PackageReleaseNotes>Initial Release</PackageReleaseNotes>
+    <PackageReleaseNotes>https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension/blob/master/CHANGELOG.md</PackageReleaseNotes>
     <Description>An object instance creator &amp; object mapper that uses Fast Member for reflection purposes. Also extends fast member feature to retrieve custom attributes from Members</Description>
     <LangVersion>latest</LangVersion>
+    <PackageProjectUrl>https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension</RepositoryUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)' == 'net45' OR '$(TargetFramework)' == 'net452'  ">

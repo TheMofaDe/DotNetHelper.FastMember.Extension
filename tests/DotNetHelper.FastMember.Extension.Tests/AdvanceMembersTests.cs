@@ -3,13 +3,11 @@ using System.Collections.Generic;
 using System.Dynamic;
 using System.Linq;
 using System.Threading.Tasks;
-using DotNetHelper.FastMember.Extension;
 using DotNetHelper.FastMember.Extension.Models;
-using DotNetHelper.FastMember.Extension.Tests;
 using DotNetHelper.FastMember.Extension.Tests.Models;
 using NUnit.Framework;
 
-namespace Tests
+namespace DotNetHelper.FastMember.Extension.Tests
 {
     public class Tests
     {

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DotNetHelper.FastMember.Extension.Tests
+﻿namespace DotNetHelper.FastMember.Extension.Tests.Models
 {
     public class PrivatePropertiesModel
     {

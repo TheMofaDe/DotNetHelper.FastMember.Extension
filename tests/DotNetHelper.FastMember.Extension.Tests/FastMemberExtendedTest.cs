@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace Tests
+namespace DotNetHelper.FastMember.Extension.Tests
 {
     public class AdvanceMembersTests
     {

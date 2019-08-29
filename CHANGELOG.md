@@ -3,16 +3,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 
-## [0.0.1] - 2019-01-01
-### Added
-- This is just an example.
+## [1.0.15] - 2019-08-29
 
-### Changed
-- This is just an example.
+### Bug Fix
+- Fix bug in SetMemberValue that was throwing invalid cast exception when setting a value that is Guid Or TimeSpan Type to a type of object
+ or dynamic
+~~~csharp
+ public static void SetMemberValue<T>(T poco, string propertyName, object value)
+~~~  
 
-### Removed
-- This is just an example.
 
 
-[0.0.1]: https://github.com/olivierlacan/keep-a-changelog/releases/tag/v0.0.1
+[1.0.15]: https://github.com/TheMofaDe/DotNetHelper.Serialization.Abstractions/releases/tag/v1.0.15
 
