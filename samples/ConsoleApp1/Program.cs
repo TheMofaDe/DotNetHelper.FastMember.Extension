@@ -24,7 +24,7 @@ namespace ConsoleApp1
             ExtFastMember.SetMemberValue(dynamicEmployee, "FirstName", "I'm so Dynamic");
 
             // GET PROPERTY VALUES FOR GENERICS & DYNAMICS & ANONYMOUS OBJECTS
-            Console.WriteLine(ExtFastMember.GetMemberValue(employee,"FirstName")); // PRINTS : I'm so generic
+            Console.WriteLine(ExtFastMember.GetMemberValue(employee, "FirstName")); // PRINTS : I'm so generic
             Console.WriteLine(ExtFastMember.GetMemberValue(dynamicEmployee, "FirstName"));  // PRINTS : I'm so Dynamic
             Console.WriteLine(ExtFastMember.GetMemberValue(anonymousEmployee, "FirstName"));  // PRINTS : I'm so Anonymous
 

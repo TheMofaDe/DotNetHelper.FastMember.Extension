@@ -153,7 +153,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
     id: GetMemberWrappers
     path: ../src/DotNetHelper.FastMember.Extension/ExtFastMember.cs
-    startLine: 83
+    startLine: 82
   assemblies:
   - DotNetHelper.FastMember.Extension
   namespace: DotNetHelper.FastMember.Extension
@@ -206,7 +206,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
     id: GetMemberWrappers
     path: ../src/DotNetHelper.FastMember.Extension/ExtFastMember.cs
-    startLine: 117
+    startLine: 116
   assemblies:
   - DotNetHelper.FastMember.Extension
   namespace: DotNetHelper.FastMember.Extension
@@ -254,7 +254,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
     id: SetMemberValue
     path: ../src/DotNetHelper.FastMember.Extension/ExtFastMember.cs
-    startLine: 133
+    startLine: 132
   assemblies:
   - DotNetHelper.FastMember.Extension
   namespace: DotNetHelper.FastMember.Extension

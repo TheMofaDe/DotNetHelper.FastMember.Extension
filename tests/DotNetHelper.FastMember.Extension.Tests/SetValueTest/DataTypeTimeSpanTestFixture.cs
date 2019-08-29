@@ -9,14 +9,14 @@ using NUnit.Framework;
 namespace DotNetHelper.FastMember.Extension.Tests.SetValueTest
 {
     [TestFixture]
-    public  class DataTypeTimeSpanTestFixture
+    public class DataTypeTimeSpanTestFixture
     {
 
         private class TimeSpanDataType
         {
             public TimeSpan TimeSpanValue { get; set; } = TimeSpan.FromSeconds(10);
             public TimeSpan? NullValue { get; set; } = null;
-          
+
         }
 
         public static TypeAccessor MyAccessor { get; } = TypeAccessor.Create(typeof(TimeSpanDataType));
@@ -53,14 +53,14 @@ namespace DotNetHelper.FastMember.Extension.Tests.SetValueTest
             var instance = list.First();
 
 
-         ;
+            ;
 
-         MyAccessor.GetMembers().ToList().ForEach(delegate (Member member)
-         {
-             var expectedValue = MyAccessor[Instance, member.Name];
-             var actualValue = MyAccessor[instance, member.Name];
-                Assert.AreEqual(expectedValue,actualValue,
-                    $"MapToList gave the property {member.Name} The wrong value. Expected {expectedValue} but it was {actualValue}");
+            MyAccessor.GetMembers().ToList().ForEach(delegate (Member member)
+            {
+                var expectedValue = MyAccessor[Instance, member.Name];
+                var actualValue = MyAccessor[instance, member.Name];
+                Assert.AreEqual(expectedValue, actualValue,
+                 $"MapToList gave the property {member.Name} The wrong value. Expected {expectedValue} but it was {actualValue}");
             });
 
 
@@ -80,7 +80,7 @@ namespace DotNetHelper.FastMember.Extension.Tests.SetValueTest
             if (type.IsGenericType && type.GetGenericTypeDefinition() == typeof(Nullable<>))
             {
                 var childType = Nullable.GetUnderlyingType(type);
-                return  childType;
+                return childType;
             }
             return type;
         }

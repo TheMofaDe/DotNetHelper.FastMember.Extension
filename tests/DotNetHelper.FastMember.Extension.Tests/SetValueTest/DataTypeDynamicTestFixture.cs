@@ -85,7 +85,7 @@ namespace DotNetHelper.FastMember.Extension.Tests.SetValueTest
         /// </summary>
         /// <param name="type"></param>
         /// <returns></returns>
-        public static bool IsTypeDynamic( Type type)
+        public static bool IsTypeDynamic(Type type)
         {
             return typeof(IDynamicMetaObjectProvider).IsAssignableFrom(type);
         }

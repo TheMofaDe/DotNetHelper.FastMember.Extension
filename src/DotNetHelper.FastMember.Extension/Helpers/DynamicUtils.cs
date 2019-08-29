@@ -19,7 +19,7 @@ namespace DotNetHelper.FastMember.Extension.Helpers
             {
 
                 return Binder.GetMember(
-                    CSharpBinderFlags.None, name, context, new[] {CSharpArgumentInfo.Create(CSharpArgumentInfoFlags.None, null)});
+                    CSharpBinderFlags.None, name, context, new[] { CSharpArgumentInfo.Create(CSharpArgumentInfoFlags.None, null) });
 
             }
 

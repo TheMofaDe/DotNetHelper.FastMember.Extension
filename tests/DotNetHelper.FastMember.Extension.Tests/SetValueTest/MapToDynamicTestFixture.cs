@@ -40,7 +40,7 @@ namespace DotNetHelper.FastMember.Extension.Tests.SetValueTest
             table.Columns.Add("GuidValue", typeof(Guid));
             table.Columns.Add("TimeSpanValue", typeof(TimeSpan));
 
-            table.Rows.Add(new object[] {1,float.Parse("1"),long.Parse("1"),DBNull.Value,"TEST",2.5,DateTime.Today,'A', Guid.Parse("63559BC0-1FEF-4158-968E-AE4B94974F8E"), TimeSpan.FromSeconds(10) });
+            table.Rows.Add(new object[] { 1, float.Parse("1"), long.Parse("1"), DBNull.Value, "TEST", 2.5, DateTime.Today, 'A', Guid.Parse("63559BC0-1FEF-4158-968E-AE4B94974F8E"), TimeSpan.FromSeconds(10) });
             table.AcceptChanges();
             return table;
         }
@@ -53,12 +53,12 @@ namespace DotNetHelper.FastMember.Extension.Tests.SetValueTest
             var dataReader = GetData().CreateDataReader();
 
             var list = dataReader.MapToList<dynamic>();
-            Assert.IsNotNull(list,"Failed to create a list");
+            Assert.IsNotNull(list, "Failed to create a list");
             Assert.IsNotEmpty(list, "Failed to put data in list");
             var instance = list.First();
             Assert.IsNotNull(instance, "Failed to create dynamic object");
 
-            Assert.AreEqual(instance.NumberValue,1);
+            Assert.AreEqual(instance.NumberValue, 1);
             Assert.AreEqual(instance.FloatValue, 1);
             Assert.AreEqual(instance.LongValue, 1);
             Assert.AreEqual(instance.NullValue, null);

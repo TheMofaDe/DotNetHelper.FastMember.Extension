@@ -135,7 +135,7 @@ namespace DotNetHelper.FastMember.Extension
                 }
                 catch (Exception)
                 {
-                  //  throw new PropertyMapException($"Failed To Map Property {pair.Key.Name} : {pair.Key.Type.FullName} --> {pair.Value.Name} : {pair.Value.Type.FullName}",error);
+                    //  throw new PropertyMapException($"Failed To Map Property {pair.Key.Name} : {pair.Key.Type.FullName} --> {pair.Value.Name} : {pair.Value.Type.FullName}",error);
                 }
             });
 

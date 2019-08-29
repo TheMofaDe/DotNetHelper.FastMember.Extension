@@ -60,14 +60,14 @@ namespace DotNetHelper.FastMember.Extension
         public static List<MemberWrapper> GetMemberWrappers(IDynamicMetaObjectProvider dynamicObject)
         {
             var list = new List<MemberWrapper>() { };
-              
-                    var dynamicObjectHelper = new DynamicObjectHelper();
-                    dynamicObjectHelper.GetDynamicMemberNameAndValues(dynamicObject).ForEach(
-                        delegate (KeyValuePair<string, object> pair)
-                        {
-                            var advance = new MemberWrapper(pair.Key, pair.Value == null ? typeof(object) : pair.Value.GetType()) { };
-                            list.Add(advance);
-                        });
+
+            var dynamicObjectHelper = new DynamicObjectHelper();
+            dynamicObjectHelper.GetDynamicMemberNameAndValues(dynamicObject).ForEach(
+                delegate (KeyValuePair<string, object> pair)
+                {
+                    var advance = new MemberWrapper(pair.Key, pair.Value == null ? typeof(object) : pair.Value.GetType()) { };
+                    list.Add(advance);
+                });
 
             return list;
         }
@@ -162,7 +162,7 @@ namespace DotNetHelper.FastMember.Extension
                     }
                     else
                     {
-                        throw new InvalidOperationException($"Is the property {propertyName} of type {typeof(T).FullName} missing a setter ??? check inner exception for more detail ",e);
+                        throw new InvalidOperationException($"Is the property {propertyName} of type {typeof(T).FullName} missing a setter ??? check inner exception for more detail ", e);
 
                     }
                 }
@@ -181,7 +181,7 @@ namespace DotNetHelper.FastMember.Extension
                 }
                 else
                 {
-                    if(needToBeType != typeof(object))
+                    if (needToBeType != typeof(object))
                         value = needToBeType.IsEnum
                         ? Enum.Parse(needToBeType.IsNullable().underlyingType, value.ToString(), true)
                         : Convert.ChangeType(value, needToBeType.IsNullable().underlyingType, null);
@@ -193,13 +193,13 @@ namespace DotNetHelper.FastMember.Extension
 
 
 
-        public static object GetMemberValue<T>(T instance,string key) where T : class
+        public static object GetMemberValue<T>(T instance, string key) where T : class
         {
             if (typeof(T).IsTypeDynamic())
                 return GetMemberValue((IDynamicMetaObjectProvider)instance, key);
             return GetMemberWrappers<T>(true).FirstOrDefault(w => w.Name == key)?.GetValue(instance);
         }
-        public static object GetMemberValue(IDynamicMetaObjectProvider instance, string key) 
+        public static object GetMemberValue(IDynamicMetaObjectProvider instance, string key)
         {
             return GetMemberWrappers<IDynamicMetaObjectProvider>(instance).FirstOrDefault(w => w.Name == key)?.GetValue(instance);
         }

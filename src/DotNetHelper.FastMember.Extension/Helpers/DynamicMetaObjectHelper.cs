@@ -39,21 +39,21 @@ namespace DotNetHelper.FastMember.Extension.Helpers
         }
 
 
-        public List<string> GetDynamicMemberNames(IDynamicMetaObjectProvider dynamicObject) 
+        public List<string> GetDynamicMemberNames(IDynamicMetaObjectProvider dynamicObject)
         {
             dynamicObject.IsNullThrow(nameof(dynamicObject));
             return dynamicObject.GetMetaObject(Expression.Constant(dynamicObject)).GetDynamicMemberNames().AsList();
         }
 
-        public Dictionary<string,object> GetDynamicMemberNameAndValues(IDynamicMetaObjectProvider dynamicObject)
+        public Dictionary<string, object> GetDynamicMemberNameAndValues(IDynamicMetaObjectProvider dynamicObject)
         {
             dynamicObject.IsNullThrow(nameof(dynamicObject));
-            var dictionary = new Dictionary<string,object>();
+            var dictionary = new Dictionary<string, object>();
             var names = dynamicObject.GetMetaObject(Expression.Constant(dynamicObject)).GetDynamicMemberNames();
             foreach (var name in names)
             {
-                if(TryGetMember(dynamicObject,name, out var value))
-                 dictionary.Add(name,value);
+                if (TryGetMember(dynamicObject, name, out var value))
+                    dictionary.Add(name, value);
             }
             return dictionary;
         }

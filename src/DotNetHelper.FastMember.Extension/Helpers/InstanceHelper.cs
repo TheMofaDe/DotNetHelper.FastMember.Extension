@@ -29,13 +29,13 @@ namespace DotNetHelper.FastMember.Extension.Helpers
                 //      return Expression.Lambda<Func<T>>(Expression.Constant(oh.Unwrap())).Compile();
 
                 var c = typeof(T).GetTypeInfo().DeclaredConstructors.Single(ci => ci.GetParameters().Length == 0);
-                if (Type.EmptyTypes != null) return (Func<T>) c.Invoke(Type.EmptyTypes);
+                if (Type.EmptyTypes != null) return (Func<T>)c.Invoke(Type.EmptyTypes);
 
                 return Activator.CreateInstance<Func<T>>();
             }
             catch (Exception)
             {
-                return () => (T) FormatterServices.GetUninitializedObject(t);
+                return () => (T)FormatterServices.GetUninitializedObject(t);
             }
         }
     }

@@ -85,7 +85,7 @@ namespace DotNetHelper.FastMember.Extension.Tests.Extension
                 }
             }
 
-            if (tType.IsTypeDynamic() || tType == typeof(object)) 
+            if (tType.IsTypeDynamic() || tType == typeof(object))
             {
                 var dynamicInstance = new ExpandoObject();
                 readerFieldLookup.ForEach(delegate (KeyValuePair<string, int> pair)
@@ -207,7 +207,7 @@ namespace DotNetHelper.FastMember.Extension.Tests.Extension
 
 
 
-  
+
 
 
         public static DataTable MapToDataTable<T>(this IEnumerable<T> source) where T : class
@@ -216,7 +216,7 @@ namespace DotNetHelper.FastMember.Extension.Tests.Extension
         }
         public static DataTable MapToDataTable<T>(this IEnumerable<T> source, string tableName) where T : class
         {
-          
+
             var dt = new DataTable();
             if (source.Count() == 0)
             {

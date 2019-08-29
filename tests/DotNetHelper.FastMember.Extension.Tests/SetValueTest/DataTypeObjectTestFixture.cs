@@ -9,7 +9,7 @@ using NUnit.Framework;
 namespace DotNetHelper.FastMember.Extension.Tests.SetValueTest
 {
     [TestFixture]
-    public  class DataTypeObjectTestFixture
+    public class DataTypeObjectTestFixture
     {
 
         private class ObjectDataType
@@ -25,7 +25,7 @@ namespace DotNetHelper.FastMember.Extension.Tests.SetValueTest
             // DOESN"T KNOW HOW TO MAP A GUID TO A TYPE OBJECT
             public object GuidValue { get; set; } = Guid.Parse("63559BC0-1FEF-4158-968E-AE4B94974F8E");
 
-           // DOESN"T KNOW HOW TO MAP A TimeSpan TO A TYPE OBJECT
+            // DOESN"T KNOW HOW TO MAP A TimeSpan TO A TYPE OBJECT
             public object TimeSpanValue { get; set; } = TimeSpan.FromSeconds(10);
         }
 
@@ -61,14 +61,14 @@ namespace DotNetHelper.FastMember.Extension.Tests.SetValueTest
             var instance = list.First();
 
 
-         
 
-         MyAccessor.GetMembers().ToList().ForEach(delegate (Member member)
-         {
-             var expectedValue = MyAccessor[Instance, member.Name];
-             var actualValue = MyAccessor[instance, member.Name];
-                Assert.AreEqual(expectedValue,actualValue,
-                    $"MapToList gave the property {member.Name} The wrong value. Expected {expectedValue} but it was {actualValue}");
+
+            MyAccessor.GetMembers().ToList().ForEach(delegate (Member member)
+            {
+                var expectedValue = MyAccessor[Instance, member.Name];
+                var actualValue = MyAccessor[instance, member.Name];
+                Assert.AreEqual(expectedValue, actualValue,
+                 $"MapToList gave the property {member.Name} The wrong value. Expected {expectedValue} but it was {actualValue}");
             });
 
 

@@ -10,7 +10,7 @@ using FastMember;
 
 namespace DotNetHelper.FastMember.Extension.Models
 {
-    public class MemberWrapper 
+    public class MemberWrapper
     {
         private IDictionary<Type, object> CustomAttributeLookup { get; set; } = new ConcurrentDictionary<Type, object>();
         private Member Member { get; }
@@ -20,14 +20,14 @@ namespace DotNetHelper.FastMember.Extension.Models
         public bool CanWrite { get; }
         public bool IsADynamicMember { get; } = false;
 
-        internal MemberWrapper(Member member) 
+        internal MemberWrapper(Member member)
         {
             Member = member;
             Name = Member.Name;
             Type = Member.Type;
             try
             {
-                CanRead = Member.CanRead; 
+                CanRead = Member.CanRead;
             }
             catch (NotSupportedException)
             {
@@ -68,8 +68,8 @@ namespace DotNetHelper.FastMember.Extension.Models
             if (hasRecord)
             {
                 // ReSharper disable once UseNullPropagation
-                if (value == null) return null; 
-                return (T) value;
+                if (value == null) return null;
+                return (T)value;
             }
             else
             {
@@ -85,7 +85,7 @@ namespace DotNetHelper.FastMember.Extension.Models
 
         public MemberInfo GetMemberInfo()
         {
-            if(IsADynamicMember) throw new InvalidOperationException("Can't retrieve MemberInfo from dynamic objects");
+            if (IsADynamicMember) throw new InvalidOperationException("Can't retrieve MemberInfo from dynamic objects");
             return Member.GetMemberInfo();
         }
 
@@ -136,14 +136,14 @@ namespace DotNetHelper.FastMember.Extension.Models
 
         public void SetMemberValue<T>(T instanceOfObject, object value)
         {
-            ExtFastMember.SetMemberValue(instanceOfObject,Name,value);
+            ExtFastMember.SetMemberValue(instanceOfObject, Name, value);
         }
 
 
- 
+
     }
 
 
-   
+
 
 }

@@ -18,7 +18,7 @@ namespace DotNetHelper.FastMember.Extension.Extension
         /// </summary>
         /// <param name="type"></param>
         /// <returns></returns>
-        public static (bool isNullableT,Type underlyingType) IsNullable (this Type type)
+        public static (bool isNullableT, Type underlyingType) IsNullable(this Type type)
         {
             if (type.IsGenericType && type.GetGenericTypeDefinition() == typeof(Nullable<>))
             {
@@ -43,10 +43,10 @@ namespace DotNetHelper.FastMember.Extension.Extension
                    && (type.Name.StartsWith("<>") || type.Name.StartsWith("VB$"))
                    && (type.Attributes & TypeAttributes.NotPublic) == TypeAttributes.NotPublic;
         }
-      
 
 
-        
+
+
 
 
 
