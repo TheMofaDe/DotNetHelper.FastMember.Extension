@@ -13,6 +13,12 @@ namespace DotNetHelper.FastMember.Extension
     // https://stackoverflow.com/questions/315146/anonymous-types-are-there-any-distingushing-characteristics
     public static class ExtFastMember
     {
+        private static Type GuidType { get; } = typeof(Guid);
+        private static Type GuidTypeNullable { get; } = typeof(Guid?);
+        private static Type DateTimeOffsetType { get; } = typeof(DateTimeOffset);
+        private static Type DateTimeOffsetTypeNullable { get; } = typeof(DateTimeOffset?);
+        private static Type TimeSpanType { get; } = typeof(TimeSpan);
+        private static Type TimeSpanTypeNullable { get; } = typeof(TimeSpan?);
 
         private static IDictionary<string, List<MemberWrapper>> Lookup { get; } = new Dictionary<string, List<MemberWrapper>>();
 
@@ -174,9 +180,9 @@ namespace DotNetHelper.FastMember.Extension
             }
             if (value.GetType() != needToBeType)
             {
-                if (needToBeType == typeof(DateTimeOffset) || needToBeType == typeof(DateTimeOffset?) || needToBeType == typeof(Guid) || needToBeType == typeof(Guid?))
+                if (needToBeType == DateTimeOffsetType || needToBeType == GuidType || needToBeType == TimeSpanType  || needToBeType == DateTimeOffsetTypeNullable  || needToBeType == GuidTypeNullable || needToBeType == TimeSpanTypeNullable)
                 {
-                    value = TypeDescriptor.GetConverter(needToBeType).ConvertFrom(value);
+                    value = TypeDescriptor.GetConverter(needToBeType).ConvertFrom(value) ;
                 }
                 else
                 {

@@ -481,6 +481,11 @@ namespace DotNetHelper.FastMember.Extension.Tests
                     member.SetMemberValue(obj, "a19ed8e6-c455-4164-afac-d4043095a4ee");
                     Assert.AreEqual(member.GetValue(obj), Guid.Parse("a19ed8e6-c455-4164-afac-d4043095a4ee"));
                 }
+                if (member.Name == "TimeSpan")
+                {
+                    member.SetMemberValue(obj, "01:00:00");
+                    Assert.AreEqual(member.GetValue(obj), TimeSpan.Parse("01:00:00"));
+                }
 
             }
         }
