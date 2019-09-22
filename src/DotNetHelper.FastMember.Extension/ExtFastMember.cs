@@ -174,8 +174,7 @@ namespace DotNetHelper.FastMember.Extension
             }
             if (value.GetType() != needToBeType)
             {
-
-                if (needToBeType == typeof(DateTimeOffset) || needToBeType == typeof(DateTimeOffset?))
+                if (needToBeType == typeof(DateTimeOffset) || needToBeType == typeof(DateTimeOffset?) || needToBeType == typeof(Guid) || needToBeType == typeof(Guid?))
                 {
                     value = TypeDescriptor.GetConverter(needToBeType).ConvertFrom(value);
                 }

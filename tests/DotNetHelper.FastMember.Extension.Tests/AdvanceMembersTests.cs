@@ -140,6 +140,10 @@ namespace DotNetHelper.FastMember.Extension.Tests
 
 
 
+
+        
+
+
         [Test]
         public void Test_MultiThreadingLookup()
         {
@@ -454,5 +458,32 @@ namespace DotNetHelper.FastMember.Extension.Tests
 
 
         #endregion
+
+
+
+
+        [Test]
+        public void Test_Setting_String_Value_To_Other_Types()
+        {
+            var obj = new StringValueModel() { };
+            var members = ExtFastMember.GetMemberWrappers<StringValueModel>(true);
+
+
+            foreach (var member in members)
+            {
+                if (member.Name == "DateTimeOffset")
+                {
+                    member.SetMemberValue(obj, "2017-05-30");
+                    Assert.AreEqual(member.GetValue(obj), DateTimeOffset.Parse("2017-05-30"));
+                }
+                if (member.Name == "Guid")
+                {
+                    member.SetMemberValue(obj, "a19ed8e6-c455-4164-afac-d4043095a4ee");
+                    Assert.AreEqual(member.GetValue(obj), Guid.Parse("a19ed8e6-c455-4164-afac-d4043095a4ee"));
+                }
+
+            }
+        }
+
     }
 }

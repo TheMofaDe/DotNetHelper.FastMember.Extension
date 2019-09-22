@@ -16,8 +16,4 @@
     <ProjectReference Include="..\..\src\DotNetHelper.FastMember.Extension\DotNetHelper.FastMember.Extension.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="SetValueTest\" />
-  </ItemGroup>
-
 </Project>

@@ -8,6 +8,12 @@ namespace DotNetHelper.FastMember.Extension.Tests.Models
         public bool? NullBoolean { get; set; } = null;
     }
 
+    public class StringValueModel
+    {
+        public Guid Guid { get; set; } 
+        public DateTimeOffset DateTimeOffset { get; set; } 
+    }
+
     public class GenericModelWithGetOnlyProperties
     {
         public bool IsPublicProperty { get; } = true;
