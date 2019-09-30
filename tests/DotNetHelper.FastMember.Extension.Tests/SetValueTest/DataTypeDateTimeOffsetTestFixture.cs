@@ -29,7 +29,7 @@ namespace DotNetHelper.FastMember.Extension.Tests.SetValueTest
             {
                 table.Columns.Add(member.Name, IsNullable(member.Type));
             });
-             
+
             var values = new List<object>() { };
             MyAccessor.GetMembers().ToList().ForEach(delegate (Member member)
             {

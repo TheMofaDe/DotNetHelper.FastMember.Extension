@@ -28,7 +28,7 @@ namespace DotNetHelper.FastMember.Extension.Tests
     [TestFixture]
     public class ObjectMapperTest
     {
-        
+
 
         //public TypeModel B { get; private set; } = new TypeModel() { };
 
@@ -42,32 +42,32 @@ namespace DotNetHelper.FastMember.Extension.Tests
             //    Guid = Guid.Parse("63559BC0-1FEF-4158-968E-AE4B94974F8E"),
             //    Number = 1
             //};
-          
+
         }
 
 
         [Test]
         public void Test_Map_Only_Will_Only_Map_Single_Property()
         {
-               var value = "1";
-                var obj = new {Number = value , TimeSpan = TimeSpan.FromHours(1)};
-                var B = new TypeModel();
-                ObjectMapper.MapOnly(obj, B, m => m.Number, false, StringComparison.OrdinalIgnoreCase);
-                Assert.AreEqual(B.TimeSpan,default(TimeSpan));
-                Assert.AreEqual(B.DateTime, default(DateTime));
-                Assert.AreEqual(B.Guid, default(Guid));
-                Assert.AreEqual(value,B.Number.ToString());
+            var value = "1";
+            var obj = new { Number = value, TimeSpan = TimeSpan.FromHours(1) };
+            var B = new TypeModel();
+            ObjectMapper.MapOnly(obj, B, m => m.Number, false, StringComparison.OrdinalIgnoreCase);
+            Assert.AreEqual(B.TimeSpan, default(TimeSpan));
+            Assert.AreEqual(B.DateTime, default(DateTime));
+            Assert.AreEqual(B.Guid, default(Guid));
+            Assert.AreEqual(value, B.Number.ToString());
         }
 
 
         [Test]
         public void Test_Map_String_To_DateTime()
         {
-             var value = DateTime.Now.ToString();
-              var obj = new { DateTime = value };
-              var B = new TypeModel();
+            var value = DateTime.Now.ToString();
+            var obj = new { DateTime = value };
+            var B = new TypeModel();
             ObjectMapper.MapOnly(obj, B, m => m.DateTime, false, StringComparison.OrdinalIgnoreCase);
-              Assert.AreEqual(value, B.DateTime.ToString()); ;
+            Assert.AreEqual(value, B.DateTime.ToString()); ;
 
         }
 
@@ -129,7 +129,7 @@ namespace DotNetHelper.FastMember.Extension.Tests
         [Test]
         public void Test_Map_Properties()
         {
-            var obj = new { Number = 1, TimeSpan = TimeSpan.FromHours(1), DateTime = DateTime.Now,  Guid = Guid.Parse("63559BC0-1FEF-4158-968E-AE4B94974F8E") };
+            var obj = new { Number = 1, TimeSpan = TimeSpan.FromHours(1), DateTime = DateTime.Now, Guid = Guid.Parse("63559BC0-1FEF-4158-968E-AE4B94974F8E") };
             var B = new TypeModel();
             ObjectMapper.MapProperties(obj, B, false, StringComparison.OrdinalIgnoreCase);
             Assert.AreEqual(B.TimeSpan, obj.TimeSpan);

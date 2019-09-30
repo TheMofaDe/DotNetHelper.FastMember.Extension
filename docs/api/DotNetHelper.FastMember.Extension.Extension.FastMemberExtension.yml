@@ -20,7 +20,7 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/Extensions/FastMemberExtension.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: FastMemberExtension
     path: ../src/DotNetHelper.FastMember.Extension/Extensions/FastMemberExtension.cs
     startLine: 9
@@ -65,7 +65,7 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/Extensions/FastMemberExtension.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: GetPrivateField
     path: ../src/DotNetHelper.FastMember.Extension/Extensions/FastMemberExtension.cs
     startLine: 12
@@ -113,7 +113,7 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/Extensions/FastMemberExtension.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: GetPrivateProperty
     path: ../src/DotNetHelper.FastMember.Extension/Extensions/FastMemberExtension.cs
     startLine: 21
@@ -161,7 +161,7 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/Extensions/FastMemberExtension.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: GetMemberInfo
     path: ../src/DotNetHelper.FastMember.Extension/Extensions/FastMemberExtension.cs
     startLine: 30
@@ -202,7 +202,7 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/Extensions/FastMemberExtension.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: GetMemberAttribute
     path: ../src/DotNetHelper.FastMember.Extension/Extensions/FastMemberExtension.cs
     startLine: 35

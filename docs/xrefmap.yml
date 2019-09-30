@@ -521,15 +521,15 @@ references:
   isSpec: "True"
   fullName: DotNetHelper.FastMember.Extension.ObjectMapper.MapProperties
   nameWithType: ObjectMapper.MapProperties
-- uid: DotNetHelper.FastMember.Extension.ObjectMapper.MapProperties``2(``0,``1,System.Boolean,System.StringComparison,System.Collections.Generic.IDictionary{System.Type,System.IFormatProvider})
-  name: MapProperties<T1, T2>(T1, T2, Boolean, StringComparison, IDictionary<Type, IFormatProvider>)
-  href: api/DotNetHelper.FastMember.Extension.ObjectMapper.html#DotNetHelper_FastMember_Extension_ObjectMapper_MapProperties__2___0___1_System_Boolean_System_StringComparison_System_Collections_Generic_IDictionary_System_Type_System_IFormatProvider__
-  commentId: M:DotNetHelper.FastMember.Extension.ObjectMapper.MapProperties``2(``0,``1,System.Boolean,System.StringComparison,System.Collections.Generic.IDictionary{System.Type,System.IFormatProvider})
-  name.vb: MapProperties(Of T1, T2)(T1, T2, Boolean, StringComparison, IDictionary(Of Type, IFormatProvider))
-  fullName: DotNetHelper.FastMember.Extension.ObjectMapper.MapProperties<T1, T2>(T1, T2, System.Boolean, System.StringComparison, System.Collections.Generic.IDictionary<System.Type, System.IFormatProvider>)
-  fullName.vb: DotNetHelper.FastMember.Extension.ObjectMapper.MapProperties(Of T1, T2)(T1, T2, System.Boolean, System.StringComparison, System.Collections.Generic.IDictionary(Of System.Type, System.IFormatProvider))
-  nameWithType: ObjectMapper.MapProperties<T1, T2>(T1, T2, Boolean, StringComparison, IDictionary<Type, IFormatProvider>)
-  nameWithType.vb: ObjectMapper.MapProperties(Of T1, T2)(T1, T2, Boolean, StringComparison, IDictionary(Of Type, IFormatProvider))
+- uid: DotNetHelper.FastMember.Extension.ObjectMapper.MapProperties``2(``0,``1,System.Boolean,System.StringComparison)
+  name: MapProperties<T1, T2>(T1, T2, Boolean, StringComparison)
+  href: api/DotNetHelper.FastMember.Extension.ObjectMapper.html#DotNetHelper_FastMember_Extension_ObjectMapper_MapProperties__2___0___1_System_Boolean_System_StringComparison_
+  commentId: M:DotNetHelper.FastMember.Extension.ObjectMapper.MapProperties``2(``0,``1,System.Boolean,System.StringComparison)
+  name.vb: MapProperties(Of T1, T2)(T1, T2, Boolean, StringComparison)
+  fullName: DotNetHelper.FastMember.Extension.ObjectMapper.MapProperties<T1, T2>(T1, T2, System.Boolean, System.StringComparison)
+  fullName.vb: DotNetHelper.FastMember.Extension.ObjectMapper.MapProperties(Of T1, T2)(T1, T2, System.Boolean, System.StringComparison)
+  nameWithType: ObjectMapper.MapProperties<T1, T2>(T1, T2, Boolean, StringComparison)
+  nameWithType.vb: ObjectMapper.MapProperties(Of T1, T2)(T1, T2, Boolean, StringComparison)
 - uid: DotNetHelper.FastMember.Extension.ObjectMapper.MapPropertiesDontThrow*
   name: MapPropertiesDontThrow
   href: api/DotNetHelper.FastMember.Extension.ObjectMapper.html#DotNetHelper_FastMember_Extension_ObjectMapper_MapPropertiesDontThrow_

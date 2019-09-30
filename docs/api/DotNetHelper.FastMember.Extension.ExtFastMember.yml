@@ -23,7 +23,7 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/ExtFastMember.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: ExtFastMember
     path: ../src/DotNetHelper.FastMember.Extension/ExtFastMember.cs
     startLine: 13
@@ -65,10 +65,10 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/ExtFastMember.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: GetMemberWrappers
     path: ../src/DotNetHelper.FastMember.Extension/ExtFastMember.cs
-    startLine: 28
+    startLine: 34
   assemblies:
   - DotNetHelper.FastMember.Extension
   namespace: DotNetHelper.FastMember.Extension
@@ -109,10 +109,10 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/ExtFastMember.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: GetMemberWrappers
     path: ../src/DotNetHelper.FastMember.Extension/ExtFastMember.cs
-    startLine: 59
+    startLine: 65
   assemblies:
   - DotNetHelper.FastMember.Extension
   namespace: DotNetHelper.FastMember.Extension
@@ -150,10 +150,10 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/ExtFastMember.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: GetMemberWrappers
     path: ../src/DotNetHelper.FastMember.Extension/ExtFastMember.cs
-    startLine: 82
+    startLine: 88
   assemblies:
   - DotNetHelper.FastMember.Extension
   namespace: DotNetHelper.FastMember.Extension
@@ -203,10 +203,10 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/ExtFastMember.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: GetMemberWrappers
     path: ../src/DotNetHelper.FastMember.Extension/ExtFastMember.cs
-    startLine: 116
+    startLine: 122
   assemblies:
   - DotNetHelper.FastMember.Extension
   namespace: DotNetHelper.FastMember.Extension
@@ -251,10 +251,10 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/ExtFastMember.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: SetMemberValue
     path: ../src/DotNetHelper.FastMember.Extension/ExtFastMember.cs
-    startLine: 132
+    startLine: 138
   assemblies:
   - DotNetHelper.FastMember.Extension
   namespace: DotNetHelper.FastMember.Extension
@@ -295,10 +295,10 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/ExtFastMember.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: GetMemberValue
     path: ../src/DotNetHelper.FastMember.Extension/ExtFastMember.cs
-    startLine: 195
+    startLine: 212
   assemblies:
   - DotNetHelper.FastMember.Extension
   namespace: DotNetHelper.FastMember.Extension
@@ -341,10 +341,10 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/ExtFastMember.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: GetMemberValue
     path: ../src/DotNetHelper.FastMember.Extension/ExtFastMember.cs
-    startLine: 201
+    startLine: 218
   assemblies:
   - DotNetHelper.FastMember.Extension
   namespace: DotNetHelper.FastMember.Extension

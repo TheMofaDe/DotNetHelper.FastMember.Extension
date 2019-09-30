@@ -35,7 +35,7 @@ namespace DotNetHelper.FastMember.Extension.Tests.SetValueTest
             public string StringValue { get; set; } = "TEST";
             public string DecimalValue { get; set; } = 2.5.ToString();
             public string DateTimeValue { get; set; } = DateTime.Today.ToString();
-
+            public string CharValue { get; set; } = "A";
             public string GuidValue { get; set; } = Guid.Parse("63559BC0-1FEF-4158-968E-AE4B94974F8E").ToString();
             public string TimeSpanValue { get; set; } = TimeSpan.FromSeconds(10).ToString();
         }

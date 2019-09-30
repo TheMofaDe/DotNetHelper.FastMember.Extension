@@ -17,7 +17,7 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/Helpers/InstanceHelper.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: New
     path: ../src/DotNetHelper.FastMember.Extension/Helpers/InstanceHelper.cs
     startLine: 10
@@ -64,7 +64,7 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/Helpers/InstanceHelper.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: Instance
     path: ../src/DotNetHelper.FastMember.Extension/Helpers/InstanceHelper.cs
     startLine: 12

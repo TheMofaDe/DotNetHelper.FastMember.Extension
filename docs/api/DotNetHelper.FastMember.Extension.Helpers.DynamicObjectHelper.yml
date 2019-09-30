@@ -21,7 +21,7 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/Helpers/DynamicMetaObjectHelper.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: DynamicObjectHelper
     path: ../src/DotNetHelper.FastMember.Extension/Helpers/DynamicMetaObjectHelper.cs
     startLine: 10
@@ -65,7 +65,7 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/Helpers/DynamicMetaObjectHelper.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: .ctor
     path: ../src/DotNetHelper.FastMember.Extension/Helpers/DynamicMetaObjectHelper.cs
     startLine: 23
@@ -97,7 +97,7 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/Helpers/DynamicMetaObjectHelper.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: GetDynamicMemberNames
     path: ../src/DotNetHelper.FastMember.Extension/Helpers/DynamicMetaObjectHelper.cs
     startLine: 41
@@ -132,7 +132,7 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/Helpers/DynamicMetaObjectHelper.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: GetDynamicMemberNameAndValues
     path: ../src/DotNetHelper.FastMember.Extension/Helpers/DynamicMetaObjectHelper.cs
     startLine: 47
@@ -167,7 +167,7 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/Helpers/DynamicMetaObjectHelper.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: TryGetMember
     path: ../src/DotNetHelper.FastMember.Extension/Helpers/DynamicMetaObjectHelper.cs
     startLine: 60
@@ -209,7 +209,7 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/Helpers/DynamicMetaObjectHelper.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: TrySetMember
     path: ../src/DotNetHelper.FastMember.Extension/Helpers/DynamicMetaObjectHelper.cs
     startLine: 79

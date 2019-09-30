@@ -10,7 +10,7 @@ namespace DotNetHelper.FastMember.Extension.Tests.Models
 
     public class StringValueModel
     {
-        public Guid Guid { get; set; } 
+        public Guid Guid { get; set; }
         public DateTimeOffset DateTimeOffset { get; set; }
         public TimeSpan TimeSpan { get; set; }
     }

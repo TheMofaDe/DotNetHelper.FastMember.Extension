@@ -182,17 +182,17 @@ namespace DotNetHelper.FastMember.Extension
             var isDifferentType = value.GetType() != needToBeType;
             if (isDifferentType)
             {
-                if (needToBeType == DateTimeOffsetType || needToBeType == GuidType || needToBeType == TimeSpanType  || needToBeType == DateTimeOffsetTypeNullable  || needToBeType == GuidTypeNullable || needToBeType == TimeSpanTypeNullable)
+                if (needToBeType == DateTimeOffsetType || needToBeType == GuidType || needToBeType == TimeSpanType || needToBeType == DateTimeOffsetTypeNullable || needToBeType == GuidTypeNullable || needToBeType == TimeSpanTypeNullable)
                 {
-                    value = TypeDescriptor.GetConverter(needToBeType).ConvertFrom(value) ;
+                    value = TypeDescriptor.GetConverter(needToBeType).ConvertFrom(value);
                 }
 
                 else
                 {
                     if (needToBeType != typeof(object) && needToBeType != typeof(string))
-                            value = needToBeType.IsEnum
-                                ? Enum.Parse(needToBeType.IsNullable().underlyingType, value.ToString(), true)
-                                : Convert.ChangeType(value, needToBeType.IsNullable().underlyingType, null);
+                        value = needToBeType.IsEnum
+                            ? Enum.Parse(needToBeType.IsNullable().underlyingType, value.ToString(), true)
+                            : Convert.ChangeType(value, needToBeType.IsNullable().underlyingType, null);
                 }
             }
 

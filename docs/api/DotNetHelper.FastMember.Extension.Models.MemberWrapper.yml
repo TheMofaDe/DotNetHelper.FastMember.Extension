@@ -28,7 +28,7 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/Models/MemberWrapper.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: MemberWrapper
     path: ../src/DotNetHelper.FastMember.Extension/Models/MemberWrapper.cs
     startLine: 12
@@ -72,7 +72,7 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/Models/MemberWrapper.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: Name
     path: ../src/DotNetHelper.FastMember.Extension/Models/MemberWrapper.cs
     startLine: 16
@@ -107,7 +107,7 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/Models/MemberWrapper.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: Type
     path: ../src/DotNetHelper.FastMember.Extension/Models/MemberWrapper.cs
     startLine: 17
@@ -142,7 +142,7 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/Models/MemberWrapper.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: CanRead
     path: ../src/DotNetHelper.FastMember.Extension/Models/MemberWrapper.cs
     startLine: 18
@@ -177,7 +177,7 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/Models/MemberWrapper.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: CanWrite
     path: ../src/DotNetHelper.FastMember.Extension/Models/MemberWrapper.cs
     startLine: 19
@@ -212,7 +212,7 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/Models/MemberWrapper.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: IsADynamicMember
     path: ../src/DotNetHelper.FastMember.Extension/Models/MemberWrapper.cs
     startLine: 20
@@ -247,7 +247,7 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/Models/MemberWrapper.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: GetCustomAttribute
     path: ../src/DotNetHelper.FastMember.Extension/Models/MemberWrapper.cs
     startLine: 63
@@ -286,7 +286,7 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/Models/MemberWrapper.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: GetMemberInfo
     path: ../src/DotNetHelper.FastMember.Extension/Models/MemberWrapper.cs
     startLine: 85
@@ -318,7 +318,7 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/Models/MemberWrapper.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: GetValue
     path: ../src/DotNetHelper.FastMember.Extension/Models/MemberWrapper.cs
     startLine: 91
@@ -353,7 +353,7 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/Models/MemberWrapper.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: GetValue
     path: ../src/DotNetHelper.FastMember.Extension/Models/MemberWrapper.cs
     startLine: 102
@@ -390,7 +390,7 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/Models/MemberWrapper.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: GetValue
     path: ../src/DotNetHelper.FastMember.Extension/Models/MemberWrapper.cs
     startLine: 114
@@ -432,7 +432,7 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/Models/MemberWrapper.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: GetValue
     path: ../src/DotNetHelper.FastMember.Extension/Models/MemberWrapper.cs
     startLine: 125
@@ -476,7 +476,7 @@ items:
     remote:
       path: src/DotNetHelper.FastMember.Extension/Models/MemberWrapper.cs
       branch: master
-      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension.git
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: SetMemberValue
     path: ../src/DotNetHelper.FastMember.Extension/Models/MemberWrapper.cs
     startLine: 136
