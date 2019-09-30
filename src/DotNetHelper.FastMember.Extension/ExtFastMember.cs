@@ -178,22 +178,34 @@ namespace DotNetHelper.FastMember.Extension
                 SetValue(null);
                 return;
             }
-            if (value.GetType() != needToBeType)
+
+            var isDifferentType = value.GetType() != needToBeType;
+            if (isDifferentType)
             {
                 if (needToBeType == DateTimeOffsetType || needToBeType == GuidType || needToBeType == TimeSpanType  || needToBeType == DateTimeOffsetTypeNullable  || needToBeType == GuidTypeNullable || needToBeType == TimeSpanTypeNullable)
                 {
                     value = TypeDescriptor.GetConverter(needToBeType).ConvertFrom(value) ;
                 }
+
                 else
                 {
-                    if (needToBeType != typeof(object))
-                        value = needToBeType.IsEnum
-                        ? Enum.Parse(needToBeType.IsNullable().underlyingType, value.ToString(), true)
-                        : Convert.ChangeType(value, needToBeType.IsNullable().underlyingType, null);
+                    if (needToBeType != typeof(object) && needToBeType != typeof(string))
+                            value = needToBeType.IsEnum
+                                ? Enum.Parse(needToBeType.IsNullable().underlyingType, value.ToString(), true)
+                                : Convert.ChangeType(value, needToBeType.IsNullable().underlyingType, null);
                 }
-
             }
-            SetValue(value);
+
+            if (isDifferentType && needToBeType == typeof(string))
+            {
+                SetValue(value.ToString());
+            }
+            else
+            {
+                SetValue(value);
+            }
+
+
         }
 
 
