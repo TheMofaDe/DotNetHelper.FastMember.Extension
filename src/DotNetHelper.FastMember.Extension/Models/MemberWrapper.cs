@@ -120,7 +120,7 @@ namespace DotNetHelper.FastMember.Extension.Models
                 helper.TryGetMember(dynamicInstance, Name, out var value);
                 return value;
             }
-            var accessor = TypeAccessor.Create(typeof(T), true);
+            var accessor = TypeAccessor.Create(instanceOfObject.GetType(), true);
             return accessor[instanceOfObject, Name];
         }
         public object GetValue<T>(T instanceOfObject, TypeAccessor accessor) where T : class
