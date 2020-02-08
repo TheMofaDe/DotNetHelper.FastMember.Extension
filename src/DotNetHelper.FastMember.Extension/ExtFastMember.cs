@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Dynamic;
 using System.Linq;
+#if NETSTANDARD
+using System.Reflection;
+#endif
 using DotNetHelper.FastMember.Extension.Extension;
 using DotNetHelper.FastMember.Extension.Helpers;
 using DotNetHelper.FastMember.Extension.Models;
@@ -46,12 +49,34 @@ namespace DotNetHelper.FastMember.Extension
                 }
 
                 var list = new List<MemberWrapper>() { };
+
+#if NETSTANDARD
+                if (OSHelper.IsRunningOnIOS)
+                {
+                     type.GetProperties().ForEach(delegate (PropertyInfo property){
+
+                        var advance = new MemberWrapper(property) { };
+                        list.Add(advance);
+                    });
+
+                }
+                else
+                {
+                    var accessor = TypeAccessor.Create(type, includeNonPublicAccessor);
+                    accessor.GetMembers().AsList().ForEach(delegate (Member member)
+                    {
+                        var advance = new MemberWrapper(member) { };
+                        list.Add(advance);
+                    });
+                }
+#else
                 var accessor = TypeAccessor.Create(type, includeNonPublicAccessor);
                 accessor.GetMembers().AsList().ForEach(delegate (Member member)
                 {
                     var advance = new MemberWrapper(member) { };
                     list.Add(advance);
                 });
+#endif
 
                 Lookup.Add(key, list);
                 return list;

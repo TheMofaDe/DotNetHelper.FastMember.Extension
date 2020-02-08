@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Dynamic;
 using System.Reflection;
 using DotNetHelper.FastMember.Extension.Extension;
@@ -19,6 +18,8 @@ namespace DotNetHelper.FastMember.Extension.Models
         public bool CanRead { get; }
         public bool CanWrite { get; }
         public bool IsADynamicMember { get; } = false;
+
+        private PropertyInfo PropertyInfo { get; }
 
         internal MemberWrapper(Member member)
         {
@@ -61,9 +62,20 @@ namespace DotNetHelper.FastMember.Extension.Models
         }
 
 
+        internal MemberWrapper(PropertyInfo propertyInfo)
+        {
+            Name = propertyInfo.Name;
+            Type = propertyInfo.PropertyType;
+            CanRead = propertyInfo.CanRead;
+            CanWrite = propertyInfo.CanWrite;
+            PropertyInfo = propertyInfo;
+        }
+
+
+
         public T GetCustomAttribute<T>() where T : Attribute
         {
-            if (IsADynamicMember) return null; // 
+            if (IsADynamicMember) return null;
             var hasRecord = CustomAttributeLookup.TryGetValue(typeof(T), out var value);
             if (hasRecord)
             {
@@ -73,6 +85,15 @@ namespace DotNetHelper.FastMember.Extension.Models
             }
             else
             {
+                if (PropertyInfo != null) // SUPPORT FOR IOS 
+                {
+                    var attributes = PropertyInfo.GetCustomAttributes(typeof(T), false);
+                    if (attributes.Length > 0)
+                    {
+                        return attributes[0] as T; 
+                    }
+                    return null;
+                }
                 if (Member.IsDefined(typeof(T)))
                 {
                     var customAttr = Member.GetMemberAttribute<T>(); // TODO :: CHECK TO SEE IF THIS RETURN NULL IF NOT DEFINED IF SO REMOVE THE CHECK ALSO WRITE UNIT TO ENSURE WE ARE NOTIFIED WHEN THIS FUNCTIONALITY CHANGES
@@ -86,7 +107,11 @@ namespace DotNetHelper.FastMember.Extension.Models
         public MemberInfo GetMemberInfo()
         {
             if (IsADynamicMember) throw new InvalidOperationException("Can't retrieve MemberInfo from dynamic objects");
-            return Member.GetMemberInfo();
+            if (PropertyInfo != null) // SUPPORT FOR IOS 
+            {
+                return null;
+            }
+                return Member.GetMemberInfo();
         }
 
         public object GetValue(object instanceOfObject)
@@ -96,6 +121,10 @@ namespace DotNetHelper.FastMember.Extension.Models
                 var helper = new DynamicObjectHelper();
                 helper.TryGetMember(dynamicInstance, Name, out var value);
                 return value;
+            }
+            if (PropertyInfo != null) // SUPPORT FOR IOS 
+            {
+                return PropertyInfo.GetValue(instanceOfObject);
             }
             var accessor = TypeAccessor.Create(instanceOfObject.GetType(), true);
             return accessor[instanceOfObject, Name];
@@ -107,6 +136,10 @@ namespace DotNetHelper.FastMember.Extension.Models
                 var helper = new DynamicObjectHelper();
                 helper.TryGetMember(dynamicInstance, Name, out var value);
                 return value;
+            }
+            if (PropertyInfo != null) // SUPPORT FOR IOS 
+            {
+                return PropertyInfo.GetValue(instanceOfObject);
             }
             accessor.IsNullThrow(nameof(accessor)); // TODO :: UNIT TEST ENSURE IT THROWS
             return accessor[instanceOfObject, Name];
@@ -120,6 +153,10 @@ namespace DotNetHelper.FastMember.Extension.Models
                 helper.TryGetMember(dynamicInstance, Name, out var value);
                 return value;
             }
+            if (PropertyInfo != null) // SUPPORT FOR IOS 
+            {
+                return PropertyInfo.GetValue(instanceOfObject);
+            }
             var accessor = TypeAccessor.Create(instanceOfObject.GetType(), true);
             return accessor[instanceOfObject, Name];
         }
@@ -131,11 +168,19 @@ namespace DotNetHelper.FastMember.Extension.Models
                 helper.TryGetMember(dynamicInstance, Name, out var value);
                 return value;
             }
+            if (PropertyInfo != null) // SUPPORT FOR IOS 
+            {
+                return PropertyInfo.GetValue(instanceOfObject);
+            }
             return accessor[instanceOfObject, Name];
         }
 
         public void SetMemberValue<T>(T instanceOfObject, object value)
         {
+            if (PropertyInfo != null) // SUPPORT FOR IOS 
+            {
+                PropertyInfo.SetValue(instanceOfObject,value);
+            }
             ExtFastMember.SetMemberValue(instanceOfObject, Name, value);
         }
 
