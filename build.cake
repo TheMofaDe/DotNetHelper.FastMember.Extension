@@ -1,5 +1,5 @@
 // Install modules
-#module nuget:?package=Cake.DotNetTool.Module&version=0.3.0
+#module nuget:?package=Cake.DotNetTool.Module&version=0.4.0
 
 // Install addins.
 #addin "nuget:?package=Cake.Gitter&version=0.11.0"
@@ -9,9 +9,9 @@
 #addin "nuget:?package=Cake.Json&version=4.0.0"
 #addin "nuget:?package=Cake.Tfx&version=0.9.0"
 #addin "nuget:?package=Cake.Gem&version=0.8.0"
-#addin "nuget:?package=Cake.Codecov&version=0.7.0"
-#addin "nuget:?package=Cake.DocFx&version=0.13.0"
-#addin "nuget:?package=Newtonsoft.Json&version=9.0.1"
+#addin "nuget:?package=Cake.Codecov&version=0.8.0"
+#addin "nuget:?package=Cake.DocFx&version=0.13.1"
+#addin "nuget:?package=Newtonsoft.Json&version=12.0.3"
 #addin "nuget:?package=xunit.assert&version=2.4.1"
 
 
@@ -20,16 +20,16 @@
 #tool "nuget:?package=NUnit.ConsoleRunner&version=3.10.0"
 #tool "nuget:?package=GitReleaseNotes&version=0.7.1"
 #tool "nuget:?package=ILRepack&version=2.0.16"
-#tool "nuget:?package=Codecov&version=1.7.0"
-#tool "nuget:?package=nuget.commandline&version=4.9.2"
-#tool "nuget:?package=GitVersion.CommandLine&version=5.0.2-beta1.2"
-#tool "nuget:?package=docfx.console&version=2.44.0"
+#tool "nuget:?package=Codecov&version=1.9.0"
+#tool "nuget:?package=nuget.commandline&version=5.4.0"
+#tool "nuget:?package=GitVersion.CommandLine&version=5.1.3"
+#tool "nuget:?package=docfx.console&version=2.48.0"
 #tool "nuget:?package=WiX.Toolset.UnofficialFork&version=3.11.1"
 #tool "nuget:?package=OpenCover&version=4.7.922"
-#tool nuget:?package=ReportGenerator&version=4.2.15
+#tool "nuget:?package=ReportGenerator&version=4.4.7"
 
 // Install .NET Core Global tools.
-#tool "dotnet:?package=GitReleaseManager.Tool&version=0.8.0"
+#tool "dotnet:?package=GitReleaseManager.Tool&version=0.10.3"
 #tool "dotnet:?package=dotnet-format&version=3.1.37601"
 
 // Load other scripts.
@@ -79,7 +79,7 @@ Setup<BuildParameters>(context =>
     Build(parameters.Configuration,MyProject.SolutionFileName);
     var gitVersion = GetVersion(parameters);
     parameters.Initialize(context, gitVersion);
-
+     // Information(Newtonsoft.Json.JsonConvert.SerializeObject(gitVersion, Formatting.Indented));e
     Information("Building version {0} of {3} ({1}, {2})",
         parameters.Version.SemVersion,
         parameters.Configuration,

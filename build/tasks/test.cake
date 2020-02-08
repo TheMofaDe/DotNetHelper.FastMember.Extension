@@ -41,12 +41,14 @@ Task("Test")
         }     
         .WithFilter("+[*]*")
 		.WithFilter("-[*.Tests*]*")
-		// .WithFilter("-[*NUnit3.*]*")
+	    .WithFilter("-[*NUnit3.*]*")
 		);
 
         }
 		    
      }
-	  //  ReportGenerator(coverageFile,parameters.Paths.Directories.TestCoverageOutput + "/" + "htmlreports");
+	  if(parameters.IsLocalBuild){
+	   ReportGenerator(parameters.Paths.Files.TestCoverageOutputFilePath,parameters.Paths.Directories.TestCoverageOutput + "/" + "htmlreports");
+	  }
 
 });
