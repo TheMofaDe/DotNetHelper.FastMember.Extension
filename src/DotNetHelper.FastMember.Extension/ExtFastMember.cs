@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Dynamic;
 using System.Linq;
-#if NETSTANDARD
 using System.Reflection;
-#endif
 using DotNetHelper.FastMember.Extension.Extension;
 using DotNetHelper.FastMember.Extension.Helpers;
 using DotNetHelper.FastMember.Extension.Models;
@@ -16,6 +14,7 @@ namespace DotNetHelper.FastMember.Extension
     // https://stackoverflow.com/questions/315146/anonymous-types-are-there-any-distingushing-characteristics
     public static class ExtFastMember
     {
+        public static bool UseRuntimeReflection { get; set; } = OSHelper.IsRunningOnIOS;
         private static Type GuidType { get; } = typeof(Guid);
         private static Type GuidTypeNullable { get; } = typeof(Guid?);
         private static Type DateTimeOffsetType { get; } = typeof(DateTimeOffset);
@@ -50,10 +49,10 @@ namespace DotNetHelper.FastMember.Extension
 
                 var list = new List<MemberWrapper>() { };
 
-#if NETSTANDARD
-                if (OSHelper.IsRunningOnIOS)
+                if (ExtFastMember.UseRuntimeReflection)
                 {
-                     type.GetProperties().ForEach(delegate (PropertyInfo property){
+
+                    type.GetProperties().ForEach(delegate (PropertyInfo property){
 
                         var advance = new MemberWrapper(property) { };
                         list.Add(advance);
@@ -69,14 +68,7 @@ namespace DotNetHelper.FastMember.Extension
                         list.Add(advance);
                     });
                 }
-#else
-                var accessor = TypeAccessor.Create(type, includeNonPublicAccessor);
-                accessor.GetMembers().AsList().ForEach(delegate (Member member)
-                {
-                    var advance = new MemberWrapper(member) { };
-                    list.Add(advance);
-                });
-#endif
+
 
                 Lookup.Add(key, list);
                 return list;

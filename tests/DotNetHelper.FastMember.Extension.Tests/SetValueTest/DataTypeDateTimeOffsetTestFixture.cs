@@ -22,6 +22,8 @@ namespace DotNetHelper.FastMember.Extension.Tests.SetValueTest
 
         public static TypeAccessor MyAccessor { get; } = TypeAccessor.Create(typeof(DateTimeOffsetDataType));
         private static DateTimeOffsetDataType Instance { get; } = new DateTimeOffsetDataType();
+
+
         private static DataTable GetData()
         {
             var table = new DataTable();
