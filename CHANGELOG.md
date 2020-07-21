@@ -42,4 +42,5 @@ using ToString() method
 
 
 [1.0.20]: https://github.com/TheMofaDe/DotNetHelper.Serialization.Abstractions/releases/tag/v1.0.20
+[2.0.0]: https://github.com/TheMofaDe/DotNetHelper.Serialization.Abstractions/releases/tag/v2.0.0
 
