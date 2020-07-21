@@ -30,19 +30,38 @@ namespace DotNetHelper.FastMember.Extension.Tests
     {
 
 
-        //public TypeModel B { get; private set; } = new TypeModel() { };
-
         [SetUp]
         public void Setup()
         {
-            //B = new TypeModel()
-            //{
-            //    TimeSpan = DateTime.Today.TimeOfDay,
-            //    DateTime = DateTime.Today,
-            //    Guid = Guid.Parse("63559BC0-1FEF-4158-968E-AE4B94974F8E"),
-            //    Number = 1
-            //};
 
+        }
+
+
+        [Test]
+        public void Test_Map_Type_To_String()
+        {
+            var value = "1";
+            var A = new StringModel() { };
+            var B = new TypeModel() { Number = 1, TimeSpan = TimeSpan.FromHours(1), DateTime = DateTime.Now, Guid = Guid.NewGuid() };
+            ObjectMapper.Map(B, A);
+            Assert.AreEqual(B.TimeSpan.ToString(), A.TimeSpan);
+            Assert.AreEqual(B.Number.ToString(), A.Number);
+            Assert.AreEqual(B.TimeSpan.ToString(), A.TimeSpan);
+            Assert.AreEqual(B.Guid.ToString(), A.Guid);
+        }
+
+
+        [Test]
+        public void Test_Map_String_To_Type()
+        {
+
+            var A = new StringModel() { Number = "1", TimeSpan = TimeSpan.FromHours(1).ToString(), DateTime = DateTime.Now.ToString(), Guid = Guid.NewGuid().ToString() };
+            var B = new TypeModel() { };
+            ObjectMapper.Map(A, B);
+            Assert.AreEqual(B.TimeSpan.ToString(), A.TimeSpan);
+            Assert.AreEqual(B.Number.ToString(), A.Number);
+            Assert.AreEqual(B.TimeSpan.ToString(), A.TimeSpan);
+            Assert.AreEqual(B.Guid.ToString(), A.Guid);
         }
 
 
@@ -131,7 +150,7 @@ namespace DotNetHelper.FastMember.Extension.Tests
         {
             var obj = new { Number = 1, TimeSpan = TimeSpan.FromHours(1), DateTime = DateTime.Now, Guid = Guid.Parse("63559BC0-1FEF-4158-968E-AE4B94974F8E") };
             var B = new TypeModel();
-            ObjectMapper.MapProperties(obj, B, false, StringComparison.OrdinalIgnoreCase);
+            ObjectMapper.Map(obj, B, false, StringComparison.OrdinalIgnoreCase);
             Assert.AreEqual(B.TimeSpan, obj.TimeSpan);
             Assert.AreEqual(B.DateTime, obj.DateTime);
             Assert.AreEqual(B.Guid, obj.Guid);

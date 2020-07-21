@@ -90,7 +90,7 @@ namespace DotNetHelper.FastMember.Extension.Models
                     var attributes = PropertyInfo.GetCustomAttributes(typeof(T), false);
                     if (attributes.Length > 0)
                     {
-                        return attributes[0] as T; 
+                        return attributes[0] as T;
                     }
                     return null;
                 }
@@ -111,7 +111,7 @@ namespace DotNetHelper.FastMember.Extension.Models
             {
                 return null;
             }
-                return Member.GetMemberInfo();
+            return Member.GetMemberInfo();
         }
 
         public object GetValue(object instanceOfObject)
@@ -179,7 +179,7 @@ namespace DotNetHelper.FastMember.Extension.Models
         {
             if (PropertyInfo != null) // SUPPORT FOR IOS 
             {
-                PropertyInfo.SetValue(instanceOfObject,value);
+                PropertyInfo.SetValue(instanceOfObject, value);
             }
             ExtFastMember.SetMemberValue(instanceOfObject, Name, value);
         }

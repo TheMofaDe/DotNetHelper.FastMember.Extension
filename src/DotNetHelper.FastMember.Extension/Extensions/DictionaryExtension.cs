@@ -10,21 +10,17 @@ namespace DotNetHelper.FastMember.Extension.Extension
 #if NETFRAMEWORK
         public static V GetValueOrDefault<K, V>(this IDictionary<K, V> dictionary, K key, V defaultValue = default)
         {
-            if (dictionary.ContainsKey(key))
-            {
-                if (dictionary.TryGetValue(key, out var a))
-                    return a;
-            }
-            return defaultValue;
+	        var keyExists = dictionary.TryGetValue(key, out var value);
+	        if (keyExists)
+		        return value;
+	        return defaultValue;
         }
 #else
         public static V GetValueOrDefaultValue<K, V>(this IDictionary<K, V> dictionary, K key, V defaultValue = default)
         {
-            if (dictionary.ContainsKey(key))
-            {
-                if (dictionary.TryGetValue(key, out var a))
-                    return a;
-            }
+            var keyExists = dictionary.TryGetValue(key, out var value);
+            if (keyExists)
+                return value;
             return defaultValue;
         }
 

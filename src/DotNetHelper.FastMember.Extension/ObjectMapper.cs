@@ -2,14 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-
-using DotNetHelper.FastMember.Extension;
 using DotNetHelper.FastMember.Extension.Comparer;
 using DotNetHelper.FastMember.Extension.Extension;
 using DotNetHelper.FastMember.Extension.Helpers;
 using DotNetHelper.FastMember.Extension.Models;
-using FastMember;
-
 namespace DotNetHelper.FastMember.Extension
 {
     public static class ObjectMapper
@@ -48,35 +44,7 @@ namespace DotNetHelper.FastMember.Extension
             return new Tuple<Dictionary<MemberWrapper, MemberWrapper>>(propertyMapping);
         }
 
-
-
-
-        //        private static object GetValue<T1>(KeyValuePair<MemberWrapper, MemberWrapper> pair, T1 original, IDictionary<Type, IFormatProvider> beforeMappinFormatProviders = null)
-        //        {
-
-        //            if (!beforeMappinFormatProviders.IsNullOrEmpty())
-        //            {
-        //#if NETFRAMEWORK
-        //                return Convert.ChangeType(accessor1[original, pair.Key.Name], pair.Value.Type, beforeMappinFormatProviders.GetValueOrDefault(pair.Key.Type));
-        //#else
-        //                return 
-        //                return Convert.ChangeType(accessor1[original, pair.Key.Name], pair.Value.Type, beforeMappinFormatProviders.GetValueOrDefaultValue(pair.Key.Type));
-        //#endif
-        //            }
-        //            else
-        //            {
-        //                if (!pair.Value.Type.IsNullable().isNullableT) // System.Convert Dont Handle Nullable<T> see link for reference https://stackoverflow.com/questions/3531318/convert-changetype-fails-on-nullable-types
-        //                {
-        //                    return accessor1[original, pair.Key.Name];
-        //                }
-        //                else
-        //                {
-        //                    return Convert.ChangeType(accessor1[original, pair.Key.Name], pair.Value.Type, null);
-        //                }
-        //            }
-        //        }
-
-        public static T2 MapProperties<T1, T2>(T1 original, T2 copyCat, bool exactTypeOnly = false, StringComparison comparer = StringComparison.CurrentCulture) where T1 : class where T2 : class
+        public static T2 Map<T1, T2>(T1 original, T2 copyCat, bool exactTypeOnly = false, StringComparison comparer = StringComparison.CurrentCulture) where T1 : class where T2 : class
         {
 
             var tuple = GetMatchingMembers<T1, T2>(exactTypeOnly, comparer);
@@ -89,10 +57,9 @@ namespace DotNetHelper.FastMember.Extension
 
             return copyCat;
         }
-        public static T2 MapPropertiesDontThrow<T1, T2>(T1 original, T2 copyCat, bool exactTypeOnly = false, StringComparison comparer = StringComparison.CurrentCulture, IDictionary<Type, IFormatProvider> beforeMappinFormatProviders = null) where T1 : class where T2 : class
+        public static T2 MapDontThrow<T1, T2>(T1 original, T2 copyCat, bool exactTypeOnly = false, StringComparison comparer = StringComparison.CurrentCulture, IDictionary<Type, IFormatProvider> beforeMappinFormatProviders = null) where T1 : class where T2 : class
         {
-
-            var tuple = GetMatchingMembers<T1, T2>(exactTypeOnly, comparer);
+            var tuple = GetMatchingMembers<T1, T2>(exactTypeOnly, comparer, beforeMappinFormatProviders);
             var sameKids = tuple.Item1;
             sameKids.ForEach(delegate (KeyValuePair<MemberWrapper, MemberWrapper> pair)
             {
@@ -111,7 +78,7 @@ namespace DotNetHelper.FastMember.Extension
 
         public static T2 MapExcept<T1, T2>(T1 original, T2 copyCat, Expression<Func<T1, object>> excludeProperties = null, bool exactTypeOnly = false, StringComparison comparer = StringComparison.CurrentCulture, IDictionary<Type, IFormatProvider> beforeMappinFormatProviders = null) where T1 : class where T2 : class
         {
-            var tuple = GetMatchingMembers<T1, T2>(exactTypeOnly, comparer);
+            var tuple = GetMatchingMembers<T1, T2>(exactTypeOnly, comparer, beforeMappinFormatProviders);
             var sameKids = tuple.Item1;
             var list = excludeProperties.GetPropertyNamesFromExpression();
             var temp = sameKids.AsList();
@@ -127,7 +94,7 @@ namespace DotNetHelper.FastMember.Extension
 
         public static T2 MapExceptDontThrow<T1, T2>(T1 original, T2 copyCat, Expression<Func<T1, object>> excludeProperties = null, bool exactTypeOnly = false, StringComparison comparer = StringComparison.CurrentCulture, IDictionary<Type, IFormatProvider> beforeMappinFormatProviders = null) where T1 : class where T2 : class
         {
-            var tuple = GetMatchingMembers<T1, T2>(exactTypeOnly, comparer);
+            var tuple = GetMatchingMembers<T1, T2>(exactTypeOnly, comparer, beforeMappinFormatProviders);
             var sameKids = tuple.Item1;
             var list = excludeProperties.GetPropertyNamesFromExpression();
             var temp = sameKids.AsList();
@@ -147,9 +114,9 @@ namespace DotNetHelper.FastMember.Extension
             return copyCat;
         }
 
-        public static T2 MapOnly<T1, T2>(T1 original, T2 copyCat, Expression<Func<T1, object>> includeProperties = null, bool exactTypeOnly = false, StringComparison comparer = StringComparison.CurrentCulture, IDictionary<Type, IFormatProvider> beforeMappinFormatProviders = null) where T1 : class where T2 : class
+        public static T2 MapOnly<T1, T2>(T1 original, T2 copyCat, Expression<Func<T1, object>> includeProperties, bool exactTypeOnly = false, StringComparison comparer = StringComparison.CurrentCulture, IDictionary<Type, IFormatProvider> beforeMappinFormatProviders = null) where T1 : class where T2 : class
         {
-            var tuple = GetMatchingMembers<T1, T2>();
+            var tuple = GetMatchingMembers<T1, T2>(exactTypeOnly, comparer, beforeMappinFormatProviders);
             var list = includeProperties.GetPropertyNamesFromExpression();
             var sameKids = tuple.Item1.Where(m => list.Contains(m.Value.Name, new EqualityComparerString(comparer))).AsList();
             sameKids.ForEach(delegate (KeyValuePair<MemberWrapper, MemberWrapper> pair)

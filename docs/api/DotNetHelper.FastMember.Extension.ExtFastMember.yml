@@ -12,6 +12,7 @@ items:
   - DotNetHelper.FastMember.Extension.ExtFastMember.GetMemberWrappers``1(``0)
   - DotNetHelper.FastMember.Extension.ExtFastMember.GetMemberWrappers``1(System.Boolean)
   - DotNetHelper.FastMember.Extension.ExtFastMember.SetMemberValue``1(``0,System.String,System.Object)
+  - DotNetHelper.FastMember.Extension.ExtFastMember.UseRuntimeReflection
   langs:
   - csharp
   - vb
@@ -26,7 +27,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: ExtFastMember
     path: ../src/DotNetHelper.FastMember.Extension/ExtFastMember.cs
-    startLine: 13
+    startLine: 14
   assemblies:
   - DotNetHelper.FastMember.Extension
   namespace: DotNetHelper.FastMember.Extension
@@ -50,6 +51,43 @@ items:
   modifiers.vb:
   - Public
   - Module
+- uid: DotNetHelper.FastMember.Extension.ExtFastMember.UseRuntimeReflection
+  commentId: P:DotNetHelper.FastMember.Extension.ExtFastMember.UseRuntimeReflection
+  id: UseRuntimeReflection
+  parent: DotNetHelper.FastMember.Extension.ExtFastMember
+  langs:
+  - csharp
+  - vb
+  name: UseRuntimeReflection
+  nameWithType: ExtFastMember.UseRuntimeReflection
+  fullName: DotNetHelper.FastMember.Extension.ExtFastMember.UseRuntimeReflection
+  type: Property
+  source:
+    remote:
+      path: src/DotNetHelper.FastMember.Extension/ExtFastMember.cs
+      branch: master
+      repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
+    id: UseRuntimeReflection
+    path: ../src/DotNetHelper.FastMember.Extension/ExtFastMember.cs
+    startLine: 16
+  assemblies:
+  - DotNetHelper.FastMember.Extension
+  namespace: DotNetHelper.FastMember.Extension
+  syntax:
+    content: public static bool UseRuntimeReflection { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Property UseRuntimeReflection As Boolean
+  overload: DotNetHelper.FastMember.Extension.ExtFastMember.UseRuntimeReflection*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: DotNetHelper.FastMember.Extension.ExtFastMember.GetMemberWrappers(System.Type,System.Boolean)
   commentId: M:DotNetHelper.FastMember.Extension.ExtFastMember.GetMemberWrappers(System.Type,System.Boolean)
   id: GetMemberWrappers(System.Type,System.Boolean)
@@ -68,7 +106,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: GetMemberWrappers
     path: ../src/DotNetHelper.FastMember.Extension/ExtFastMember.cs
-    startLine: 34
+    startLine: 37
   assemblies:
   - DotNetHelper.FastMember.Extension
   namespace: DotNetHelper.FastMember.Extension
@@ -112,7 +150,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: GetMemberWrappers
     path: ../src/DotNetHelper.FastMember.Extension/ExtFastMember.cs
-    startLine: 65
+    startLine: 77
   assemblies:
   - DotNetHelper.FastMember.Extension
   namespace: DotNetHelper.FastMember.Extension
@@ -153,7 +191,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: GetMemberWrappers
     path: ../src/DotNetHelper.FastMember.Extension/ExtFastMember.cs
-    startLine: 88
+    startLine: 100
   assemblies:
   - DotNetHelper.FastMember.Extension
   namespace: DotNetHelper.FastMember.Extension
@@ -206,7 +244,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: GetMemberWrappers
     path: ../src/DotNetHelper.FastMember.Extension/ExtFastMember.cs
-    startLine: 122
+    startLine: 137
   assemblies:
   - DotNetHelper.FastMember.Extension
   namespace: DotNetHelper.FastMember.Extension
@@ -254,7 +292,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: SetMemberValue
     path: ../src/DotNetHelper.FastMember.Extension/ExtFastMember.cs
-    startLine: 138
+    startLine: 153
   assemblies:
   - DotNetHelper.FastMember.Extension
   namespace: DotNetHelper.FastMember.Extension
@@ -298,7 +336,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: GetMemberValue
     path: ../src/DotNetHelper.FastMember.Extension/ExtFastMember.cs
-    startLine: 212
+    startLine: 227
   assemblies:
   - DotNetHelper.FastMember.Extension
   namespace: DotNetHelper.FastMember.Extension
@@ -344,7 +382,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: GetMemberValue
     path: ../src/DotNetHelper.FastMember.Extension/ExtFastMember.cs
-    startLine: 218
+    startLine: 233
   assemblies:
   - DotNetHelper.FastMember.Extension
   namespace: DotNetHelper.FastMember.Extension
@@ -663,6 +701,18 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: DotNetHelper.FastMember.Extension.ExtFastMember.UseRuntimeReflection*
+  commentId: Overload:DotNetHelper.FastMember.Extension.ExtFastMember.UseRuntimeReflection
+  name: UseRuntimeReflection
+  nameWithType: ExtFastMember.UseRuntimeReflection
+  fullName: DotNetHelper.FastMember.Extension.ExtFastMember.UseRuntimeReflection
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: DotNetHelper.FastMember.Extension.ExtFastMember.GetMemberWrappers*
   commentId: Overload:DotNetHelper.FastMember.Extension.ExtFastMember.GetMemberWrappers
   name: GetMemberWrappers
@@ -675,13 +725,6 @@ references:
   name: Type
   nameWithType: Type
   fullName: System.Type
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
 - uid: System.Collections.Generic.List{DotNetHelper.FastMember.Extension.Models.MemberWrapper}
   commentId: T:System.Collections.Generic.List{DotNetHelper.FastMember.Extension.Models.MemberWrapper}
   parent: System.Collections.Generic

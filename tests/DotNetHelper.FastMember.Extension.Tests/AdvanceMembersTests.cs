@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Dynamic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using DotNetHelper.FastMember.Extension.Models;
 using DotNetHelper.FastMember.Extension.Tests.Models;
@@ -142,13 +144,42 @@ namespace DotNetHelper.FastMember.Extension.Tests
 
 
 
+        [Test]
+        public void Test_MultiThreadingLookup2()
+        {
+	        var instance = new PublicPropertiesModel();
+	   
 
+	        for (var i2 = 0; i2 < 1000; i2++)
+	        {
+		        var threads = new Thread[4];
+
+		        for (var i = 0; i < threads.Length; i++)
+		        {
+			        threads[i] = new Thread(delegate (object sdo)
+			        {
+				        ExtFastMember.GetMemberWrappers<PublicPropertiesModel>(true);
+				        ExtFastMember.GetMemberWrappers(typeof(PublicPropertiesModel),true);
+                    });
+		        }
+
+		        foreach (var thread in threads)
+		        {
+			        thread.Start();
+		        }
+
+		        foreach (var thread in threads)
+		        {
+			        thread.Join();
+		        }
+	        }
+        }
 
         [Test]
         public void Test_MultiThreadingLookup()
         {
-            List<int> ret = new List<int>(50);
-            ret.AddRange(Enumerable.Repeat(8, 50));
+            var ret = new List<int>(50);
+            ret.AddRange(Enumerable.Repeat(10, 1000));
 
             Parallel.ForEach(ret, delegate (int i, ParallelLoopState state)
             {
@@ -163,9 +194,7 @@ namespace DotNetHelper.FastMember.Extension.Tests
         public void Test_SetMemberValue_Throws_Exception_On_Non_Settable_Members()
         {
 
-            var obj = new GenericModelWithGetOnlyProperties()
-            {
-            };
+            var obj = new GenericModelWithGetOnlyProperties() { };
             var members = ExtFastMember.GetMemberWrappers<PublicPropertiesNoAccessor>(true);
 
 
@@ -386,7 +415,7 @@ namespace DotNetHelper.FastMember.Extension.Tests
             };
             var members = ExtFastMember.GetMemberWrappers(obj.GetType(), true);
 
-            foreach (MemberWrapper member in members)
+            foreach (var member in members)
             {
                 if (member.Name == "FalseNullableBoolean")
                 {

@@ -23,6 +23,7 @@ namespace DotNetHelper.FastMember.Extension
         private static Type TimeSpanTypeNullable { get; } = typeof(TimeSpan?);
 
         private static IDictionary<string, List<MemberWrapper>> Lookup { get; } = new Dictionary<string, List<MemberWrapper>>();
+        //    private static IDictionary<string, List<MemberWrapper>> Lookup { get; } = new ConcurrentDictionary<string, List<MemberWrapper>>();
 
         private static object Lock { get; } = new object();
 
@@ -38,38 +39,34 @@ namespace DotNetHelper.FastMember.Extension
         {
             type.IsNullThrow(nameof(type));
             // ReSharper disable once AssignNullToNotNullAttribute
-            var key = type.FullName + includeNonPublicAccessor;
+            var key = $"{type.FullName}{includeNonPublicAccessor}";
             lock (Lock)
             {
-                //if (Lookup.TryGetValue(key, out var cachedMembers))
-                if (Lookup.ContainsKey(key))
-                {
-                    return Lookup[key];
-                }
+                // https://stackoverflow.com/questions/9382681/what-is-more-efficient-dictionary-trygetvalue-or-containskeyitem
+                var membersAlreadyExist = Lookup.TryGetValue(key, out var cachedMembers);
+                if (membersAlreadyExist)
+                    return cachedMembers;
 
                 var list = new List<MemberWrapper>() { };
-
-                if (ExtFastMember.UseRuntimeReflection)
+                if (UseRuntimeReflection)
                 {
-
-                    type.GetProperties().ForEach(delegate (PropertyInfo property){
-
+                    type.GetProperties().ForEach(delegate (PropertyInfo property)
+                    {
                         var advance = new MemberWrapper(property) { };
                         list.Add(advance);
                     });
-
                 }
                 else
                 {
                     var accessor = TypeAccessor.Create(type, includeNonPublicAccessor);
-                    accessor.GetMembers().AsList().ForEach(delegate (Member member)
+                    var set = accessor.GetMembers();
+                    for (var index = 0; index < set.Count; index++)
                     {
-                        var advance = new MemberWrapper(member) { };
-                        list.Add(advance);
-                    });
+	                    var member = set[index];
+	                    var advance = new MemberWrapper(member) { };
+	                    list.Add(advance);
+                    }
                 }
-
-
                 Lookup.Add(key, list);
                 return list;
             }
@@ -110,22 +107,24 @@ namespace DotNetHelper.FastMember.Extension
 
             var type = typeof(T);
             // ReSharper disable once AssignNullToNotNullAttribute
-            var key = type.FullName + includeNonPublicAccessor;
+            var key = $"{type.FullName}{includeNonPublicAccessor}";
             lock (Lock)
             {
                 //if (Lookup.TryGetValue(key, out var cachedMembers))
-                if (Lookup.ContainsKey(key))
-                {
-                    return Lookup[key];
-                }
+                var membersAlreadyExist = Lookup.TryGetValue(key, out var cachedMembers);
+                if (membersAlreadyExist)
+                    return cachedMembers;
 
                 var list = new List<MemberWrapper>() { };
                 var accessor = TypeAccessor.Create(type, includeNonPublicAccessor);
-                accessor.GetMembers().AsList().ForEach(delegate (Member member)
+                var set = accessor.GetMembers();
+                for (var index = 0; index < set.Count; index++)
                 {
+                    var member = set[index];
                     var advance = new MemberWrapper(member) { };
                     list.Add(advance);
-                });
+                }
+
 
                 Lookup.Add(key, list);
                 return list;

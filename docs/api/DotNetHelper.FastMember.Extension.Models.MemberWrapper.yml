@@ -31,7 +31,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: MemberWrapper
     path: ../src/DotNetHelper.FastMember.Extension/Models/MemberWrapper.cs
-    startLine: 12
+    startLine: 11
   assemblies:
   - DotNetHelper.FastMember.Extension
   namespace: DotNetHelper.FastMember.Extension.Models
@@ -75,7 +75,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: Name
     path: ../src/DotNetHelper.FastMember.Extension/Models/MemberWrapper.cs
-    startLine: 16
+    startLine: 15
   assemblies:
   - DotNetHelper.FastMember.Extension
   namespace: DotNetHelper.FastMember.Extension.Models
@@ -110,7 +110,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: Type
     path: ../src/DotNetHelper.FastMember.Extension/Models/MemberWrapper.cs
-    startLine: 17
+    startLine: 16
   assemblies:
   - DotNetHelper.FastMember.Extension
   namespace: DotNetHelper.FastMember.Extension.Models
@@ -145,7 +145,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: CanRead
     path: ../src/DotNetHelper.FastMember.Extension/Models/MemberWrapper.cs
-    startLine: 18
+    startLine: 17
   assemblies:
   - DotNetHelper.FastMember.Extension
   namespace: DotNetHelper.FastMember.Extension.Models
@@ -180,7 +180,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: CanWrite
     path: ../src/DotNetHelper.FastMember.Extension/Models/MemberWrapper.cs
-    startLine: 19
+    startLine: 18
   assemblies:
   - DotNetHelper.FastMember.Extension
   namespace: DotNetHelper.FastMember.Extension.Models
@@ -215,7 +215,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: IsADynamicMember
     path: ../src/DotNetHelper.FastMember.Extension/Models/MemberWrapper.cs
-    startLine: 20
+    startLine: 19
   assemblies:
   - DotNetHelper.FastMember.Extension
   namespace: DotNetHelper.FastMember.Extension.Models
@@ -250,7 +250,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: GetCustomAttribute
     path: ../src/DotNetHelper.FastMember.Extension/Models/MemberWrapper.cs
-    startLine: 63
+    startLine: 75
   assemblies:
   - DotNetHelper.FastMember.Extension
   namespace: DotNetHelper.FastMember.Extension.Models
@@ -289,7 +289,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: GetMemberInfo
     path: ../src/DotNetHelper.FastMember.Extension/Models/MemberWrapper.cs
-    startLine: 85
+    startLine: 106
   assemblies:
   - DotNetHelper.FastMember.Extension
   namespace: DotNetHelper.FastMember.Extension.Models
@@ -321,7 +321,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: GetValue
     path: ../src/DotNetHelper.FastMember.Extension/Models/MemberWrapper.cs
-    startLine: 91
+    startLine: 116
   assemblies:
   - DotNetHelper.FastMember.Extension
   namespace: DotNetHelper.FastMember.Extension.Models
@@ -356,7 +356,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: GetValue
     path: ../src/DotNetHelper.FastMember.Extension/Models/MemberWrapper.cs
-    startLine: 102
+    startLine: 131
   assemblies:
   - DotNetHelper.FastMember.Extension
   namespace: DotNetHelper.FastMember.Extension.Models
@@ -393,7 +393,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: GetValue
     path: ../src/DotNetHelper.FastMember.Extension/Models/MemberWrapper.cs
-    startLine: 114
+    startLine: 147
   assemblies:
   - DotNetHelper.FastMember.Extension
   namespace: DotNetHelper.FastMember.Extension.Models
@@ -435,7 +435,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: GetValue
     path: ../src/DotNetHelper.FastMember.Extension/Models/MemberWrapper.cs
-    startLine: 125
+    startLine: 162
   assemblies:
   - DotNetHelper.FastMember.Extension
   namespace: DotNetHelper.FastMember.Extension.Models
@@ -479,7 +479,7 @@ items:
       repo: https://github.com/TheMofaDe/DotNetHelper.FastMember.Extension
     id: SetMemberValue
     path: ../src/DotNetHelper.FastMember.Extension/Models/MemberWrapper.cs
-    startLine: 136
+    startLine: 177
   assemblies:
   - DotNetHelper.FastMember.Extension
   namespace: DotNetHelper.FastMember.Extension.Models

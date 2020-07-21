@@ -20,6 +20,7 @@
   "DotNetHelper.FastMember.Extension.ExtFastMember.GetMemberWrappers``1(``0)": "DotNetHelper.FastMember.Extension.ExtFastMember.yml",
   "DotNetHelper.FastMember.Extension.ExtFastMember.GetMemberWrappers``1(System.Boolean)": "DotNetHelper.FastMember.Extension.ExtFastMember.yml",
   "DotNetHelper.FastMember.Extension.ExtFastMember.SetMemberValue``1(``0,System.String,System.Object)": "DotNetHelper.FastMember.Extension.ExtFastMember.yml",
+  "DotNetHelper.FastMember.Extension.ExtFastMember.UseRuntimeReflection": "DotNetHelper.FastMember.Extension.ExtFastMember.yml",
   "DotNetHelper.FastMember.Extension.Helpers": "DotNetHelper.FastMember.Extension.Helpers.yml",
   "DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper": "DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.yml",
   "DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.#ctor": "DotNetHelper.FastMember.Extension.Helpers.DynamicObjectHelper.yml",
@@ -44,9 +45,9 @@
   "DotNetHelper.FastMember.Extension.Models.MemberWrapper.SetMemberValue``1(``0,System.Object)": "DotNetHelper.FastMember.Extension.Models.MemberWrapper.yml",
   "DotNetHelper.FastMember.Extension.Models.MemberWrapper.Type": "DotNetHelper.FastMember.Extension.Models.MemberWrapper.yml",
   "DotNetHelper.FastMember.Extension.ObjectMapper": "DotNetHelper.FastMember.Extension.ObjectMapper.yml",
+  "DotNetHelper.FastMember.Extension.ObjectMapper.Map``2(``0,``1,System.Boolean,System.StringComparison)": "DotNetHelper.FastMember.Extension.ObjectMapper.yml",
+  "DotNetHelper.FastMember.Extension.ObjectMapper.MapDontThrow``2(``0,``1,System.Boolean,System.StringComparison,System.Collections.Generic.IDictionary{System.Type,System.IFormatProvider})": "DotNetHelper.FastMember.Extension.ObjectMapper.yml",
   "DotNetHelper.FastMember.Extension.ObjectMapper.MapExcept``2(``0,``1,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Boolean,System.StringComparison,System.Collections.Generic.IDictionary{System.Type,System.IFormatProvider})": "DotNetHelper.FastMember.Extension.ObjectMapper.yml",
   "DotNetHelper.FastMember.Extension.ObjectMapper.MapExceptDontThrow``2(``0,``1,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Boolean,System.StringComparison,System.Collections.Generic.IDictionary{System.Type,System.IFormatProvider})": "DotNetHelper.FastMember.Extension.ObjectMapper.yml",
-  "DotNetHelper.FastMember.Extension.ObjectMapper.MapOnly``2(``0,``1,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Boolean,System.StringComparison,System.Collections.Generic.IDictionary{System.Type,System.IFormatProvider})": "DotNetHelper.FastMember.Extension.ObjectMapper.yml",
-  "DotNetHelper.FastMember.Extension.ObjectMapper.MapProperties``2(``0,``1,System.Boolean,System.StringComparison)": "DotNetHelper.FastMember.Extension.ObjectMapper.yml",
-  "DotNetHelper.FastMember.Extension.ObjectMapper.MapPropertiesDontThrow``2(``0,``1,System.Boolean,System.StringComparison,System.Collections.Generic.IDictionary{System.Type,System.IFormatProvider})": "DotNetHelper.FastMember.Extension.ObjectMapper.yml"
+  "DotNetHelper.FastMember.Extension.ObjectMapper.MapOnly``2(``0,``1,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Boolean,System.StringComparison,System.Collections.Generic.IDictionary{System.Type,System.IFormatProvider})": "DotNetHelper.FastMember.Extension.ObjectMapper.yml"
 }
